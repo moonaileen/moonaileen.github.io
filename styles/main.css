@@ -2299,9 +2299,21 @@ blockquote:before,.markdown .stressed-quote:before {
 	position:absolute;
 }
 
-.next-md-body h1:first-letter {
-  font-size: 1.5em;
-  color: #e993a3;
+.next-md-body h1 {
+  position: relative;/*相対位置*/
+  padding-left: 1.2em;/*アイコン分のスペース*/
+  line-height: 1.4;/*行高*/
+  color: #e993a3;/*文字色*/
+}
+
+.next-md-body h1:before {
+  font-family: FontAwesome;
+  content: "\f02d";/*アイコンのユニコード*/
+  position: absolute;/*絶対位置*/
+  font-size: 1em;/*サイズ*/
+  left: 0;/*アイコンの位置*/
+  top: 0;/*アイコンの位置*/
+  color: #ff938b; /*アイコン色*/
 }
 
 .next-md-body h2 {
@@ -2364,7 +2376,7 @@ mark {
 }
 
 .pagination-ul a:hover {
-  border-top: 1px solid e993a3;
+  border-top: 1px solid #e993a3;
 }
 
 .post-button .btn {

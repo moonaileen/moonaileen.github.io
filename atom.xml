@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://moonaileen.github.io</id>
     <title>「旅程」</title>
-    <updated>2020-05-07T16:57:05.326Z</updated>
+    <updated>2020-05-08T16:03:36.266Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://moonaileen.github.io"/>
     <link rel="self" href="https://moonaileen.github.io/atom.xml"/>
@@ -10,6 +10,21 @@
     <logo>https://moonaileen.github.io/images/avatar.png</logo>
     <icon>https://moonaileen.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 「旅程」</rights>
+    <entry>
+        <title type="html"><![CDATA[ダメラジ095（20/01/22放送分）]]></title>
+        <id>https://moonaileen.github.io/post/dameradio095/</id>
+        <link href="https://moonaileen.github.io/post/dameradio095/">
+        </link>
+        <updated>2020-05-08T09:23:14.000Z</updated>
+        <summary type="html"><![CDATA[<p>寒さも一段と増していくからダメじゃないラジオ。<br>
+↑K：さみーんだよこういうなんか営業みたいなやり口ｗｗ</p>
+<p>这期开头就有超震撼的事啊。我当初为什么没有直接过来记录？哦，是我的拖延症😃</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>寒さも一段と増していくからダメじゃないラジオ。<br>
+↑K：さみーんだよこういうなんか営業みたいなやり口ｗｗ</p>
+<p>这期开头就有超震撼的事啊。我当初为什么没有直接过来记录？哦，是我的拖延症😃</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[ダメラジ094（20/01/15放送分）]]></title>
         <id>https://moonaileen.github.io/post/dameradio094/</id>
@@ -150,28 +165,5 @@ K：今年の毛は今年のうちに←</p>
         <link href="https://moonaileen.github.io/post/memo1219/">
         </link>
         <updated>2019-12-19T05:33:29.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ダメラジ089（19/12/11放送分）]]></title>
-        <id>https://moonaileen.github.io/post/dameradio089/</id>
-        <link href="https://moonaileen.github.io/post/dameradio089/">
-        </link>
-        <updated>2019-12-12T03:26:26.000Z</updated>
-        <summary type="html"><![CDATA[<p>EPの発売一週間前だからダメじゃないラジオ。</p>
-<p>冒头K自己一个人突然开始了。结果没多久就支撑不下去了，向S搭话了。<br>
-S：走りきれ！ｗｗ<br>
-K：もうダメだったｗ</p>
-<p>说起今天会放S的新歌宣传，在K的半强迫（？）下ArtistS时隔一年多再次登场w<br>
-S说自己都有点苦手这个人设了，还说上周河西GUEST的那回K明明主持得很好呢，怎么到了这周就不行了，性能的gacha太激烈了<font color=gray>←这个形容好有趣w</font><br>
-K：因为这是第二期了，所以不行了！（广播收录一般是两期一收w）</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>EPの発売一週間前だからダメじゃないラジオ。</p>
-<p>冒头K自己一个人突然开始了。结果没多久就支撑不下去了，向S搭话了。<br>
-S：走りきれ！ｗｗ<br>
-K：もうダメだったｗ</p>
-<p>说起今天会放S的新歌宣传，在K的半强迫（？）下ArtistS时隔一年多再次登场w<br>
-S说自己都有点苦手这个人设了，还说上周河西GUEST的那回K明明主持得很好呢，怎么到了这周就不行了，性能的gacha太激烈了<font color=gray>←这个形容好有趣w</font><br>
-K：因为这是第二期了，所以不行了！（广播收录一般是两期一收w）</p>
-]]></content>
     </entry>
 </feed>

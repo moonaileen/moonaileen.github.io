@@ -8,7 +8,7 @@
 <meta name="keywords" content="斉藤壮馬">
 <meta name="description" content="君と出逢ったことだけ後悔はしない">
 <meta name="theme-color" content="#ec91a3">
-<title>【Memo】11/2 明大祭  | 「旅程」</title>
+<title>ダメラジ095（20/01/22放送分） | 「旅程」</title>
 <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/moonaileen/moonaileen.github.io@master/favicon.ico?v=1588953800473">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/moonaileen/moonaileen.github.io@master/styles/main.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/moonaileen/moonaileen.github.io@master/media/css/gemini.css">
@@ -52,8 +52,8 @@
   })();
 </script>
 
-  <meta name="description" content="【Memo】11/2 明大祭 " />
-  <meta name="keywords" content="Soma Memo" />
+  <meta name="description" content="ダメラジ095（20/01/22放送分）" />
+  <meta name="keywords" content="Radio,ダメラジ,斉藤壮馬,石川界人" />
 </head>
 
 <body>
@@ -228,7 +228,8 @@
       <div class="sidebar-body gemini" id="sidebar_body">
         
           
-            
+            <div class="post-side-meta" id="post_side_meta">
+              
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="https://cdn.jsdelivr.net/gh/moonaileen/moonaileen.github.io@master/images/avatar.png"/>
@@ -289,6 +290,199 @@
 
 
 </div>
+            </div>
+            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+              <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number auto"
+    id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#op">OP</a></li>
+<li><a href="#%E3%81%B5%E3%81%A4%E3%81%8A%E3%81%9F">ふつおた</a></li>
+<li><a href="#%E4%BB%8A%E9%80%B1%E3%81%AE%E3%83%80%E5%90%8D%E8%A8%80">今週のダ名言</a></li>
+<li><a href="#%E3%83%A0%E3%83%BC%E3%83%93%E3%83%83%E3%82%AF%E3%82%A4%E3%83%B3%E3%83%95%E3%82%A9%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3">ムービックインフォメーション</a></li>
+<li><a href="#ed">ED</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
+  let active = 'active-show', activeClass = 'active-current';
+  let tocWrapper = document.querySelector('#toc_wrapper');
+  let tocContent = tocWrapper.children[0];
+  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
+
+  function addTocNumber(elem, deep) {
+    if (!elem) {
+      return;
+    }
+    let prop = elem.__proto__;
+
+    if (prop === HTMLUListElement.prototype) {
+      for (let i = 0; i < elem.children.length; i++) {
+        addTocNumber(elem.children[i], deep + (i + 1) + '.');
+      }
+    } else if (prop === HTMLLIElement.prototype) {
+      // 保存li元素
+      if (elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
+        lList.push(elem);
+      }
+      for (let i = 0; i < elem.children.length; i++) {
+        let cur = elem.children[i];
+        if (cur.__proto__ === HTMLAnchorElement.prototype) {
+          if (autoNumber) {
+            cur.text = deep + ' ' + cur.text;
+          }
+        } else if (cur.__proto__ === HTMLUListElement.prototype) {
+          addTocNumber(cur, deep);
+        }
+      }
+    }
+  }
+
+  function removeParentActiveClass() {
+    let parents = tocContent.querySelectorAll('.' + active)
+    parents.forEach(function (elem) {
+      elem.classList.remove(active);
+    });
+  }
+
+  function addActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.add(activeClass);
+    }
+  }
+
+  function removeActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.remove(activeClass);
+    }
+  }
+
+  function addActiveLiElemment(elem, parent) {
+    if (!elem || elem === parent) {
+      return;
+    } else {
+      if (elem.__proto__ === HTMLLIElement.prototype) {
+        elem.classList.add(active);
+      }
+      addActiveLiElemment(elem.parentElement, parent);
+    }
+  }
+
+  function showToc() {
+    if (tocWrapper) {
+      postBody = document.querySelector('#post_body');
+      for (let i = 0; i < postBody.children.length; i++) {
+        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+          hList.push(postBody.children[i]);
+        }
+      }
+      if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+      } else if (tocWrapper.classList.contains('no_compress')) {
+        tocContent.classList.add('expanded');
+      } else {
+        if (hList.length > 10) {
+          active = 'active-hidden'
+          tocContent.classList.add('closed');
+        } else {
+          tocContent.classList.add('expanded');
+        }
+      }
+    }
+  }
+
+  (function () {
+    // 处理不是从#一级标题开始目录
+    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
+      let con = tocContent.children[0].children[0];
+      tocContent.innerHTML = con.innerHTML;
+    }
+    let markdownItTOC = document.querySelector('.markdownIt-TOC');
+    let innerHeight = window.innerHeight;
+    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
+    addTocNumber(tocContent, '');
+  })();
+
+  document.addEventListener('scroll', function (e) {
+    if (lList.length <= 0) {
+      return;
+    }
+    let scrollTop = document.scrollingElement.scrollTop + 10;
+    let dir;
+
+    if (lastTop - scrollTop > 0) {
+      dir = 'up';
+    } else {
+      dir = 'down';
+    }
+
+    lastTop = scrollTop;
+    if (scrollTop <= 0) {
+      if (lastIndex >= 0 && lastIndex < hList.length) {
+        lList[lastIndex].classList.remove(activeClass);
+      }
+      return;
+    }
+
+    let current = 0, hasFind = false;
+    for (let i = 0; i < hList.length; i++) {
+      if (hList[i].offsetTop > scrollTop) {
+        current = i;
+        hasFind = true;
+        break;
+      }
+    }
+    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+      current = hList.length - 1;
+    } else {
+      current--;
+    }
+    if (dir === 'down') {
+      if (current > lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex)
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    } else {
+      if (current < lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex);
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    }
+  });
+
+
+  window.addEventListener('load', function () {
+    showToc();
+    document.querySelector('#sidebar').style = 'display: block;';
+    tocWrapper.classList.add('toc-active');
+    setTimeout(function () {
+      if ("createEvent" in document) {
+        let evt = document.createEvent("HTMLEvents");
+        evt.initEvent("scroll", false, true);
+        document.dispatchEvent(evt);
+      }
+      else {
+        document.fireEvent("scroll");
+      }
+    }, 500)
+  })
+
+</script>
+            </div>
           
         
       </div>
@@ -376,8 +570,8 @@
           <div class="section bg-color post post-page">
             <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://moonaileen.github.io/post/memo191102/">
-      【Memo】11/2 明大祭 
+    <a class="post-title-link" href="https://moonaileen.github.io/post/dameradio095/">
+      ダメラジ095（20/01/22放送分）
     </a>
   </h1>
   <div class="post-meta">
@@ -385,7 +579,7 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span>发布于</span>
-      <span>2019-11-02</span>
+      <span>2020-05-08</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
@@ -394,8 +588,26 @@
       <span class="pc-show">分类于</span>
       
       
-      <a href="https://moonaileen.github.io/tag/SomaMemo/">
-        <span>Soma Memo</span>
+      <a href="https://moonaileen.github.io/tag/Radio/">
+        <span>Radio</span>
+      </a>、
+      
+      
+      
+      <a href="https://moonaileen.github.io/tag/DameRadio/">
+        <span>ダメラジ</span>
+      </a>、
+      
+      
+      
+      <a href="https://moonaileen.github.io/tag/SaitoSoma/">
+        <span>斉藤壮馬</span>
+      </a>、
+      
+      
+      
+      <a href="https://moonaileen.github.io/tag/IshikawaKaito/">
+        <span>石川界人</span>
       </a>
       
       
@@ -404,17 +616,17 @@
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>2分钟</span>
+      <span>7分钟</span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>277<span class="pc-show">字数</span></span>
+      <span>1853<span class="pc-show">字数</span></span>
     </span>
     
     
     
-    <span id="/post/memo191102/" data-flag-title="【Memo】11/2 明大祭 " class="meta-item pc-show leancloud_visitors">
+    <span id="/post/dameradio095/" data-flag-title="ダメラジ095（20/01/22放送分）" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span>浏览量：<span class="leancloud-visitors-count"></span></span>
@@ -423,15 +635,71 @@
   </div>
 </header>
             <div class="post-body next-md-body" id="post_body">
-              <!-- more -->
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">西山花江カーニバル無事終了！<br>明治大学さん、ありがとうございました！<br><br>続いては東洋英和女学院さんでトークショーしてきまーす！ <a href="https://t.co/bVJmbYOqXi">pic.twitter.com/bVJmbYOqXi</a></p>&mdash; 花江 夏樹 (@hanae0626) <a href="https://twitter.com/hanae0626/status/1190483902739009538?ref_src=twsrc%5Etfw">November 2, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<p>看起来又cue了一下S。<br>
-不过这个SPS……真的是又让我回想起了revisions时生放的SDS事故啊…………🤣<br>
-不过完全没想到竟然还能看到花花跟S的新动画实况！？</p>
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">11/2 明大祭 レポ<br>たろり家に花江くん安元さん江口さん梅ちゃん壮馬くんが集まって、何故か靴下履いたまま風呂に入った花江くん、それに次いで風呂に入ったたろり江口安元、でも家に泊まるのは無理だったから旅館にわざわざ泊まりに行きまた広い風呂につかる6人<br>たろり｢視界が安元さんの安元さん｣</p>&mdash; まい🌟 (@el_t20k11) <a href="https://twitter.com/el_t20k11/status/1190481959148908544?ref_src=twsrc%5Etfw">November 2, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">花江くんと西山くんのトークショー爆笑だった笑いすぎて涙出た〜🤣🤣<br><br>SPS(イベント運営様)の略なんだと思いますか？<br>で<br>「斉藤、パンツ、壮馬」<br>って西山くんが言ってめちゃわろた</p>&mdash; くいん🐰 (@1119__quinn) <a href="https://twitter.com/1119__quinn/status/1190482299663482881?ref_src=twsrc%5Etfw">November 2, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">明大祭終了～！花江くんと宏太朗くん仲良しでとっても楽しかった♪SolidS+西山&amp;安元で宿でお泊まりとかさ～！みんなでお風呂とかもっと詳しく聴きたいwSPSは「すごいパンツすごい」「斉藤パンツ壮馬」「斉藤パリジェンヌ壮馬」(笑)</p>&mdash; ユエ (@yuekichi20) <a href="https://twitter.com/yuekichi20/status/1190481433959120896?ref_src=twsrc%5Etfw">November 2, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">あと、今夜の動画は壮馬さんと花江さんらしい〜！！<br>西「いつ呼んでくれるの？うちの事務所から江口さんもそーまも、何回もおかわりしてるよね？？」<br>花「ゲームできる？」<br>西「ほんっとにしない。でも、どうぶつの森とかさ！」<br>花「どうぶつの森めっちゃ勧めてくるよね」</p>&mdash; 空季 (@aki_skycolor) <a href="https://twitter.com/aki_skycolor/status/1190484254490120192?ref_src=twsrc%5Etfw">November 2, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+              <p>寒さも一段と増していくからダメじゃないラジオ。<br>
+↑K：さみーんだよこういうなんか営業みたいなやり口ｗｗ</p>
+<p>这期开头就有超震撼的事啊。我当初为什么没有直接过来记录？哦，是我的拖延症😃</p>
+<!-- more -->
+<p>dmrj的广播收录时间一般没有规律，去年收录的时候正好赶上了圣诞节，两个人都因为年末调整忙到夜里很晚才回去，正好那天K君开了车，就说载S君回家。<br>
+本来平时一直都是上高速的，结果那天不知道为什么高速被封了，然后K君<strong>就决定</strong>（这句很重要）从六本木开回去，途经欅坂，正值圣诞节当天，两个人在毫无预谋的情况下，被迫在车里一起欣赏了<b>欅坂这一路上的彩灯街景，车载广播里还放着胡子男的金曲</b>←🤣🤣<br>
+而且在这样的环境下，聊的内容还是：<br>
+K：俺最近、ダメラジすごい楽しい<br>
+S：本当にダメラジはかいとくんのおかげでやれてると思ってるよ<br>
+K：それはお互い様ですよ<br>
+↑最后因为实在太好笑了，K还生生把S送到了家门口。明明两个人对外四处宣称只是Business的关系，结果却被老天给狠狠暗算了一把。度过了一个难忘的圣诞节呢😂😂<font color=#bfc5d9>（这大概是自从N年前生日一起开车去台场约会后再度震撼我的事了😂）</font><br>
+而且K在送完S回家后就变成了自己一个人开车，那种<b>“跟一个大老爷们度过了圣诞节”</b>的难以言表的空虚感笼罩了他wwww<br>
+S：<strong>悪くない夜でした</strong> www</p>
+<h2 id="op">OP</h2>
+<p>过完年后天气开始转冷，于是说起了衣服的问题。K君自从开始穿白T后就不怎么买衣服了，也对上EV用的服装没有那么纠结了（这就导致会有粉丝特定出他上不同EV穿的相同的衣服w顺道感叹了一下粉丝能有这般好的记忆力也是喜欢自己的表现之一吧）。S是会隔一阵子找个闲暇时间统一买次衣服，不过因为年末ZOZO用不了，处理不掉家里不想要的衣服就想要靠送给K来解决，被K断然拒绝了ww<br>
+这边K特意说了，千万不要送他们喜欢的牌子的衣服当礼物，这样反而会让他们再也穿不了它们。因为事务所对于这方面的规定还是挺严格的，K所在的profit就严令禁止旗下的声优穿粉丝们送的东西。如果自己买的喜欢的衣服正好跟粉丝送的撞衫了，就反而再也没办法在公众场合下穿了。<br>
+综上所述，粉丝们表达喜欢的心情最好的方式还是<strong>写信</strong>！<br>
+S还说自己生日的4月22日，有一家出版社出版过一套生日书籍，每天都对应一本当天生日的作者的代表作。然后4月22日是这一天生日的纳博科夫的代表作《洛丽塔》，于是S君到现在已经至少收到过6本《洛丽塔》了😂 他诚恳地希望大家以后不用再送他这本书了www<br>
+K：下次可以送pedophilia（恋童）的……<br>
+S：你住口啊！</p>
+<p>说起有没有买新年福袋。包括staff在内大家都没买。<br>
+K不喜欢买福袋是因为不知道里面装了什么，但是又觉得知道了里面装了些什么的话就不是福袋而是单纯的打折商品了。<br>
+然后认为staff也没有买是因为这个广播的相关人员大部分都是家里蹲的陰キャ，只有副作家三上D是大家公认的陽キャ。问三上D年末年始做了些什么，三上D也不负众望地展现出了陽キャ的风范，因为工作去了次韩国，S在听<strong>韓国（かんこく）<strong>的时候竟然错听成了</strong>蒲公英（たんぽぽ）</strong>。<br>
+K：お花畑か頭の中が！！<br>
+S：不好意思我的耳朵鼓膜可能出了点问题😂<br>
+结果三上D的感想是在韩国的吃了很多米饭←<br>
+S：这不是基本上跟たんぽぽ没什么区别吗！←不甘心😂</p>
+<h2 id="ふつおた">ふつおた</h2>
+<p>来信说起虽然是反派但非常有魅力的角色，问两人有没有喜欢过这样的角色。<br>
+K：影山飞雄吧w<br>
+S：那不是反派吧！<br>
+K：怎么不是，中学的时候！只不过第一集就到我方阵营了。<br>
+S：好吧ww</p>
+<p>S这边因为年末年初看了头丢了和ぬ～べ～，自然一口咬定是玉藻京介。还说自己也想像他一样说アディオス<font color=#bfc5d9>（所以去年<a href="https://weibo.com/5619159772/IkjwvCEym">12/29歌舞伎町夏洛克的生放</a>最后他谢幕的时候才会说アディオス吗！）</font><br>
+聊一口气看完全卷后对玉藻的热情充分展现了他otaku特有的早口www</p>
+<p>K说不知道为什么自己经常会接到随着故事发展越来越富有激情的角色。S却觉得很理解，K的声音就像是乍看沉着冷静，但是内心藏着火焰的感觉。<br>
+K说那就是所谓的热血声系吧。但是我在刚出道的时候可是人称COOL系声优的诶。<br>
+S：那大概是因为……你本人吧？一些东西显露出来了ww虽然经常会说角色是角色，声优是声优，不要将两者联系得太紧密，但是K君有时候会让自己也影响到角色…………就比如ナレクww<br>
+K：我也刚想说ナレク！所以movic的P总是让我演红色系的角色吗？！number24也是。<br>
+S：真的耶，我也是蓝色系的居多。<br>
+K：看来在movic心中我们俩已经被定型了……下次有机会演反过来的角色吧？再一起出个碟？<br>
+这时候最可怕的是似乎得到了棚外的movic大佬首肯！！而且K还打算一个月出一张每张演不同的角色，关键的是movic的大佬又说可行！！<br>
+K：有那么多template可以用吗！哎呀……（说错话了）<br>
+S：石川桑！www<br>
+说起这个两人又回想起了多年前一起演过的某张乙女CD（对说的就是<strong>泥沼恋愛</strong>哈哈哈哈）<br>
+S：我的角色真的很喜欢黑化诶www<br>
+K：闇深いもんね～<br>
+S：そうなのよ😂😂<br>
+K：还老穿黑衣服←wwww</p>
+<h2 id="今週のダ名言">今週のダ名言</h2>
+<blockquote>
+<p>なくしたお金は、未来の私へのプレゼントだから。</p>
+</blockquote>
+<p>是来信的妹妹在家里丢了钱懒得找的时候说出的名言。</p>
+<p>K：原来如此，是把整个家当存钱罐用的类型啊ww<br>
+S说自己经常会在书里面偶然发现夹着的纸钞。被K嫌弃了XD<br>
+K对这方面还是很仔细的，所以觉得这次的名言确实很dame，是很标准的ダ名言，但是人格方面被K君否定了ww</p>
+<h2 id="ムービックインフォメーション">ムービックインフォメーション</h2>
+<p>继续宣传number24。这周播到了第三话。本乡兄弟虽然活在了大家的话题里，但是离正式登场还有一段时间。<br>
+以及宣传goods大厂movic出品的各种number24的goods。</p>
+<h2 id="ed">ED</h2>
+<p>这期的ARCHIVE因为K一开始说岔了顺势变成了 <strong>ナーカイブ</strong> 🤣<br>
+S因为被前面说岔的部分吸引了全部注意力根本没注意后面ww<br>
+从下期开始广播就要走回正轨了，但是两人希望大家还是能用轻松的心情来收听广播。</p>
+
             </div>
             <div class="post-footer">
   <ul class="post-copyright">
@@ -441,7 +709,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://moonaileen.github.io/post/memo191102/" title="【Memo】11/2 明大祭 ">https://moonaileen.github.io/post/memo191102/</a>
+      <a href="https://moonaileen.github.io/post/dameradio095/" title="ダメラジ095（20/01/22放送分）">https://moonaileen.github.io/post/dameradio095/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -450,21 +718,23 @@
   </ul>
   <div class="tags">
     
-      <a href="https://moonaileen.github.io/tag/SomaMemo/"># Soma Memo</a>
+      <a href="https://moonaileen.github.io/tag/Radio/"># Radio</a>
+    
+      <a href="https://moonaileen.github.io/tag/DameRadio/"># ダメラジ</a>
+    
+      <a href="https://moonaileen.github.io/tag/SaitoSoma/"># 斉藤壮馬</a>
+    
+      <a href="https://moonaileen.github.io/tag/IshikawaKaito/"># 石川界人</a>
     
   </div>
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="ダメラジ082（19/10/23放送分）" href="https://moonaileen.github.io/post/dameradio082/">ダメラジ082（19/10/23放送分）</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="ダメラジ082（19/10/23放送分）" href="https://moonaileen.github.io/post/dameradio082/">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="中级职称get！" href="https://moonaileen.github.io/post/e9XRx4I3/">中级职称get！</a>
-        <a class="nav-mobile-next" title="中级职称get！" href="https://moonaileen.github.io/post/e9XRx4I3/">下一篇</a>
+        <a class="nav-pc-next" title="ダメラジ094（20/01/15放送分）" href="https://moonaileen.github.io/post/dameradio094/">ダメラジ094（20/01/15放送分）</a>
+        <a class="nav-mobile-next" title="ダメラジ094（20/01/15放送分）" href="https://moonaileen.github.io/post/dameradio094/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>
