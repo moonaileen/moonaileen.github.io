@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://moonaileen.github.io</id>
     <title>「旅程」</title>
-    <updated>2020-05-08T16:03:36.266Z</updated>
+    <updated>2020-05-11T06:21:37.323Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://moonaileen.github.io"/>
     <link rel="self" href="https://moonaileen.github.io/atom.xml"/>
@@ -10,6 +10,25 @@
     <logo>https://moonaileen.github.io/images/avatar.png</logo>
     <icon>https://moonaileen.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 「旅程」</rights>
+    <entry>
+        <title type="html"><![CDATA[ダメラジ096（20/01/29放送分）]]></title>
+        <id>https://moonaileen.github.io/post/dameradio096/</id>
+        <link href="https://moonaileen.github.io/post/dameradio096/">
+        </link>
+        <updated>2020-05-11T06:19:45.000Z</updated>
+        <summary type="html"><![CDATA[<p>新年がもう一ヶ月終わっちゃうからダメじゃないラジオ。</p>
+<p>寒冷的冬季。S君在录音棚里都戴着围巾ww<br>
+K君到现在也没穿过S在<a href="/post/dameradio081/">K生日回</a>送他的那件外套。（K：我把它当作关键时刻的御寒装😃结果到了冬天S送的礼物也还是没能派上用场😃）<br>
+另外K强力推荐了优衣库的保暖内衣，这个我也在用，确实不错。S说下次会尝试一下。K还挺惊讶像S这么怕冷的人竟然没穿过，但是S不但怕冷还怕热，而且自身体温比较高容易出汗，所以感觉保暖内衣虽然在外面可以御寒，但是在室内则会让他容易出汗，并不是很适合他XD<br>
+这次又说要送衣服给K君，倒是没有被明确拒绝了。（恭喜终于可以处理掉了？虽然感觉应该不会有后续了ww）</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>新年がもう一ヶ月終わっちゃうからダメじゃないラジオ。</p>
+<p>寒冷的冬季。S君在录音棚里都戴着围巾ww<br>
+K君到现在也没穿过S在<a href="/post/dameradio081/">K生日回</a>送他的那件外套。（K：我把它当作关键时刻的御寒装😃结果到了冬天S送的礼物也还是没能派上用场😃）<br>
+另外K强力推荐了优衣库的保暖内衣，这个我也在用，确实不错。S说下次会尝试一下。K还挺惊讶像S这么怕冷的人竟然没穿过，但是S不但怕冷还怕热，而且自身体温比较高容易出汗，所以感觉保暖内衣虽然在外面可以御寒，但是在室内则会让他容易出汗，并不是很适合他XD<br>
+这次又说要送衣服给K君，倒是没有被明确拒绝了。（恭喜终于可以处理掉了？虽然感觉应该不会有后续了ww）</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[ダメラジ095（20/01/22放送分）]]></title>
         <id>https://moonaileen.github.io/post/dameradio095/</id>
@@ -158,12 +177,5 @@ S指责K对别人跟对他的态度怎么差了这么多……上次说要去的
 S也祈求这个月能够找出时间去再做次脱毛，祝他成功。<br>
 K：今年の毛は今年のうちに←</p>
 ]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Memo】12/18 小野友樹「Winter Voice Friends」SP]]></title>
-        <id>https://moonaileen.github.io/post/memo1219/</id>
-        <link href="https://moonaileen.github.io/post/memo1219/">
-        </link>
-        <updated>2019-12-19T05:33:29.000Z</updated>
     </entry>
 </feed>

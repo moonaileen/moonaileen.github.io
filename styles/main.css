@@ -209,8 +209,7 @@ pre > span.copy-code:hover {
   overflow-y: hidden !important;
 }
 .head-top-line {
-  height: 3px;
-  background: #222;
+  height: 2px;
 }
 .header-box {
   position: relative;
@@ -2116,10 +2115,10 @@ pre > span.copy-code:hover {
 .bg-color .bg-color {
       background: transparent !important;
     }body {
-      background-color: #fff;
+      background-color: #eee;
     }
     .nav-toggle .line {
-      background-color: #fff !important;
+      background-color: #eee !important;
     }.header {
         width: 1200px;
         margin: 0 auto;
@@ -2235,10 +2234,12 @@ pre > span.copy-code:hover {
     .pisces .blog-header, .pisces .sidebar-wrapper, .pisces .article-wrapper, .pisces .section, .pisces .sidebar-box, .pisces .friends-section {
       border-radius: 13px;
     }
-      .site-meta {
-        background: #ec91a3 !important;
-      }
-      .head-top-line {
+    .site-meta {
+      background: #ec91a3 !important;
+    }
+    .head-top-line {
+      background: #ec91a3;
+    }.pace .pace-progress {
         background: #ec91a3 !important;
       }
     .brand {

@@ -9,10 +9,8 @@
 <meta name="description" content="君と出逢ったことだけ後悔はしない">
 <meta name="theme-color" content="#ec91a3">
 <title>【Memo】とりあえずUNION 第30回（19/11/08配信分） | 「旅程」</title>
-<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/moonaileen/moonaileen.github.io@master/favicon.ico?v=1588953800473">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/moonaileen/moonaileen.github.io@master/styles/main.css">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/moonaileen/moonaileen.github.io@master/favicon.ico?v=1589178087537">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/moonaileen/moonaileen.github.io@master/media/css/gemini.css">
-
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/moonaileen/moonaileen.github.io@master/media/fonts/font-awesome.css">
 <link
   href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
@@ -20,11 +18,11 @@
 
 <link href="https://cdn.jsdelivr.net/gh/moonaileen/moonaileen.github.io@master/media/hljs/styles/androidstudio.css"
   rel="stylesheet">
-  
-  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/themes/pink/pace-theme-center-circle.css" rel="stylesheet" />
-  
 
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/themes/pink/pace-theme-center-circle.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/moonaileen/moonaileen.github.io@master/styles/main.css">
 
 <script src="https://cdn.jsdelivr.net/gh/moonaileen/moonaileen.github.io@master/media/hljs/highlight.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
@@ -51,6 +49,7 @@
     s.parentNode.insertBefore(hm, s);
   })();
 </script>
+
 
   <meta name="description" content="【Memo】とりあえずUNION 第30回（19/11/08配信分）" />
   <meta name="keywords" content="Soma Memo" />
@@ -174,11 +173,13 @@
               </li>
             
           
-          <li id="fa_search" class="nav-item">
-            <a href="javascript:void(0);">
-              <i class="fa fa-search"></i> 搜索
-            </a>
-          </li>
+          
+            <li id="fa_search" class="nav-item">
+              <a href="javascript:void(0);">
+                <i class="fa fa-search"></i> <span class="language" data-lan="search">搜索</span>
+              </a>
+            </li>
+          
         </ul>
       </nav>
     </div>
@@ -220,8 +221,8 @@
       
         <div class="post-list-sidebar">
           <div class="sidebar-title">
-            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active">文章目录</span>
-            <span id="metaSideBar" class="sidebar-title-item">站点概览</span>
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active language" data-lan="index">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item language" data-lan="preview">站点概览</span>
           </div>
         </div>
       
@@ -248,20 +249,20 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">77</span>
-        <span class="site-item-stat-name">文章</span>
+        <span class="site-item-stat-count">78</span>
+        <span class="site-item-stat-name language" data-lan="article">文章</span>
       </a>
     </div>
     <div class="sidebar-item-box">
       <a href="">
         <span class="site-item-stat-count">36</span>
-        <span class="site-item-stat-name">分类</span>
+        <span class="site-item-stat-name language" data-lan="category">分类</span>
       </a>
     </div>
     <div class="sidebar-item-box">
       <a href="/tags/">
         <span class="site-item-stat-count">36</span>
-        <span class="site-item-stat-name">标签</span>
+        <span class="site-item-stat-name language" data-lan="tag">标签</span>
       </a>
     </div>
   </div>
@@ -384,14 +385,14 @@
     
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
-      <span>发布于</span>
-      <span>2019-11-12</span>
+      <span class="language" data-lan="publish">发布于</span>
+      <span>2019-11-11</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
     <span class="meta-item">
       <i class="fa fa-folder-o"></i>
-      <span class="pc-show">分类于</span>
+      <span class="pc-show language" data-lan="category-in">分类于</span>
       
       
       <a href="https://moonaileen.github.io/tag/SomaMemo/">
@@ -404,12 +405,12 @@
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>1分钟</span>
+      <span>1<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>123<span class="pc-show">字数</span></span>
+      <span>123<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
@@ -417,7 +418,7 @@
     <span id="/post/memo1111/" data-flag-title="【Memo】とりあえずUNION 第30回（19/11/08配信分）" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
-      <span>浏览量：<span class="leancloud-visitors-count"></span></span>
+      <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
     </span>
     
   </div>
@@ -432,18 +433,19 @@ S最后还是无奈（？）地还是带他们去了。<br>
 结果最后是三个人一直喝到了很晚XD</p>
 
             </div>
-            <div class="post-footer">
+            
+              <div class="post-footer">
   <ul class="post-copyright">
     <li class="post-copyright-author">
-      <strong>本文作者：</strong>
+      <strong class="language" data-lan="author">本文作者：</strong>
       哀凌
     </li>
     <li class="post-copyright-link">
-      <strong>本文链接：</strong>
+      <strong class="language" data-lan="link">本文链接：</strong>
       <a href="https://moonaileen.github.io/post/memo1111/" title="【Memo】とりあえずUNION 第30回（19/11/08配信分）">https://moonaileen.github.io/post/memo1111/</a>
     </li>
     <li class="post-copyright-license">
-      <strong>版权声明： </strong>
+      <strong class="language" data-lan="copyright">版权声明： </strong>
       本博客所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i> BY-NC-SA</a> 许可协议。转载请注明出处！
     </li>
   </ul>
@@ -469,6 +471,7 @@ S最后还是无奈（？）地还是带他们去了。<br>
     </div>
   </div>
 </div>
+            
             
   <script src="https://cdn.jsdelivr.net/npm/valine@1.4.4/dist/Valine.min.js"></script>
 <div id="vcomments" style="padding: 10px 0px 0px 0px"></div>
@@ -732,118 +735,58 @@ S最后还是无奈（？）地还是带他们去了。<br>
 </script>
   </div>
 </body>
-<input hidden id="copy" />
-<script>
-  //拿来主义(真香)^_^，Clipboard 实现摘自掘金 https://juejin.im/post/5aefeb6e6fb9a07aa43c20af
-  window.Clipboard = (function (window, document, navigator) {
-    var textArea,
-      copy;
 
-    // 判断是不是ios端
-    function isOS() {
-      return navigator.userAgent.match(/ipad|iphone/i);
-    }
-    //创建文本元素
-    function createTextArea(text) {
-      textArea = document.createElement('textArea');
-      textArea.value = text;
-      textArea.style.width = 0;
-      textArea.style.height = 0;
-      textArea.clientHeight = 0;
-      textArea.clientWidth = 0;
-      document.body.appendChild(textArea);
-    }
-    //选择内容
-    function selectText() {
-      var range,
-        selection;
-
-      if (isOS()) {
-        range = document.createRange();
-        range.selectNodeContents(textArea);
-        selection = window.getSelection();
-        selection.removeAllRanges();
-        selection.addRange(range);
-        textArea.setSelectionRange(0, 999999);
-      } else {
-        textArea.select();
-      }
-    }
-
-    //复制到剪贴板
-    function copyToClipboard() {
-      try {
-        document.execCommand("Copy")
-      } catch (err) {
-        alert("复制错误！请手动复制！")
-      }
-      document.body.removeChild(textArea);
-    }
-
-    copy = function (text) {
-      createTextArea(text);
-      selectText();
-      copyToClipboard();
-    };
-
-    return {
-      copy: copy
-    };
-  })(window, document, navigator);
-
-  function copyCode(e) {
-    if (e.srcElement.tagName === 'SPAN' && e.srcElement.classList.contains('copy-code')) {
-      let code = e.currentTarget.querySelector('code');
-      var text = code.innerText;
-      if (e.srcElement.textContent === '复制成功') {
-        console.log('复制操作频率过高');
-        return;
-      }
-      e.srcElement.textContent = '复制成功';
-      (function (elem) {
-        setTimeout(() => {
-          if (elem.textContent === '复制成功') {
-            elem.textContent = '复制代码'
-          }
-        }, 1000);
-      })(e.srcElement)
-      Clipboard.copy(text);
-    }
-  }
-
-  let pres = document.querySelectorAll('pre');
-  pres.forEach(pre => {
-    let code = pre.querySelector('code');
-    let copyElem = document.createElement('span');
-    copyElem.classList.add('copy-code');
-    copyElem.textContent = '复制代码';
-    pre.appendChild(copyElem);
-    pre.onclick = copyCode
-  })
-</script>
-<script src="https://cdn.jsdelivr.net/gh/moonaileen/moonaileen.github.io@master/media/js/motion.js"></script>
-
-<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-<script>
-  var scroll = new SmoothScroll('a[href*="#"]', {
-    speed: 200
-  });
-</script>
-
-<div class="search-mask" id="search_mask" style="display: none;">
+  <div class="search-mask" id="search_mask" style="display: none;">
   <div class="search-box">
     <div class="search-title">
       <i class="fa fa-search"></i>
       <div class="input-box">
-        <input id="search" type="text" placeholder="搜索">
+        <input id="search" type="text" class="language" data-lan="search" placeholder="搜索">
       </div>
       <i id="close" class="fa fa-times-circle"></i>
     </div>
     <div class="stat-box">
-      <span id="stat_count">0</span>条相关条目，使用了<span id="stat_times">0</span>毫秒
+      <span id="stat_count">0</span><span class="language" data-lan="stat">条相关条目，使用了</span><span id="stat_times">0</span><span class="language" data-lan="stat-time">毫秒</span>
       <hr>
     </div>
     <div class="result" id="result">
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://moonaileen.github.io/post/dameradio096/"" data-c="
+          &lt;p&gt;新年がもう一ヶ月終わっちゃうからダメじゃないラジオ。&lt;/p&gt;
+&lt;p&gt;寒冷的冬季。S君在录音棚里都戴着围巾ww&lt;br&gt;
+K君到现在也没穿过S在&lt;a href=&#34;/post/dameradio081/&#34;&gt;K生日回&lt;/a&gt;送他的那件外套。（K：我把它当作关键时刻的御寒装😃结果到了冬天S送的礼物也还是没能派上用场😃）&lt;br&gt;
+另外K强力推荐了优衣库的保暖内衣，这个我也在用，确实不错。S说下次会尝试一下。K还挺惊讶像S这么怕冷的人竟然没穿过，但是S不但怕冷还怕热，而且自身体温比较高容易出汗，所以感觉保暖内衣虽然在外面可以御寒，但是在室内则会让他容易出汗，并不是很适合他XD&lt;br&gt;
+这次又说要送衣服给K君，倒是没有被明确拒绝了。（恭喜终于可以处理掉了？虽然感觉应该不会有后续了ww）&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;h2 id=&#34;op&#34;&gt;OP&lt;/h2&gt;
+&lt;p&gt;最近天干物燥，声音容易劈。家里虽然有加湿器，但是经常忘记加水，所以也没办法发挥功效。这是需要改掉的问题！&lt;br&gt;
+天气干燥的时候一定要更加注意保湿的哦！对嗓子好些w&lt;/p&gt;
+&lt;h2 id=&#34;ふつおた&#34;&gt;ふつおた&lt;/h2&gt;
+&lt;p&gt;来信提到了K君去DGS神谷生日回做客。&lt;br&gt;
+DGS的staff跟K君自己的🐬广播的staff重合的人有很多，🐬那边被staff禁止了大部分的筋トレTALK，就说这次去DGS做客的时候可以敞开了聊。结果真的聊得没完没了，把本来是1本的量愣是给聊成了2本的份儿w&lt;br&gt;
+而且到了🐬广播的时候被staff说量太足了，想切还不是那么容易切，因为K君一直在说话找不到可以切的点XDDD&lt;br&gt;
+另外K还爆料自己在DGS里其实因为筋肉疼痛悄悄偷懒了（ここで？？）&lt;/p&gt;
+&lt;p&gt;另一封信是来问两人平时管使劲蹬自行车脚踏板的行为叫做什么。各地的叫法都会不一样很有意思。&lt;br&gt;
+S表示自己老家没有专有的名词，但是“バクチャリ”应该是最接近的了。K君也是普通的“使劲蹬”。&lt;br&gt;
+延伸了一下，S老家管警察抓小偷的游戏叫“どろポリ”w（ポリ一般是在黑道上才会用这个叫法喊警察，所以K君说这么叫听起来不是很友好XD）S就很好奇，明明一个是是日语，一个是英语，为什么他老家会混在一起说ww&lt;br&gt;
+然后又思维发展了指スマ（具体怎么翻我也不清楚，国内没玩过这种的游戏😂）的各地区叫法，S老家山梨县的叫法非常独特：せっさん。据S说除了他跟他的朋友之外，没有人这么叫过ww&lt;br&gt;
+据构成作家说，千叶的叫法是ちゅんちゅん，意外！喊起来的感觉还挺可爱的ww&lt;/p&gt;
+&lt;h2 id=&#34;ダメラジ写真館&#34;&gt;ダメラジ写真館&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;被S君传授萌萌袖真谛的K君。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-dnt=&#34;true&#34; align=&#34;center&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;本日のダメラジ写真は…&lt;br&gt;&lt;br&gt;／&lt;br&gt;壮馬さんから『萌え袖』を伝授して貰っている界人君&lt;br&gt;＼&lt;br&gt;&lt;br&gt;皆さんはしっかり冬服着てくださいね！&lt;br&gt;来週の放送もお楽しみにぃ～！&lt;a href=&#34;https://twitter.com/hashtag/%E8%90%8C%E3%81%88%E8%A2%96%E3%81%A3%E3%81%A6%E8%89%B2%E3%80%85%E3%81%AA%E5%BD%A2%E3%81%8C%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%82%88%E3%81%AD?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#萌え袖って色々な形がありますよね&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/%E7%8F%BE%E5%9C%A8%E9%80%B2%E8%A1%8C%E5%BD%A2?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#現在進行形&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/%E6%AD%A3%E5%BC%8F%E3%81%AA%E3%81%8A%E4%BD%9C%E6%B3%95?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#正式なお作法&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/%E3%81%8A%E3%82%84%E3%81%99%E3%81%BF%E3%81%AA%E3%81%95%E3%81%84?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#おやすみなさい&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%80%E3%83%A1%E3%83%A9%E3%82%B8?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ダメラジ&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/agqr?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#agqr&lt;/a&gt; &lt;a href=&#34;https://t.co/b691TDGqaQ&#34;&gt;pic.twitter.com/b691TDGqaQ&lt;/a&gt;&lt;/p&gt;&amp;mdash; 斉藤壮馬・石川界人のダメじゃないラジオ (@dameradi) &lt;a href=&#34;https://twitter.com/dameradi/status/1222536264282329088?ref_src=twsrc%5Etfw&#34;&gt;January 29, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h2 id=&#34;壮馬君界人君聞いてください&#34;&gt;壮馬君・界人君聞いてください。&lt;/h2&gt;
+&lt;p&gt;对懸賞応募着迷的听众。而且是喜欢通过寄明信片来应募，并且战果不少。&lt;br&gt;
+S说自己虽然应募过，但是从来没中过。K跟哥哥一起应募过BEYBLADE（玩具），结果虽然都中奖了，但是哥哥的还是比他的强ww让他认清一个现实：看来这辈子是赢不了哥哥了ww&lt;/p&gt;
+&lt;h2 id=&#34;ed&#34;&gt;ED&lt;/h2&gt;
+&lt;p&gt;本期的ARCHIVE：アーーー（掠り声）カイブ&lt;br&gt;
+K：干燥季节限定ww&lt;br&gt;
+S：是只有现在这个时期才能发出来的声音呢ww&lt;/p&gt;
+">ダメラジ096（20/01/29放送分）</a>
+      </div>
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://moonaileen.github.io/post/dameradio095/"" data-c="
@@ -5879,6 +5822,154 @@ A：＜电影＞『天使爱美丽』『生人勿进』『涨潮海岸』／＜�
     searchBox.addEventListener('input', search(200));
   }()
 </script>
+
+<input hidden id="copy" />
+<script>
+  let language = 'en';
+  if (language !== '') {
+    let map = new Map();
+    if (language === 'en') {
+      map.set('search', 'Search');
+      map.set('category', 'Categories');
+      map.set('article', 'Articles');
+      map.set('tag', 'Tags');
+      map.set('top', 'Top');
+      map.set('publish', 'published');
+      map.set('minute', ' minutes');
+      map.set('read-more', 'Read More');
+      map.set('view', 'View');
+      map.set('words', ' words');
+      map.set('category-in', 'category in');
+      map.set('preview', 'Meta');
+      map.set('index', 'Toc');
+      map.set('no-archives', "You haven't created yet");
+      map.set('archives', " articles in total");
+      map.set('cloud-tags', " tags in total");
+      map.set('copyright', "Copyright: ");
+      map.set('author', "Author: ");
+      map.set('link', "Link: ");
+      map.set('leave-message', "Leave a message");
+      map.set('format', "Links Format");
+      map.set('site-name', "Name: ");
+      map.set('site-link', "Link: ");
+      map.set('site-desc', "Desc: ");
+      map.set('stat', " related results, taking ");
+      map.set('stat-time', " ms");
+      map.set('site-img', "Image: ");
+    }
+
+    if (map.size > 0) {
+      let lanElems = document.querySelectorAll('.language');
+      lanElems.forEach(elem => {
+        let lan = elem.dataset.lan, text = map.get(lan);
+        if (elem.__proto__ === HTMLInputElement.prototype) {
+          elem.placeholder = text
+        } else {
+          if (elem.dataset.count) {
+            text = elem.dataset.count + text;
+          }
+          elem.textContent = text;
+        }
+      })
+    }
+  }
+  //拿来主义(真香)^_^，Clipboard 实现摘自掘金 https://juejin.im/post/5aefeb6e6fb9a07aa43c20af
+  window.Clipboard = (function (window, document, navigator) {
+    var textArea,
+      copy;
+
+    // 判断是不是ios端
+    function isOS() {
+      return navigator.userAgent.match(/ipad|iphone/i);
+    }
+    //创建文本元素
+    function createTextArea(text) {
+      textArea = document.createElement('textArea');
+      textArea.value = text;
+      textArea.style.width = 0;
+      textArea.style.height = 0;
+      textArea.clientHeight = 0;
+      textArea.clientWidth = 0;
+      document.body.appendChild(textArea);
+    }
+    //选择内容
+    function selectText() {
+      var range,
+        selection;
+
+      if (isOS()) {
+        range = document.createRange();
+        range.selectNodeContents(textArea);
+        selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        textArea.setSelectionRange(0, 999999);
+      } else {
+        textArea.select();
+      }
+    }
+
+    //复制到剪贴板
+    function copyToClipboard() {
+      try {
+        document.execCommand("Copy")
+      } catch (err) {
+        alert("复制错误！请手动复制！")
+      }
+      document.body.removeChild(textArea);
+    }
+
+    copy = function (text) {
+      createTextArea(text);
+      selectText();
+      copyToClipboard();
+    };
+
+    return {
+      copy: copy
+    };
+  })(window, document, navigator);
+
+  function copyCode(e) {
+    if (e.srcElement.tagName === 'SPAN' && e.srcElement.classList.contains('copy-code')) {
+      let code = e.currentTarget.querySelector('code');
+      var text = code.innerText;
+      if (e.srcElement.textContent === '复制成功') {
+        console.log('复制操作频率过高');
+        return;
+      }
+      e.srcElement.textContent = '复制成功';
+      (function (elem) {
+        setTimeout(() => {
+          if (elem.textContent === '复制成功') {
+            elem.textContent = '复制代码'
+          }
+        }, 1000);
+      })(e.srcElement)
+      Clipboard.copy(text);
+    }
+  }
+
+  let pres = document.querySelectorAll('pre');
+  pres.forEach(pre => {
+    let code = pre.querySelector('code');
+    let copyElem = document.createElement('span');
+    copyElem.classList.add('copy-code');
+    copyElem.textContent = '复制代码';
+    pre.appendChild(copyElem);
+    pre.onclick = copyCode
+  })
+
+</script>
+<script src="https://cdn.jsdelivr.net/gh/moonaileen/moonaileen.github.io@master/media/js/motion.js"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+<script>
+  var scroll = new SmoothScroll('a[href*="#"]', {
+    speed: 200
+  });
+</script>
+
 
 <script src="/media/js/mouse/love.js"></script>
 

@@ -8,7 +8,7 @@
 <meta name="keywords" content="斉藤壮馬">
 <meta name="description" content="君と出逢ったことだけ後悔はしない">
 <meta name="theme-color" content="#ec91a3">
-<title>「旅程」</title>
+<title>ダメラジ096（20/01/29放送分） | 「旅程」</title>
 <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/moonaileen/moonaileen.github.io@master/favicon.ico?v=1589178087537">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/moonaileen/moonaileen.github.io@master/media/css/gemini.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/moonaileen/moonaileen.github.io@master/media/fonts/font-awesome.css">
@@ -51,6 +51,8 @@
 </script>
 
 
+  <meta name="description" content="ダメラジ096（20/01/29放送分）" />
+  <meta name="keywords" content="ダメラジ,斉藤壮馬,石川界人" />
 </head>
 
 <body>
@@ -209,10 +211,26 @@
   <div class="main-continer">
     
     <div
-      class="section-layout  gemini">
+      class="section-layout gemini ">
       <div class="section-layout-wrapper">
-        <div id="sidebarMeta" class="sidebar">
-    
+        
+
+<div class="sidebar">
+  
+    <div class="sidebar-box box-shadow-wrapper bg-color right-motion" id="sidebar">
+      
+        <div class="post-list-sidebar">
+          <div class="sidebar-title">
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active language" data-lan="index">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item language" data-lan="preview">站点概览</span>
+          </div>
+        </div>
+      
+      <div class="sidebar-body gemini" id="sidebar_body">
+        
+          
+            <div class="post-side-meta" id="post_side_meta">
+              
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="https://cdn.jsdelivr.net/gh/moonaileen/moonaileen.github.io@master/images/avatar.png"/>
@@ -273,852 +291,468 @@
 
 
 </div>
+            </div>
+            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+              <div class="toc-box right-motion">
+  <div class="toc-wrapper  auto"
+    id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#op">OP</a></li>
+<li><a href="#%E3%81%B5%E3%81%A4%E3%81%8A%E3%81%9F">ふつおた</a></li>
+<li><a href="#%E3%83%80%E3%83%A1%E3%83%A9%E3%82%B8%E5%86%99%E7%9C%9F%E9%A4%A8">ダメラジ写真館</a></li>
+<li><a href="#%E5%A3%AE%E9%A6%AC%E5%90%9B%E7%95%8C%E4%BA%BA%E5%90%9B%E8%81%9E%E3%81%84%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84">壮馬君・界人君聞いてください。</a></li>
+<li><a href="#ed">ED</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
 </div>
+
 <script>
-  let sidebarMeta = document.querySelector('#sidebarMeta');
-  let scheme = 'gemini';
-  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
-  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
-    document.addEventListener('scroll', function(e) {
-      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
-        sidebarWrapper.classList.add('home-sidebar-fixed')
-      } else {
-        sidebarWrapper.classList.remove('home-sidebar-fixed')
+
+  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
+  let active = 'active-show', activeClass = 'active-current';
+  let tocWrapper = document.querySelector('#toc_wrapper');
+  let tocContent = tocWrapper.children[0];
+  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
+
+  function addTocNumber(elem, deep) {
+    if (!elem) {
+      return;
+    }
+    let prop = elem.__proto__;
+
+    if (prop === HTMLUListElement.prototype) {
+      for (let i = 0; i < elem.children.length; i++) {
+        addTocNumber(elem.children[i], deep + (i + 1) + '.');
       }
+    } else if (prop === HTMLLIElement.prototype) {
+      // 保存li元素
+      if (elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
+        lList.push(elem);
+      }
+      for (let i = 0; i < elem.children.length; i++) {
+        let cur = elem.children[i];
+        if (cur.__proto__ === HTMLAnchorElement.prototype) {
+          if (autoNumber) {
+            cur.text = deep + ' ' + cur.text;
+          }
+        } else if (cur.__proto__ === HTMLUListElement.prototype) {
+          addTocNumber(cur, deep);
+        }
+      }
+    }
+  }
+
+  function removeParentActiveClass() {
+    let parents = tocContent.querySelectorAll('.' + active)
+    parents.forEach(function (elem) {
+      elem.classList.remove(active);
     });
   }
-  </script>
-        <div class="section-box tag-line box-shadow-wrapper">
-          <section class="section tags-section posts-expand bg-color">
-            <div class="padding-wrapper">
-  <div class="tag-timeline-box">
-    <div class="tag-timeline-wrapper">
-      <div class="tag-timeline-title">
-        <h2>
-          Soma Memo
-          <small class="language" data-lan="tag">标签</small>
-        </h2>
+
+  function addActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.add(activeClass);
+    }
+  }
+
+  function removeActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.remove(activeClass);
+    }
+  }
+
+  function addActiveLiElemment(elem, parent) {
+    if (!elem || elem === parent) {
+      return;
+    } else {
+      if (elem.__proto__ === HTMLLIElement.prototype) {
+        elem.classList.add(active);
+      }
+      addActiveLiElemment(elem.parentElement, parent);
+    }
+  }
+
+  function showToc() {
+    if (tocWrapper) {
+      postBody = document.querySelector('#post_body');
+      for (let i = 0; i < postBody.children.length; i++) {
+        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+          hList.push(postBody.children[i]);
+        }
+      }
+      if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+      } else if (tocWrapper.classList.contains('no_compress')) {
+        tocContent.classList.add('expanded');
+      } else {
+        if (hList.length > 10) {
+          active = 'active-hidden'
+          tocContent.classList.add('closed');
+        } else {
+          tocContent.classList.add('expanded');
+        }
+      }
+    }
+  }
+
+  (function () {
+    // 处理不是从#一级标题开始目录
+    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
+      let con = tocContent.children[0].children[0];
+      tocContent.innerHTML = con.innerHTML;
+    }
+    let markdownItTOC = document.querySelector('.markdownIt-TOC');
+    let innerHeight = window.innerHeight;
+    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
+    addTocNumber(tocContent, '');
+  })();
+
+  document.addEventListener('scroll', function (e) {
+    if (lList.length <= 0) {
+      return;
+    }
+    let scrollTop = document.scrollingElement.scrollTop + 10;
+    let dir;
+
+    if (lastTop - scrollTop > 0) {
+      dir = 'up';
+    } else {
+      dir = 'down';
+    }
+
+    lastTop = scrollTop;
+    if (scrollTop <= 0) {
+      if (lastIndex >= 0 && lastIndex < hList.length) {
+        lList[lastIndex].classList.remove(activeClass);
+      }
+      return;
+    }
+
+    let current = 0, hasFind = false;
+    for (let i = 0; i < hList.length; i++) {
+      if (hList[i].offsetTop > scrollTop) {
+        current = i;
+        hasFind = true;
+        break;
+      }
+    }
+    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+      current = hList.length - 1;
+    } else {
+      current--;
+    }
+    if (dir === 'down') {
+      if (current > lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex)
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    } else {
+      if (current < lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex);
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    }
+  });
+
+
+  window.addEventListener('load', function () {
+    showToc();
+    document.querySelector('#sidebar').style = 'display: block;';
+    tocWrapper.classList.add('toc-active');
+    setTimeout(function () {
+      if ("createEvent" in document) {
+        let evt = document.createEvent("HTMLEvents");
+        evt.initEvent("scroll", false, true);
+        document.dispatchEvent(evt);
+      }
+      else {
+        document.fireEvent("scroll");
+      }
+    }, 500)
+  })
+
+</script>
+            </div>
+          
+        
       </div>
+    </div>
+  
+</div>
+<script>
+  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
+  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
+  const SLIDE_UP_IN = 'slide-up-in';
+
+  let sidebar = document.querySelector('#sidebar'),
+  tocSideBar = document.querySelector('#tocSideBar'),
+  metaSideBar = document.querySelector('#metaSideBar'),
+  postToc = document.querySelector('#post_toc'),
+  postSiteMeta = document.querySelector('#post_side_meta'),
+  sidebarTitle = document.querySelector('.sidebar-title'),
+  sidebarBody = document.querySelector('#sidebar_body');
+
+  tocSideBar && tocSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  metaSideBar && metaSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  function toggleSidebar(e) {
+    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
+    if (currentTitle == e.srcElement) {
+      return ;
+    }
+    let current, showElement, hideElement;
+    if (e.srcElement == metaSideBar) {
+      showElement = postSiteMeta;
+      hideElement = postToc;
+    } else if (e.srcElement == tocSideBar){
+      showElement = postToc;
+      hideElement = postSiteMeta;
+    }
+    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
+    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
+
+    window.Velocity(hideElement, 'stop');
+    window.Velocity(hideElement, 'transition.slideUpOut', {
+      display: 'none',
+      duration: 200,
+      complete: function () {
+        window.Velocity(showElement, 'transition.slideDownIn', {
+          duration: 200
+        });
+      }
+    })
+    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
+    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
+  }
+
+  postToc && postToc.addEventListener('transitionend', function() {
+    this.classList.remove(SLIDE_UP_IN);
+  });
+
+  if (sidebarBody) {
+    if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
+      let hasFix = false;
+      let scrollEl = document.querySelector('.main-continer');
+      let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
+      window.addEventListener('scroll', function(e) {
+        if (document.scrollingElement.scrollTop >= limitTop) {
+          if (!hasFix) {
+            sidebar.classList.add('sidebar-fixed');
+            hasFix = true;
+          }
+        } else {
+          if (hasFix) {
+            sidebar.classList.remove('sidebar-fixed');
+            hasFix = false;
+          }
+        }
+      });
+    }
+  }
+  
+</script>
+        <div class="section-box box-shadow-wrapper">
+          <div class="section bg-color post post-page">
+            <header class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://moonaileen.github.io/post/dameradio096/">
+      ダメラジ096（20/01/29放送分）
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span>2020-05-11</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">分类于</span>
+      
       
+      <a href="https://moonaileen.github.io/tag/DameRadio/">
+        <span>ダメラジ</span>
+      </a>、
       
       
       
+      <a href="https://moonaileen.github.io/tag/SaitoSoma/">
+        <span>斉藤壮馬</span>
+      </a>、
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      <a href="https://moonaileen.github.io/post/memo1222/">
-        <div class="motion-warpper">
-          <div class="tag-post-node">
-            <h1>
-              12-22
-              <small>【Memo】my blue vacationリリイベ</small>
-            </h1>
-          </div>
-        </div>
+      <a href="https://moonaileen.github.io/tag/IshikawaKaito/">
+        <span>石川界人</span>
       </a>
       
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      <a href="https://moonaileen.github.io/post/memo1219/">
-        <div class="motion-warpper">
-          <div class="tag-post-node">
-            <h1>
-              12-19
-              <small>【Memo】12/18 小野友樹「Winter Voice Friends」SP</small>
-            </h1>
-          </div>
-        </div>
-      </a>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      <a href="https://moonaileen.github.io/post/memo1123/">
-        <div class="motion-warpper">
-          <div class="tag-post-node">
-            <h1>
-              11-24
-              <small>【Memo】11/23 小野賢章バースデーイベント 昼の部</small>
-            </h1>
-          </div>
-        </div>
-      </a>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      <a href="https://moonaileen.github.io/post/memo1122/">
-        <div class="motion-warpper">
-          <div class="tag-post-node">
-            <h1>
-              11-22
-              <small>【Memo】歌舞伎町シャーロック～パイプキャットラジオ～ 第04回（19/11/20配信）</small>
-            </h1>
-          </div>
-        </div>
-      </a>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      <a href="https://moonaileen.github.io/post/memo1119/">
-        <div class="motion-warpper">
-          <div class="tag-post-node">
-            <h1>
-              11-19
-              <small>【Memo】声優と夜あそび【月：安元洋貴×江口拓也】 #32</small>
-            </h1>
-          </div>
-        </div>
-      </a>
-      
-      
-      
-      
-      
-      <a href="https://moonaileen.github.io/post/memo1114/">
-        <div class="motion-warpper">
-          <div class="tag-post-node">
-            <h1>
-              11-14
-              <small>【Memo】声優と夜あそび【月：安元洋貴×江口拓也】 #31</small>
-            </h1>
-          </div>
-        </div>
-      </a>
-      
-      
-      
-      
-      
-      <a href="https://moonaileen.github.io/post/memo1114-2/">
-        <div class="motion-warpper">
-          <div class="tag-post-node">
-            <h1>
-              11-14
-              <small>【Memo】小野賢章のおののみ 第92回（19/11/13配信回）</small>
-            </h1>
-          </div>
-        </div>
-      </a>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      <a href="https://moonaileen.github.io/post/memo1111/">
-        <div class="motion-warpper">
-          <div class="tag-post-node">
-            <h1>
-              11-11
-              <small>【Memo】とりあえずUNION 第30回（19/11/08配信分）</small>
-            </h1>
-          </div>
-        </div>
-      </a>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      <a href="https://moonaileen.github.io/post/memo191102/">
-        <div class="motion-warpper">
-          <div class="tag-post-node">
-            <h1>
-              11-02
-              <small>【Memo】11/2 明大祭 </small>
-            </h1>
-          </div>
-        </div>
-      </a>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      <a href="https://moonaileen.github.io/post/memo1030-2/">
-        <div class="motion-warpper">
-          <div class="tag-post-node">
-            <h1>
-              10-30
-              <small>【Memo】河出文庫ベスト･オブ･ベスト</small>
-            </h1>
-          </div>
-        </div>
-      </a>
-      
-      
-      
-      
-      
-      <a href="https://moonaileen.github.io/post/memo1030-1/">
-        <div class="motion-warpper">
-          <div class="tag-post-node">
-            <h1>
-              10-30
-              <small>【Memo】歌舞伎町シャーロック～パイプキャットラジオ～ 第02回（19/10/23配信）</small>
-            </h1>
-          </div>
-        </div>
-      </a>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      <a href="https://moonaileen.github.io/post/memo1014/">
-        <div class="motion-warpper">
-          <div class="tag-post-node">
-            <h1>
-              10-17
-              <small>【Memo】石川界人・中島ヨシキの10分ダベる？第31回（10/14配信分）</small>
-            </h1>
-          </div>
-        </div>
-      </a>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      <a href="https://moonaileen.github.io/post/memo1009/">
-        <div class="motion-warpper">
-          <div class="tag-post-node">
-            <h1>
-              10-09
-              <small>【Memo】声優と夜あそび【月：安元洋貴×江口拓也】 #26</small>
-            </h1>
-          </div>
-        </div>
-      </a>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      <a href="https://moonaileen.github.io/post/5BR0cnspC/">
-        <div class="motion-warpper">
-          <div class="tag-post-node">
-            <h1>
-              09-29
-              <small>【Memo】宏太朗と裕一郎 ひょろっと男子 09/29</small>
-            </h1>
-          </div>
-        </div>
-      </a>
-      
-      
-      
-      
-      
-      <a href="https://moonaileen.github.io/post/zPhdWJa3q/">
-        <div class="motion-warpper">
-          <div class="tag-post-node">
-            <h1>
-              09-25
-              <small>【Memo】声優と夜あそび【月：安元洋貴×江口拓也】 #24 </small>
-            </h1>
-          </div>
-        </div>
-      </a>
-      
-      
-      
-      
-      
-      <a href="https://moonaileen.github.io/post/MmrXqzE3F/">
-        <div class="motion-warpper">
-          <div class="tag-post-node">
-            <h1>
-              09-19
-              <small>【Memo】ゆめラジ 第68回 おまけ</small>
-            </h1>
-          </div>
-        </div>
-      </a>
-      
-      
-      
-      
-      
-      <a href="https://moonaileen.github.io/post/dWZKJjKfs/">
-        <div class="motion-warpper">
-          <div class="tag-post-node">
-            <h1>
-              09-19
-              <small>【Memo】シラサカの白酒喝采！19/09/09 第119回</small>
-            </h1>
-          </div>
-        </div>
-      </a>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>4<span class="language" data-lan="minute">分钟</span></span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>947<span class="pc-show language" data-lan="words">字数</span></span>
+    </span>
+    
+    
+    
+    <span id="/post/dameradio096/" data-flag-title="ダメラジ096（20/01/29放送分）" class="meta-item pc-show leancloud_visitors">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-eye"></i>
+      <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
+    </span>
+    
+  </div>
+</header>
+            <div class="post-body next-md-body" id="post_body">
+              <p>新年がもう一ヶ月終わっちゃうからダメじゃないラジオ。</p>
+<p>寒冷的冬季。S君在录音棚里都戴着围巾ww<br>
+K君到现在也没穿过S在<a href="/post/dameradio081/">K生日回</a>送他的那件外套。（K：我把它当作关键时刻的御寒装😃结果到了冬天S送的礼物也还是没能派上用场😃）<br>
+另外K强力推荐了优衣库的保暖内衣，这个我也在用，确实不错。S说下次会尝试一下。K还挺惊讶像S这么怕冷的人竟然没穿过，但是S不但怕冷还怕热，而且自身体温比较高容易出汗，所以感觉保暖内衣虽然在外面可以御寒，但是在室内则会让他容易出汗，并不是很适合他XD<br>
+这次又说要送衣服给K君，倒是没有被明确拒绝了。（恭喜终于可以处理掉了？虽然感觉应该不会有后续了ww）</p>
+<!-- more -->
+<h2 id="op">OP</h2>
+<p>最近天干物燥，声音容易劈。家里虽然有加湿器，但是经常忘记加水，所以也没办法发挥功效。这是需要改掉的问题！<br>
+天气干燥的时候一定要更加注意保湿的哦！对嗓子好些w</p>
+<h2 id="ふつおた">ふつおた</h2>
+<p>来信提到了K君去DGS神谷生日回做客。<br>
+DGS的staff跟K君自己的🐬广播的staff重合的人有很多，🐬那边被staff禁止了大部分的筋トレTALK，就说这次去DGS做客的时候可以敞开了聊。结果真的聊得没完没了，把本来是1本的量愣是给聊成了2本的份儿w<br>
+而且到了🐬广播的时候被staff说量太足了，想切还不是那么容易切，因为K君一直在说话找不到可以切的点XDDD<br>
+另外K还爆料自己在DGS里其实因为筋肉疼痛悄悄偷懒了（ここで？？）</p>
+<p>另一封信是来问两人平时管使劲蹬自行车脚踏板的行为叫做什么。各地的叫法都会不一样很有意思。<br>
+S表示自己老家没有专有的名词，但是“バクチャリ”应该是最接近的了。K君也是普通的“使劲蹬”。<br>
+延伸了一下，S老家管警察抓小偷的游戏叫“どろポリ”w（ポリ一般是在黑道上才会用这个叫法喊警察，所以K君说这么叫听起来不是很友好XD）S就很好奇，明明一个是是日语，一个是英语，为什么他老家会混在一起说ww<br>
+然后又思维发展了指スマ（具体怎么翻我也不清楚，国内没玩过这种的游戏😂）的各地区叫法，S老家山梨县的叫法非常独特：せっさん。据S说除了他跟他的朋友之外，没有人这么叫过ww<br>
+据构成作家说，千叶的叫法是ちゅんちゅん，意外！喊起来的感觉还挺可爱的ww</p>
+<h2 id="ダメラジ写真館">ダメラジ写真館</h2>
+<blockquote>
+<p>被S君传授萌萌袖真谛的K君。</p>
+</blockquote>
+<blockquote class="twitter-tweet" data-dnt="true" align="center"><p lang="ja" dir="ltr">本日のダメラジ写真は…<br><br>／<br>壮馬さんから『萌え袖』を伝授して貰っている界人君<br>＼<br><br>皆さんはしっかり冬服着てくださいね！<br>来週の放送もお楽しみにぃ～！<a href="https://twitter.com/hashtag/%E8%90%8C%E3%81%88%E8%A2%96%E3%81%A3%E3%81%A6%E8%89%B2%E3%80%85%E3%81%AA%E5%BD%A2%E3%81%8C%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%82%88%E3%81%AD?src=hash&amp;ref_src=twsrc%5Etfw">#萌え袖って色々な形がありますよね</a><a href="https://twitter.com/hashtag/%E7%8F%BE%E5%9C%A8%E9%80%B2%E8%A1%8C%E5%BD%A2?src=hash&amp;ref_src=twsrc%5Etfw">#現在進行形</a><a href="https://twitter.com/hashtag/%E6%AD%A3%E5%BC%8F%E3%81%AA%E3%81%8A%E4%BD%9C%E6%B3%95?src=hash&amp;ref_src=twsrc%5Etfw">#正式なお作法</a><a href="https://twitter.com/hashtag/%E3%81%8A%E3%82%84%E3%81%99%E3%81%BF%E3%81%AA%E3%81%95%E3%81%84?src=hash&amp;ref_src=twsrc%5Etfw">#おやすみなさい</a><a href="https://twitter.com/hashtag/%E3%83%80%E3%83%A1%E3%83%A9%E3%82%B8?src=hash&amp;ref_src=twsrc%5Etfw">#ダメラジ</a> <a href="https://twitter.com/hashtag/agqr?src=hash&amp;ref_src=twsrc%5Etfw">#agqr</a> <a href="https://t.co/b691TDGqaQ">pic.twitter.com/b691TDGqaQ</a></p>&mdash; 斉藤壮馬・石川界人のダメじゃないラジオ (@dameradi) <a href="https://twitter.com/dameradi/status/1222536264282329088?ref_src=twsrc%5Etfw">January 29, 2020</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<h2 id="壮馬君界人君聞いてください">壮馬君・界人君聞いてください。</h2>
+<p>对懸賞応募着迷的听众。而且是喜欢通过寄明信片来应募，并且战果不少。<br>
+S说自己虽然应募过，但是从来没中过。K跟哥哥一起应募过BEYBLADE（玩具），结果虽然都中奖了，但是哥哥的还是比他的强ww让他认清一个现实：看来这辈子是赢不了哥哥了ww</p>
+<h2 id="ed">ED</h2>
+<p>本期的ARCHIVE：アーーー（掠り声）カイブ<br>
+K：干燥季节限定ww<br>
+S：是只有现在这个时期才能发出来的声音呢ww</p>
+
+            </div>
+            
+              <div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong class="language" data-lan="author">本文作者：</strong>
+      哀凌
+    </li>
+    <li class="post-copyright-link">
+      <strong class="language" data-lan="link">本文链接：</strong>
+      <a href="https://moonaileen.github.io/post/dameradio096/" title="ダメラジ096（20/01/29放送分）">https://moonaileen.github.io/post/dameradio096/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong class="language" data-lan="copyright">版权声明： </strong>
+      本博客所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i> BY-NC-SA</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+  <div class="tags">
+    
+      <a href="https://moonaileen.github.io/tag/DameRadio/"># ダメラジ</a>
+    
+      <a href="https://moonaileen.github.io/tag/SaitoSoma/"># 斉藤壮馬</a>
+    
+      <a href="https://moonaileen.github.io/tag/IshikawaKaito/"># 石川界人</a>
+    
+  </div>
+  <div class="nav">
+    <div class="nav-prev">
+      
+    </div>
+    <div class="nav-next">
+      
+        <a class="nav-pc-next" title="ダメラジ095（20/01/22放送分）" href="https://moonaileen.github.io/post/dameradio095/">ダメラジ095（20/01/22放送分）</a>
+        <a class="nav-mobile-next" title="ダメラジ095（20/01/22放送分）" href="https://moonaileen.github.io/post/dameradio095/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
       
     </div>
   </div>
 </div>
-          </section>
+            
+            
+  <script src="https://cdn.jsdelivr.net/npm/valine@1.4.4/dist/Valine.min.js"></script>
+<div id="vcomments" style="padding: 10px 0px 0px 0px"></div>
+
+<style>
+  .v .veditor {
+    min-height: 10rem;
+    background-image: url('/media/images/comment.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: rgba(255, 255, 255, 0);
+    resize: none;
+  }
+
+  .v .vwrap {
+    border: 1px solid #000 !important;
+  }
+
+  .v .vbtn {
+    padding: .4rem 1.2rem !important;
+    border-color: #fff !important;
+    background-color: #49b1f5 !important;
+    color: #fff !important;
+    font-size: .7rem !important;
+  }
+
+  .v .vcards .vcard .vh .vmeta .vat {
+    padding: 0 .8rem !important;
+    border: 1px solid #00c4b6 !important;
+    border-radius: 5px !important;
+    color: #00c4b6 !important;
+  }
+</style>
+<script>
+  new Valine({
+    el: '#vcomments',
+    appId: 'gFnnTFDXWiuusgoivc6d9afz-MdYXbMMI',
+    appKey: 'hWY2jXPF5fRho7aDeVV29Qv2',
+    avatar: '',
+    placeholder: '欢迎留言~',
+    pageSize: '',
+    lang: 'zh-cn',
+    visitor: 'true' === 'true',
+    highlight: 'true' === 'true',
+    avatarForce: 'true' === 'false',
+  });
+</script>
+
+          </div>
         </div>
       </div>
     </div>
@@ -1299,6 +933,36 @@
   // 代码高亮
   hljs.initHighlightingOnLoad();
 
+</script>
+    <div class="light-box" id="light_box"></div>
+<script>
+  let imgs = document.querySelectorAll('.post-body img');
+  let lightBox = document.querySelector('#light_box');
+  lightBox.addEventListener('mousedown', (e) => {
+    e.preventDefault()
+  })
+  lightBox.addEventListener('mousewheel', (e) => {
+    e.preventDefault()
+  })
+  let width = window.innerWidth * 0.8;
+  lightBox.onclick = () => {
+    let img = lightBox.querySelector('img');
+    lightBox.style = '';
+    img && img.remove();
+  }
+  imgs.forEach(item => {
+    item.onclick = function (e) {
+      let lightImg = document.createElement('img');
+      lightImg.src = this.src;
+      lightBox.style = `height: 100%; opacity: 1; background-color: rgba(0, 0, 0, 0.5);cursor: zoom-out;`;
+      lightImg.style = `width: ${width}px; border: 1px solid #fff; border-radius: 2px;`;
+      lightImg.onclick = function () {
+        lightBox.style = '';
+        this.remove();
+      }
+      lightBox.append(lightImg);
+    }
+  })
 </script>
   </div>
 </body>
@@ -6539,7 +6203,6 @@ A：＜电影＞『天使爱美丽』『生人勿进』『涨潮海岸』／＜�
 
 
 <script src="/media/js/mouse/love.js"></script>
-
 
 
 </html>
