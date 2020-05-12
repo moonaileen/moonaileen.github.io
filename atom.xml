@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://moonaileen.github.io</id>
     <title>「旅程」</title>
-    <updated>2020-05-11T06:21:37.323Z</updated>
+    <updated>2020-05-12T06:54:45.259Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://moonaileen.github.io"/>
     <link rel="self" href="https://moonaileen.github.io/atom.xml"/>
@@ -10,6 +10,35 @@
     <logo>https://moonaileen.github.io/images/avatar.png</logo>
     <icon>https://moonaileen.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 「旅程」</rights>
+    <entry>
+        <title type="html"><![CDATA[ダメラジ097（20/02/05放送分）]]></title>
+        <id>https://moonaileen.github.io/post/dameradio097/</id>
+        <link href="https://moonaileen.github.io/post/dameradio097/">
+        </link>
+        <updated>2020-05-11T06:31:34.000Z</updated>
+        <summary type="html"><![CDATA[<p>今年はうるう年だから2月が一日多いんだよという情報を伝えるからダメじゃないラジオ。</p>
+<p>S：今週のサザエさんは：</p>
+<ul>
+<li>お風呂上がり</li>
+<li>タコの</li>
+<li>止まらない<br>
+の三本です。</li>
+</ul>
+<p>K：S桑的粉想听的……肯定是洗澡后的事情了对不对？选1！😊<br>
+原先S在广播里也蹭提到过，自己看书有一个习惯是：在什么地方看什么类型的书，是有自己的原则的。最近原则扩展到了音乐上，原来对于音乐的原则是走在什么路上听什么样的歌，现在对于音乐的原则又多加了一条→ <strong>洗完澡后听ELLEGARDEN</strong> 。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>今年はうるう年だから2月が一日多いんだよという情報を伝えるからダメじゃないラジオ。</p>
+<p>S：今週のサザエさんは：</p>
+<ul>
+<li>お風呂上がり</li>
+<li>タコの</li>
+<li>止まらない<br>
+の三本です。</li>
+</ul>
+<p>K：S桑的粉想听的……肯定是洗澡后的事情了对不对？选1！😊<br>
+原先S在广播里也蹭提到过，自己看书有一个习惯是：在什么地方看什么类型的书，是有自己的原则的。最近原则扩展到了音乐上，原来对于音乐的原则是走在什么路上听什么样的歌，现在对于音乐的原则又多加了一条→ <strong>洗完澡后听ELLEGARDEN</strong> 。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[ダメラジ096（20/01/29放送分）]]></title>
         <id>https://moonaileen.github.io/post/dameradio096/</id>
@@ -152,30 +181,5 @@ K给出的建议是，发ま这个音的时候用门牙贴上下唇发音。S在
         <link href="https://moonaileen.github.io/post/memo1222/">
         </link>
         <updated>2019-12-22T15:20:12.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ダメラジ090（19/12/18放送分）]]></title>
-        <id>https://moonaileen.github.io/post/dameradio090/</id>
-        <link href="https://moonaileen.github.io/post/dameradio090/">
-        </link>
-        <updated>2019-12-20T01:20:40.000Z</updated>
-        <summary type="html"><![CDATA[<p>クリスマス直前だからダメじゃないラジオ。</p>
-<p>本想在冒头给自己新EP再做一番宣传的S被K抢了先，说起了再次去做了脱毛手术。<br>
-而且YSK也在K君的激情安利下也去做了脱毛，虽然因为时间碰不上没能一起去，但是两个人最近都去了。<br>
-S指责K对别人跟对他的态度怎么差了这么多……上次说要去的时候K还说绝对不可以挑这天（K去的日子）来。K说没办法，毕竟咱们俩肩宽差了这么多。<br>
-跟肩宽有毛线关系！？床又不是特制的！？<br>
-总之K这次做完后一个疗程就算结束了。效果确实不错。<br>
-S也祈求这个月能够找出时间去再做次脱毛，祝他成功。<br>
-K：今年の毛は今年のうちに←</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>クリスマス直前だからダメじゃないラジオ。</p>
-<p>本想在冒头给自己新EP再做一番宣传的S被K抢了先，说起了再次去做了脱毛手术。<br>
-而且YSK也在K君的激情安利下也去做了脱毛，虽然因为时间碰不上没能一起去，但是两个人最近都去了。<br>
-S指责K对别人跟对他的态度怎么差了这么多……上次说要去的时候K还说绝对不可以挑这天（K去的日子）来。K说没办法，毕竟咱们俩肩宽差了这么多。<br>
-跟肩宽有毛线关系！？床又不是特制的！？<br>
-总之K这次做完后一个疗程就算结束了。效果确实不错。<br>
-S也祈求这个月能够找出时间去再做次脱毛，祝他成功。<br>
-K：今年の毛は今年のうちに←</p>
-]]></content>
     </entry>
 </feed>
