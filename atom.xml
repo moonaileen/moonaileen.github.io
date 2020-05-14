@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://moonaileen.github.io</id>
     <title>「旅程」</title>
-    <updated>2020-05-12T06:54:45.259Z</updated>
+    <updated>2020-05-14T15:20:09.610Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://moonaileen.github.io"/>
     <link rel="self" href="https://moonaileen.github.io/atom.xml"/>
@@ -10,6 +10,25 @@
     <logo>https://moonaileen.github.io/images/avatar.png</logo>
     <icon>https://moonaileen.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 「旅程」</rights>
+    <entry>
+        <title type="html"><![CDATA[ダメラジ098（20/02/12放送分）]]></title>
+        <id>https://moonaileen.github.io/post/dameradio098/</id>
+        <link href="https://moonaileen.github.io/post/dameradio098/">
+        </link>
+        <updated>2020-05-14T20:13:29.000Z</updated>
+        <summary type="html"><![CDATA[<p>バレンタイン直前で、甘い香りがするからダメじゃないラジオ。</p>
+<p>冒头是隔了很久的脱毛话题。<br>
+S说街坊里传他也去脱毛了，但其实他们两个去的并不是同一家，希望大家不要误会。<br>
+K说这次做完脱毛后，医院还问他其它地方想不想做，他本来说想试试脱胸毛，因为他的胸毛很浓密……但是因为实在太痛了，就说只要搞定胡子就可以了XDD<br>
+问了一下还不小心知道了K君的胸毛不光很浓密，范围还很广，甚至tkb颜色还很深（K纠证：不是跟其他人比，是跟自己胸部其它部位比ww）……真的知道了很多并不想知道的情报呢🤣🤣🤣</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>バレンタイン直前で、甘い香りがするからダメじゃないラジオ。</p>
+<p>冒头是隔了很久的脱毛话题。<br>
+S说街坊里传他也去脱毛了，但其实他们两个去的并不是同一家，希望大家不要误会。<br>
+K说这次做完脱毛后，医院还问他其它地方想不想做，他本来说想试试脱胸毛，因为他的胸毛很浓密……但是因为实在太痛了，就说只要搞定胡子就可以了XDD<br>
+问了一下还不小心知道了K君的胸毛不光很浓密，范围还很广，甚至tkb颜色还很深（K纠证：不是跟其他人比，是跟自己胸部其它部位比ww）……真的知道了很多并不想知道的情报呢🤣🤣🤣</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[ダメラジ097（20/02/05放送分）]]></title>
         <id>https://moonaileen.github.io/post/dameradio097/</id>
@@ -174,12 +193,5 @@ K给出的建议是，发ま这个音的时候用门牙贴上下唇发音。S在
         <content type="html"><![CDATA[<p>时隔一年再次在comcha登场！<br>
 也是因为时隔一年再次发行新专辑来做客～</p>
 ]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Memo】my blue vacationリリイベ]]></title>
-        <id>https://moonaileen.github.io/post/memo1222/</id>
-        <link href="https://moonaileen.github.io/post/memo1222/">
-        </link>
-        <updated>2019-12-22T15:20:12.000Z</updated>
     </entry>
 </feed>
