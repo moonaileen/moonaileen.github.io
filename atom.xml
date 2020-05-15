@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://moonaileen.github.io</id>
     <title>「旅程」</title>
-    <updated>2020-05-15T08:06:45.791Z</updated>
+    <updated>2020-05-15T16:15:15.824Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://moonaileen.github.io"/>
     <link rel="self" href="https://moonaileen.github.io/atom.xml"/>
@@ -10,6 +10,27 @@
     <logo>https://moonaileen.github.io/images/avatar.png</logo>
     <icon>https://moonaileen.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 「旅程」</rights>
+    <entry>
+        <title type="html"><![CDATA[ダメラジ100（20/02/26放送分）]]></title>
+        <id>https://moonaileen.github.io/post/dameradio100/</id>
+        <link href="https://moonaileen.github.io/post/dameradio100/">
+        </link>
+        <updated>2020-05-15T17:44:09.000Z</updated>
+        <summary type="html"><![CDATA[<p>100回目は結局スタジオからお送りするけどダメじゃないラジオ。</p>
+<p>值得纪念的第100回！<br>
+结果是从开玩笑地说是在S家收录开始的，dame哟。K倒是也很配合地跟着吹得很欢。<br>
+拿到了movic送的庆祝用的小倉羊羹代替蛋糕（见收录照）。是东京奥运会的限定版 <s>（结果冬奥会今年办不成了😂）</s><br>
+其中有一款羊羹是“夜の梅”的口味，K看着成分列表的“小豆”突然不知道该怎么念了。S提示：<mark>あずき</mark>。K：我、我其实知道该怎么念的！刚才只是在考考你！😂（羞）<br>
+于是我也又跟着学会了一个新词🤔</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>100回目は結局スタジオからお送りするけどダメじゃないラジオ。</p>
+<p>值得纪念的第100回！<br>
+结果是从开玩笑地说是在S家收录开始的，dame哟。K倒是也很配合地跟着吹得很欢。<br>
+拿到了movic送的庆祝用的小倉羊羹代替蛋糕（见收录照）。是东京奥运会的限定版 <s>（结果冬奥会今年办不成了😂）</s><br>
+其中有一款羊羹是“夜の梅”的口味，K看着成分列表的“小豆”突然不知道该怎么念了。S提示：<mark>あずき</mark>。K：我、我其实知道该怎么念的！刚才只是在考考你！😂（羞）<br>
+于是我也又跟着学会了一个新词🤔</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[ダメラジ099（20/02/19放送分）]]></title>
         <id>https://moonaileen.github.io/post/dameradio099/</id>
@@ -170,34 +191,5 @@ K也说到了最近遇到的恐怖体验，喜欢开车的人最怕听到报警�
         <link href="https://moonaileen.github.io/post/Walk-with-your-smile/">
         </link>
         <updated>2020-05-04T08:58:33.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ダメラジ091（19/12/25放送分）]]></title>
-        <id>https://moonaileen.github.io/post/dameradio091/</id>
-        <link href="https://moonaileen.github.io/post/dameradio091/">
-        </link>
-        <updated>2020-05-03T12:32:42.000Z</updated>
-        <summary type="html"><![CDATA[<p><font color="#bbbbbb">发现自己一不小心拖延症拖到国内新冠都快结束了还没更新（……）<br>
-秉持着不能烂尾的精神，好歹先把19年最后一期memo出来吧（汗）<br>
-顺便又换了个新主题。原来的主题不知道为什么显示不出菜单了……<br>
-现在这个新主题非常像很久以前用过一阵子的hexo系统下的主题next。当时就很喜欢，没想到有大大移植了这款主题还加了很多有意思的额外选项，比心。</font><br>
-——————</p>
-<p>クリスマスの夜で今年最後のダメラジだから、ダメじゃないラジオ。</p>
-<p>一开场就讲到上周最后提到的吐词清楚的问题。<br>
-S说其实每个人都会有自己不擅长的发音。比如自己的舌头很短，所以发ダタラナ行本来就很不擅长，在养成所里也针对这些行进行过专门的训练。最近发现其实マ行好像也很难的样子。尤其是マ行的连续，比如このまま这样的。有时候在台词的最后碰到这样的词会非常担心自己卡壳。<br>
-K给出的建议是，发ま这个音的时候用门牙贴上下唇发音。S在意想不到的情况下学到新的一招！</p>
-<p>确实，尽管在养成所都会进行专门的发声训练，但是因为每个人的牙齿排列、舌头的长短和嘴的大小都不一样，所以会面对的发音问题也是不尽相同呢。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p><font color="#bbbbbb">发现自己一不小心拖延症拖到国内新冠都快结束了还没更新（……）<br>
-秉持着不能烂尾的精神，好歹先把19年最后一期memo出来吧（汗）<br>
-顺便又换了个新主题。原来的主题不知道为什么显示不出菜单了……<br>
-现在这个新主题非常像很久以前用过一阵子的hexo系统下的主题next。当时就很喜欢，没想到有大大移植了这款主题还加了很多有意思的额外选项，比心。</font><br>
-——————</p>
-<p>クリスマスの夜で今年最後のダメラジだから、ダメじゃないラジオ。</p>
-<p>一开场就讲到上周最后提到的吐词清楚的问题。<br>
-S说其实每个人都会有自己不擅长的发音。比如自己的舌头很短，所以发ダタラナ行本来就很不擅长，在养成所里也针对这些行进行过专门的训练。最近发现其实マ行好像也很难的样子。尤其是マ行的连续，比如このまま这样的。有时候在台词的最后碰到这样的词会非常担心自己卡壳。<br>
-K给出的建议是，发ま这个音的时候用门牙贴上下唇发音。S在意想不到的情况下学到新的一招！</p>
-<p>确实，尽管在养成所都会进行专门的发声训练，但是因为每个人的牙齿排列、舌头的长短和嘴的大小都不一样，所以会面对的发音问题也是不尽相同呢。</p>
-]]></content>
     </entry>
 </feed>

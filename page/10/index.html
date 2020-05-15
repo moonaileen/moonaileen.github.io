@@ -8,7 +8,7 @@
 <meta name="keywords" content="斉藤壮馬">
 <meta name="description" content="君と出逢ったことだけ後悔はしない">
 <meta name="theme-color" content="#ec91a3">
-<title>Walk with your smile | 「旅程」</title>
+<title>「旅程」</title>
 <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/moonaileen/moonaileen.github.io@master/favicon.ico?v=1589559299634">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/moonaileen/moonaileen.github.io@master/media/css/gemini.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/moonaileen/moonaileen.github.io@master/media/fonts/font-awesome.css">
@@ -48,8 +48,6 @@
 </script>
 
 
-  <meta name="description" content="Walk with your smile" />
-  <meta name="keywords" content="花江夏樹,Music,斉藤壮馬" />
 </head>
 
 <body>
@@ -210,23 +208,8 @@
     <div
       class="section-layout gemini ">
       <div class="section-layout-wrapper">
-        
-
-<div class="sidebar">
-  
-    <div class="sidebar-box box-shadow-wrapper bg-color right-motion" id="sidebar">
-      
-        <div class="post-list-sidebar">
-          <div class="sidebar-title">
-            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active language" data-lan="index">文章目录</span>
-            <span id="metaSideBar" class="sidebar-title-item language" data-lan="preview">站点概览</span>
-          </div>
-        </div>
-      
-      <div class="sidebar-body gemini" id="sidebar_body">
-        
-          
-            
+        <div id="sidebarMeta" class="sidebar">
+    
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="https://cdn.jsdelivr.net/gh/moonaileen/moonaileen.github.io@master/images/avatar.png"/>
@@ -287,95 +270,30 @@
 
 
 </div>
-          
-        
-      </div>
-    </div>
-  
 </div>
 <script>
-  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
-  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
-  const SLIDE_UP_IN = 'slide-up-in';
-
-  let sidebar = document.querySelector('#sidebar'),
-  tocSideBar = document.querySelector('#tocSideBar'),
-  metaSideBar = document.querySelector('#metaSideBar'),
-  postToc = document.querySelector('#post_toc'),
-  postSiteMeta = document.querySelector('#post_side_meta'),
-  sidebarTitle = document.querySelector('.sidebar-title'),
-  sidebarBody = document.querySelector('#sidebar_body');
-
-  tocSideBar && tocSideBar.addEventListener('click', (e) => {
-    toggleSidebar(e);
-  });
-
-  metaSideBar && metaSideBar.addEventListener('click', (e) => {
-    toggleSidebar(e);
-  });
-
-  function toggleSidebar(e) {
-    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
-    if (currentTitle == e.srcElement) {
-      return ;
-    }
-    let current, showElement, hideElement;
-    if (e.srcElement == metaSideBar) {
-      showElement = postSiteMeta;
-      hideElement = postToc;
-    } else if (e.srcElement == tocSideBar){
-      showElement = postToc;
-      hideElement = postSiteMeta;
-    }
-    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
-    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
-
-    window.Velocity(hideElement, 'stop');
-    window.Velocity(hideElement, 'transition.slideUpOut', {
-      display: 'none',
-      duration: 200,
-      complete: function () {
-        window.Velocity(showElement, 'transition.slideDownIn', {
-          duration: 200
-        });
+  let sidebarMeta = document.querySelector('#sidebarMeta');
+  let scheme = 'gemini';
+  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
+  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
+    document.addEventListener('scroll', function(e) {
+      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
+        sidebarWrapper.classList.add('home-sidebar-fixed')
+      } else {
+        sidebarWrapper.classList.remove('home-sidebar-fixed')
       }
-    })
-    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
-    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
+    });
   }
-
-  postToc && postToc.addEventListener('transitionend', function() {
-    this.classList.remove(SLIDE_UP_IN);
-  });
-
-  if (sidebarBody) {
-    if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
-      let hasFix = false;
-      let scrollEl = document.querySelector('.main-continer');
-      let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
-      window.addEventListener('scroll', function(e) {
-        if (document.scrollingElement.scrollTop >= limitTop) {
-          if (!hasFix) {
-            sidebar.classList.add('sidebar-fixed');
-            hasFix = true;
-          }
-        } else {
-          if (hasFix) {
-            sidebar.classList.remove('sidebar-fixed');
-            hasFix = false;
-          }
-        }
-      });
-    }
-  }
-  
-</script>
-        <div class="section-box box-shadow-wrapper">
-          <div class="section bg-color post post-page">
-            <header class="post-header">
+  </script>
+        <div class="section-box gemini">
+          <section class="section  posts-expand slide-down-in">
+            
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://moonaileen.github.io/post/Walk-with-your-smile/">
-      Walk with your smile
+    <a class="post-title-link" href="https://moonaileen.github.io/post/fuyunohanashi/">
+      冬のはなし
     </a>
   </h1>
   <div class="post-meta">
@@ -383,19 +301,13 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span>2020-05-04</span>
+      <span>2017-02-02</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
     <span class="meta-item">
       <i class="fa fa-folder-o"></i>
       <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://moonaileen.github.io/tag/HanaeNatsuki/">
-        <span>花江夏樹</span>
-      </a>、
-      
       
       
       <a href="https://moonaileen.github.io/tag/Music/">
@@ -419,125 +331,75 @@
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>175<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-    
-    
-    <span id="/post/Walk-with-your-smile/" data-flag-title="Walk with your smile" class="meta-item pc-show leancloud_visitors">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-eye"></i>
-      <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
+      <span>218<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
   </div>
 </header>
-            <div class="post-body next-md-body" id="post_body">
-              <audio src="https://files.catbox.moe/vw5ywr.mp3" controls preload="auto">
-	<h3>遇到不支持的浏览器才会显示出这行字</h3>
-</audio>
-<p>ES五周年纪念曲。<br>
-这次五周年的歌意外地非常好听，不知不觉就会LOOP起来。<br>
-前些天托oooo的福，弄到了日向和裕太的单人ver。<br>
-甚至还可以自主随便混响自己喜欢的人组合成一个新的的音轨……<br>
-双子合起来就是非常和谐的2wink ver了，但是，我是，真的，没有，想到巴日和<font color=gray>（CV.花江夏樹）</font>和裕太的声音也可以这么合适……<br>
-在听到混响完的歌曲之前，我真的是<mark>一丢丢</mark>都没有想到过……<br>
-感谢oooo让我发现了新大陆（囧）</p>
-
-            </div>
+      <div class="post-body">
+        
+        
+          
+          
+        
+        
+        <div class="post-button text-center">
+          <a class="btn language" data-lan="read-more" href="https://moonaileen.github.io/post/fuyunohanashi/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
+      
+    </div>
+  </article>
+  
             
-              <div class="post-footer">
-  <ul class="post-copyright">
-    <li class="post-copyright-author">
-      <strong class="language" data-lan="author">本文作者：</strong>
-      哀凌
-    </li>
-    <li class="post-copyright-link">
-      <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://moonaileen.github.io/post/Walk-with-your-smile/" title="Walk with your smile">https://moonaileen.github.io/post/Walk-with-your-smile/</a>
-    </li>
-    <li class="post-copyright-license">
-      <strong class="language" data-lan="copyright">版权声明： </strong>
-      本博客所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i> BY-NC-SA</a> 许可协议。转载请注明出处！
-    </li>
+            
+<div class="page bg-color">
+  <ul class="pagination-ul">
+    
+      <li class="pagination-dir">
+        <a href="https://moonaileen.github.io/page/9/">
+          <i class="fa fa-angle-left"></i>
+        </a>
+      </li>
+    
+    
+      <!-- 1 2 3 4 ... N -->
+      
+        <!-- 1 ... N-2 N-1 N-->
+        <li class="pagination-li">
+          <a href="/">1</a>
+        </li>
+        <li class="pagination-li">
+          …
+        </li>
+        
+          <li class="pagination-li ">
+            <a href="/page/8">
+              8
+            </a>
+          </li>
+        
+          <li class="pagination-li ">
+            <a href="/page/9">
+              9
+            </a>
+          </li>
+        
+          <li class="pagination-li pagination-active">
+            <a href="#">
+              10
+            </a>
+          </li>
+        
+      
+    
+    
   </ul>
-  <div class="tags">
-    
-      <a href="https://moonaileen.github.io/tag/HanaeNatsuki/"># 花江夏樹</a>
-    
-      <a href="https://moonaileen.github.io/tag/Music/"># Music</a>
-    
-      <a href="https://moonaileen.github.io/tag/SaitoSoma/"># 斉藤壮馬</a>
-    
-  </div>
-  <div class="nav">
-    <div class="nav-prev">
-      
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="ダメラジ092（20/01/01放送分）" href="https://moonaileen.github.io/post/dameradio092/">ダメラジ092（20/01/01放送分）</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="ダメラジ092（20/01/01放送分）" href="https://moonaileen.github.io/post/dameradio092/">上一篇</a>
-      
-    </div>
-    <div class="nav-next">
-      
-        <a class="nav-pc-next" title="ダメラジ091（19/12/25放送分）" href="https://moonaileen.github.io/post/dameradio091/">ダメラジ091（19/12/25放送分）</a>
-        <a class="nav-mobile-next" title="ダメラジ091（19/12/25放送分）" href="https://moonaileen.github.io/post/dameradio091/">下一篇</a>
-        <i class="fa fa-chevron-right"></i>
-      
-    </div>
-  </div>
 </div>
-            
-            
-  <script src="https://cdn.jsdelivr.net/npm/valine@1.4.4/dist/Valine.min.js"></script>
-<div id="vcomments" style="padding: 10px 0px 0px 0px"></div>
-
-<style>
-  .v .veditor {
-    min-height: 10rem;
-    background-image: url('/media/images/comment.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right;
-    background-color: rgba(255, 255, 255, 0);
-    resize: none;
-  }
-
-  .v .vwrap {
-    border: 1px solid #000 !important;
-  }
-
-  .v .vbtn {
-    padding: .4rem 1.2rem !important;
-    border-color: #fff !important;
-    background-color: #49b1f5 !important;
-    color: #fff !important;
-    font-size: .7rem !important;
-  }
-
-  .v .vcards .vcard .vh .vmeta .vat {
-    padding: 0 .8rem !important;
-    border: 1px solid #00c4b6 !important;
-    border-radius: 5px !important;
-    color: #00c4b6 !important;
-  }
-</style>
-<script>
-  new Valine({
-    el: '#vcomments',
-    appId: 'gFnnTFDXWiuusgoivc6d9afz-MdYXbMMI',
-    appKey: 'hWY2jXPF5fRho7aDeVV29Qv2',
-    avatar: '',
-    placeholder: '欢迎留言~',
-    pageSize: '',
-    lang: 'zh-cn',
-    visitor: 'true' === 'true',
-    highlight: 'true' === 'true',
-    avatarForce: 'true' === 'false',
-  });
-</script>
-
-          </div>
+          </section>
         </div>
       </div>
     </div>
@@ -6268,6 +6130,7 @@ A：＜电影＞『天使爱美丽』『生人勿进』『涨潮海岸』／＜�
 
 
 <script src="/media/js/mouse/love.js"></script>
+
 
 
 </html>
