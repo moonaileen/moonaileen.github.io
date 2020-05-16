@@ -2432,7 +2432,11 @@ mark {
   z-index: -1;
   border-radius: 0.4rem;
 }
-.box-shadow-wrapper {
+
+.next-md-body hr {
+  height: 4px;
+  background: url(/media/images/line02.png) repeat-x 0 0;
+}.box-shadow-wrapper {
       box-shadow: none !important;
     }body {
       cursor: default;

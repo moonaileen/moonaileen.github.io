@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://moonaileen.github.io</id>
     <title>「旅程」</title>
-    <updated>2020-05-15T16:15:15.824Z</updated>
+    <updated>2020-05-16T16:36:29.106Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://moonaileen.github.io"/>
     <link rel="self" href="https://moonaileen.github.io/atom.xml"/>
@@ -10,6 +10,31 @@
     <logo>https://moonaileen.github.io/images/avatar.png</logo>
     <icon>https://moonaileen.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 「旅程」</rights>
+    <entry>
+        <title type="html"><![CDATA[ダメラジ101（20/03/04放送分）]]></title>
+        <id>https://moonaileen.github.io/post/dameradio101/</id>
+        <link href="https://moonaileen.github.io/post/dameradio101/">
+        </link>
+        <updated>2020-05-16T18:25:02.000Z</updated>
+        <summary type="html"><![CDATA[<p>卒業式シーズンで寂しいけどダメじゃないラジオ。</p>
+<p>冒头继续上期没答完的特别栏目仲良しチャレンジ延長線～<br>
+<b>Q：说起3月的活动首先想到的是？</b><br>
+S：毕业典礼　K：公开录音<br>
+S本来是想答女儿节（ひな祭り）的，结果愣是没想起这个词，所以改了答案。<br>
+K：不是吧，你怎么连朋友主演的动画标题都能忘记？！（指的YSK）<br>
+S：而且漫画我明明全卷都看了！<br>
+K：是啊你还说超级有趣来着呢！</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>卒業式シーズンで寂しいけどダメじゃないラジオ。</p>
+<p>冒头继续上期没答完的特别栏目仲良しチャレンジ延長線～<br>
+<b>Q：说起3月的活动首先想到的是？</b><br>
+S：毕业典礼　K：公开录音<br>
+S本来是想答女儿节（ひな祭り）的，结果愣是没想起这个词，所以改了答案。<br>
+K：不是吧，你怎么连朋友主演的动画标题都能忘记？！（指的YSK）<br>
+S：而且漫画我明明全卷都看了！<br>
+K：是啊你还说超级有趣来着呢！</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[ダメラジ100（20/02/26放送分）]]></title>
         <id>https://moonaileen.github.io/post/dameradio100/</id>
@@ -184,12 +209,5 @@ K：是你的“お友達”吧？<br>
 S：这么说来我现实生活中的好朋友以前上学的时候倒是真的遇到过很多灵异事件，我自己倒是没有遇到过。<br>
 K也说到了最近遇到的恐怖体验，喜欢开车的人最怕听到报警声，结果最近经常会在开车的时候听到报警声，停车检查了半天才发现是从正在播放的音乐里传出来的——说的就是胡子男啦ww</p>
 ]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Walk with your smile]]></title>
-        <id>https://moonaileen.github.io/post/Walk-with-your-smile/</id>
-        <link href="https://moonaileen.github.io/post/Walk-with-your-smile/">
-        </link>
-        <updated>2020-05-04T08:58:33.000Z</updated>
     </entry>
 </feed>
