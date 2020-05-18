@@ -2303,6 +2303,7 @@ blockquote:before,.markdown .stressed-quote:before {
   padding-left: 1.2em;/*アイコン分のスペース*/
   line-height: 1.4;/*行高*/
   color: #e993a3;/*文字色*/
+  border-bottom: none; !important
 }
 
 .next-md-body h1:before {
@@ -2325,6 +2326,7 @@ blockquote:before,.markdown .stressed-quote:before {
   position: relative;
   padding-left: 1.3em;
   color:#e993a3;
+  border-bottom: none; !important
 }
 
 .next-md-body h2:before {
@@ -2351,6 +2353,7 @@ blockquote:before,.markdown .stressed-quote:before {
   padding-left: 1.2em;/*アイコン分のスペース*/
   line-height: 1.4;/*行高*/
   color:#153c6e;
+  border-bottom: none; !important
 }
 
 h3:before {
@@ -2434,8 +2437,8 @@ mark {
 }
 
 .next-md-body hr {
-  height: 4px;
-  background: url(https://moonaileen.github.io/media/images/line02.png) repeat-x 0 0;
+height: 4px;
+background: url(https://moonaileen.github.io/media/images/line02.png) repeat-x 0 0;
 }.box-shadow-wrapper {
       box-shadow: none !important;
     }body {
