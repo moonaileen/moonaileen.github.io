@@ -8,7 +8,7 @@
 <meta name="keywords" content="斉藤壮馬">
 <meta name="description" content="君と出逢ったことだけ後悔はしない">
 <meta name="theme-color" content="#ec91a3">
-<title>「旅程」</title>
+<title>ダメラジ104（20/03/25放送分） | 「旅程」</title>
 <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/moonaileen/moonaileen.github.io@master/favicon.ico?v=1589870525170">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/moonaileen/moonaileen.github.io@master/media/css/gemini.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/moonaileen/moonaileen.github.io@master/media/fonts/font-awesome.css">
@@ -48,6 +48,8 @@
 </script>
 
 
+  <meta name="description" content="ダメラジ104（20/03/25放送分）" />
+  <meta name="keywords" content="Radio,ダメラジ,斉藤壮馬,石川界人" />
 </head>
 
 <body>
@@ -208,8 +210,24 @@
     <div
       class="section-layout gemini ">
       <div class="section-layout-wrapper">
-        <div id="sidebarMeta" class="sidebar">
-    
+        
+
+<div class="sidebar">
+  
+    <div class="sidebar-box box-shadow-wrapper bg-color right-motion" id="sidebar">
+      
+        <div class="post-list-sidebar">
+          <div class="sidebar-title">
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active language" data-lan="index">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item language" data-lan="preview">站点概览</span>
+          </div>
+        </div>
+      
+      <div class="sidebar-body gemini" id="sidebar_body">
+        
+          
+            <div class="post-side-meta" id="post_side_meta">
+              
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="https://cdn.jsdelivr.net/gh/moonaileen/moonaileen.github.io@master/images/avatar.png"/>
@@ -270,701 +288,500 @@
 
 
 </div>
+            </div>
+            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+              <div class="toc-box right-motion">
+  <div class="toc-wrapper  auto"
+    id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#op">OP</a></li>
+<li><a href="#%E3%81%B5%E3%81%A4%E3%81%8A%E3%81%9F">ふつおた</a></li>
+<li><a href="#%E5%A3%AE%E9%A6%AC%E5%90%9B%E7%95%8C%E4%BA%BA%E5%90%9B%E8%81%9E%E3%81%84%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84">壮馬君・界人君聞いてください。</a></li>
+<li><a href="#%E3%83%A0%E3%83%BC%E3%83%93%E3%83%83%E3%82%AF%E3%82%A4%E3%83%B3%E3%83%95%E3%82%A9%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3">ムービックインフォメーション</a></li>
+<li><a href="#%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AB%E3%81%AB%E4%BB%B2%E8%89%AF%E3%81%97%E3%83%81%E3%83%A3%E3%83%AC%E3%83%B3%E3%82%B8%E3%83%AA%E3%83%99%E3%83%B3%E3%82%B8">シンプルに仲良しチャレンジ：リベンジ</a></li>
+<li><a href="#ed">ED</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
 </div>
+
 <script>
-  let sidebarMeta = document.querySelector('#sidebarMeta');
-  let scheme = 'gemini';
-  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
-  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
-    document.addEventListener('scroll', function(e) {
-      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
-        sidebarWrapper.classList.add('home-sidebar-fixed')
-      } else {
-        sidebarWrapper.classList.remove('home-sidebar-fixed')
+
+  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
+  let active = 'active-show', activeClass = 'active-current';
+  let tocWrapper = document.querySelector('#toc_wrapper');
+  let tocContent = tocWrapper.children[0];
+  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
+
+  function addTocNumber(elem, deep) {
+    if (!elem) {
+      return;
+    }
+    let prop = elem.__proto__;
+
+    if (prop === HTMLUListElement.prototype) {
+      for (let i = 0; i < elem.children.length; i++) {
+        addTocNumber(elem.children[i], deep + (i + 1) + '.');
       }
+    } else if (prop === HTMLLIElement.prototype) {
+      // 保存li元素
+      if (elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
+        lList.push(elem);
+      }
+      for (let i = 0; i < elem.children.length; i++) {
+        let cur = elem.children[i];
+        if (cur.__proto__ === HTMLAnchorElement.prototype) {
+          if (autoNumber) {
+            cur.text = deep + ' ' + cur.text;
+          }
+        } else if (cur.__proto__ === HTMLUListElement.prototype) {
+          addTocNumber(cur, deep);
+        }
+      }
+    }
+  }
+
+  function removeParentActiveClass() {
+    let parents = tocContent.querySelectorAll('.' + active)
+    parents.forEach(function (elem) {
+      elem.classList.remove(active);
     });
   }
-  </script>
-        <div class="section-box gemini">
-          <section class="section  posts-expand slide-down-in">
-            
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <header class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://moonaileen.github.io/post/dameradio085/">
-      ダメラジ085（19/11/13放送分）
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span>2019-11-22</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://moonaileen.github.io/tag/Radio/">
-        <span>Radio</span>
-      </a>、
-      
-      
-      
-      <a href="https://moonaileen.github.io/tag/DameRadio/">
-        <span>ダメラジ</span>
-      </a>、
-      
-      
-      
-      <a href="https://moonaileen.github.io/tag/SaitoSoma/">
-        <span>斉藤壮馬</span>
-      </a>、
-      
-      
-      
-      <a href="https://moonaileen.github.io/tag/IshikawaKaito/">
-        <span>石川界人</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>7<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>1903<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</header>
-      <div class="post-body">
-        
-        
-          
-          <p>もう界人くんのお誕生日から一ヶ月経ったけどダメじゃないラジオ。</p>
-<p>S最近热衷于在APP（ペンギンの島）里养企鹅。<br>
-拿给K看，K却觉得像是PUBG。S说K的想法太牙白了w</p>
 
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://moonaileen.github.io/post/dameradio085/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
+  function addActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.add(activeClass);
+    }
+  }
+
+  function removeActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.remove(activeClass);
+    }
+  }
+
+  function addActiveLiElemment(elem, parent) {
+    if (!elem || elem === parent) {
+      return;
+    } else {
+      if (elem.__proto__ === HTMLLIElement.prototype) {
+        elem.classList.add(active);
+      }
+      addActiveLiElemment(elem.parentElement, parent);
+    }
+  }
+
+  function showToc() {
+    if (tocWrapper) {
+      postBody = document.querySelector('#post_body');
+      for (let i = 0; i < postBody.children.length; i++) {
+        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+          hList.push(postBody.children[i]);
+        }
+      }
+      if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+      } else if (tocWrapper.classList.contains('no_compress')) {
+        tocContent.classList.add('expanded');
+      } else {
+        if (hList.length > 10) {
+          active = 'active-hidden'
+          tocContent.classList.add('closed');
+        } else {
+          tocContent.classList.add('expanded');
+        }
+      }
+    }
+  }
+
+  (function () {
+    // 处理不是从#一级标题开始目录
+    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
+      let con = tocContent.children[0].children[0];
+      tocContent.innerHTML = con.innerHTML;
+    }
+    let markdownItTOC = document.querySelector('.markdownIt-TOC');
+    let innerHeight = window.innerHeight;
+    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
+    addTocNumber(tocContent, '');
+  })();
+
+  document.addEventListener('scroll', function (e) {
+    if (lList.length <= 0) {
+      return;
+    }
+    let scrollTop = document.scrollingElement.scrollTop + 10;
+    let dir;
+
+    if (lastTop - scrollTop > 0) {
+      dir = 'up';
+    } else {
+      dir = 'down';
+    }
+
+    lastTop = scrollTop;
+    if (scrollTop <= 0) {
+      if (lastIndex >= 0 && lastIndex < hList.length) {
+        lList[lastIndex].classList.remove(activeClass);
+      }
+      return;
+    }
+
+    let current = 0, hasFind = false;
+    for (let i = 0; i < hList.length; i++) {
+      if (hList[i].offsetTop > scrollTop) {
+        current = i;
+        hasFind = true;
+        break;
+      }
+    }
+    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+      current = hList.length - 1;
+    } else {
+      current--;
+    }
+    if (dir === 'down') {
+      if (current > lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex)
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    } else {
+      if (current < lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex);
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    }
+  });
+
+
+  window.addEventListener('load', function () {
+    showToc();
+    document.querySelector('#sidebar').style = 'display: block;';
+    tocWrapper.classList.add('toc-active');
+    setTimeout(function () {
+      if ("createEvent" in document) {
+        let evt = document.createEvent("HTMLEvents");
+        evt.initEvent("scroll", false, true);
+        document.dispatchEvent(evt);
+      }
+      else {
+        document.fireEvent("scroll");
+      }
+    }, 500)
+  })
+
+</script>
+            </div>
+          
         
       </div>
-      
     </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <header class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://moonaileen.github.io/post/memo1122/">
-      【Memo】歌舞伎町シャーロック～パイプキャットラジオ～ 第04回（19/11/20配信）
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span>2019-11-22</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://moonaileen.github.io/tag/SomaMemo/">
-        <span>Soma Memo</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>1<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>228<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</header>
-      <div class="post-body">
-        
-        
-          
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://moonaileen.github.io/post/memo1122/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <header class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://moonaileen.github.io/post/dameradio084/">
-      ダメラジ084（19/11/06放送分）
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span>2019-11-22</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://moonaileen.github.io/tag/Radio/">
-        <span>Radio</span>
-      </a>、
-      
-      
-      
-      <a href="https://moonaileen.github.io/tag/DameRadio/">
-        <span>ダメラジ</span>
-      </a>、
-      
-      
-      
-      <a href="https://moonaileen.github.io/tag/SaitoSoma/">
-        <span>斉藤壮馬</span>
-      </a>、
-      
-      
-      
-      <a href="https://moonaileen.github.io/tag/IshikawaKaito/">
-        <span>石川界人</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>6<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>1590<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</header>
-      <div class="post-body">
-        
-        
-          
-          <p>2019年もラストスパートだからダメじゃないラジオ。</p>
-<p>S最近连着看了以冲绳为舞台的漫画「イオ」和「ナチュン」，所以萌生了想去冲绳玩的想法。<br>
-K说那这样的话你可以叫上仲村（仲村）宗悟啊。<br>
-S说对哦，下次可以把他叫来广播当GUEST，给我们介绍一下冲绳的魅力所在。</p>
-
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://moonaileen.github.io/post/dameradio084/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <header class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://moonaileen.github.io/post/memo1119/">
-      【Memo】声優と夜あそび【月：安元洋貴×江口拓也】 #32
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span>2019-11-19</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://moonaileen.github.io/tag/SomaMemo/">
-        <span>Soma Memo</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>2<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>310<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</header>
-      <div class="post-body">
-        
-        
-          
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://moonaileen.github.io/post/memo1119/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <header class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://moonaileen.github.io/post/memo1114/">
-      【Memo】声優と夜あそび【月：安元洋貴×江口拓也】 #31
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span>2019-11-14</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://moonaileen.github.io/tag/SomaMemo/">
-        <span>Soma Memo</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>1<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>183<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</header>
-      <div class="post-body">
-        
-        
-          
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://moonaileen.github.io/post/memo1114/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <header class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://moonaileen.github.io/post/memo1114-2/">
-      【Memo】小野賢章のおののみ 第92回（19/11/13配信回）
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span>2019-11-14</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://moonaileen.github.io/tag/SomaMemo/">
-        <span>Soma Memo</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>2<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>313<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</header>
-      <div class="post-body">
-        
-        
-          
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://moonaileen.github.io/post/memo1114-2/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <header class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://moonaileen.github.io/post/dameradio083/">
-      ダメラジ083（19/10/30放送分）
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span>2019-11-13</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://moonaileen.github.io/tag/Radio/">
-        <span>Radio</span>
-      </a>、
-      
-      
-      
-      <a href="https://moonaileen.github.io/tag/DameRadio/">
-        <span>ダメラジ</span>
-      </a>、
-      
-      
-      
-      <a href="https://moonaileen.github.io/tag/SaitoSoma/">
-        <span>斉藤壮馬</span>
-      </a>、
-      
-      
-      
-      <a href="https://moonaileen.github.io/tag/IshikawaKaito/">
-        <span>石川界人</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>6<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>1639<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</header>
-      <div class="post-body">
-        
-        
-          
-          <p>もう冬が来そうだけどダメじゃないラジオ。</p>
-<p>本期因为冒头K的讨论变成了魔法少女奈叶回ww</p>
-<p>起源是跟K一起玩PUBG的高中生，因为最近游戏里追加了田村ゆかり的音声，高中生就问K这位配过什么作品，原来现在的孩子已经都不认识田村大魔王了呢……而且K提起这部名作的名字后高中生完全没get到，甚至还问出了“是魔法少女小圆的衍生作品吗？”（S：逆ーwww）</p>
-<p>因为这段对话，K深刻地感受到了代沟。决定自己先好好补习一下这套，再去给高中生布教。而且K是从前天（收录日算）就一口气补完了前两部，都开始看第三部了。甚至为了这部作品特意入了danime的会员www</p>
-<p>K：奈叶教会了我所有的人生哲理！只要提它的名字咱们就是朋友了！</p>
-<p>S：wwwww</p>
-<p><font color=gray>这么说起来虽然奈叶也是我年轻时就播出过的作品，但是我也是只听说过名字的程度，并没有特意去看过ww</font></p>
-
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://moonaileen.github.io/post/dameradio083/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <header class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://moonaileen.github.io/post/memo1111/">
-      【Memo】とりあえずUNION 第30回（19/11/08配信分）
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span>2019-11-11</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://moonaileen.github.io/tag/SomaMemo/">
-        <span>Soma Memo</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>1<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>123<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</header>
-      <div class="post-body">
-        
-        
-          
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://moonaileen.github.io/post/memo1111/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <header class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://moonaileen.github.io/post/dameradio082/">
-      ダメラジ082（19/10/23放送分）
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span>2019-11-04</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://moonaileen.github.io/tag/Radio/">
-        <span>Radio</span>
-      </a>、
-      
-      
-      
-      <a href="https://moonaileen.github.io/tag/DameRadio/">
-        <span>ダメラジ</span>
-      </a>、
-      
-      
-      
-      <a href="https://moonaileen.github.io/tag/SaitoSoma/">
-        <span>斉藤壮馬</span>
-      </a>、
-      
-      
-      
-      <a href="https://moonaileen.github.io/tag/IshikawaKaito/">
-        <span>石川界人</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>7<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>1830<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</header>
-      <div class="post-body">
-        
-        
-          
-          <p>秋も深まっている頃だと期待しているからダメじゃないラジオ。</p>
-<p>用猩猩语开场只是为了带出K君又去做第三次脱毛（胡子）手术的故事。<br>
-因为终于第三次了，所以今天做广播的时候终于有了效果，所以才会发生<a href="/post/dameradio081/#op">上周81回的胡子进眼睛里的事故</a>，而且这次帮他做脱毛的小姐姐，非常的不讲情面，就算他痛得大喊也没有给他休息的机会，从结果来看，好处是进展得又快又顺利，坏处是痛得他大汗淋漓。而且当天穿的T恤本身就是半干不干的，导致汗味更加严重。他自己去厕所闻了一下都受不了自己，只好临时又买了一件新衣服穿。<br>
-S也说在做手术的时候会戴上防护眼罩，然后因为过程很疼会产生生理反应（哭），结果护士姐姐帮他拿下眼罩的时候看到他哭了，还跟他说“泣いちゃいましたね〜”，事实才不是这样啦！只是正常的生理反应啦！ww</p>
-
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://moonaileen.github.io/post/dameradio082/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
   
-            
-            
-<div class="page bg-color">
-  <ul class="pagination-ul">
-    
-      <li class="pagination-dir">
-        <a href="https://moonaileen.github.io/page/3/">
-          <i class="fa fa-angle-left"></i>
-        </a>
-      </li>
-    
-    
-      <!-- 1 2 3 4 ... N -->
-      
-        <li class="pagination-li">
-          <a href="/">1</a>
-        </li>
-        <li class="pagination-li">
-          …
-        </li>
-        <li class="pagination-li">
-          <a href="/page/3">3</a>
-        </li>
-        <li class="pagination-li pagination-active">
-          <a href="/page/4">4</a>
-        </li>
-        <li class="pagination-li">
-          <a href="/page/5">5</a>
-        </li>
-        <li class="pagination-li">
-          …
-        </li>
-        <li class="pagination-li">
-          <a href="/page/10">10</a>
-        </li>
-      
-    
-    
-      <li class="pagination-dir">
-        <a href="/page/5">
-          <i class="fa fa-angle-right"></i>
-        </a>
-      </li>
-    
-  </ul>
 </div>
-          </section>
+<script>
+  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
+  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
+  const SLIDE_UP_IN = 'slide-up-in';
+
+  let sidebar = document.querySelector('#sidebar'),
+  tocSideBar = document.querySelector('#tocSideBar'),
+  metaSideBar = document.querySelector('#metaSideBar'),
+  postToc = document.querySelector('#post_toc'),
+  postSiteMeta = document.querySelector('#post_side_meta'),
+  sidebarTitle = document.querySelector('.sidebar-title'),
+  sidebarBody = document.querySelector('#sidebar_body');
+
+  tocSideBar && tocSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  metaSideBar && metaSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  function toggleSidebar(e) {
+    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
+    if (currentTitle == e.srcElement) {
+      return ;
+    }
+    let current, showElement, hideElement;
+    if (e.srcElement == metaSideBar) {
+      showElement = postSiteMeta;
+      hideElement = postToc;
+    } else if (e.srcElement == tocSideBar){
+      showElement = postToc;
+      hideElement = postSiteMeta;
+    }
+    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
+    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
+
+    window.Velocity(hideElement, 'stop');
+    window.Velocity(hideElement, 'transition.slideUpOut', {
+      display: 'none',
+      duration: 200,
+      complete: function () {
+        window.Velocity(showElement, 'transition.slideDownIn', {
+          duration: 200
+        });
+      }
+    })
+    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
+    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
+  }
+
+  postToc && postToc.addEventListener('transitionend', function() {
+    this.classList.remove(SLIDE_UP_IN);
+  });
+
+  if (sidebarBody) {
+    if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
+      let hasFix = false;
+      let scrollEl = document.querySelector('.main-continer');
+      let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
+      window.addEventListener('scroll', function(e) {
+        if (document.scrollingElement.scrollTop >= limitTop) {
+          if (!hasFix) {
+            sidebar.classList.add('sidebar-fixed');
+            hasFix = true;
+          }
+        } else {
+          if (hasFix) {
+            sidebar.classList.remove('sidebar-fixed');
+            hasFix = false;
+          }
+        }
+      });
+    }
+  }
+  
+</script>
+        <div class="section-box box-shadow-wrapper">
+          <div class="section bg-color post post-page">
+            <header class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://moonaileen.github.io/post/dameradio104/">
+      ダメラジ104（20/03/25放送分）
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span>2020-05-19</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">分类于</span>
+      
+      
+      <a href="https://moonaileen.github.io/tag/Radio/">
+        <span>Radio</span>
+      </a>、
+      
+      
+      
+      <a href="https://moonaileen.github.io/tag/DameRadio/">
+        <span>ダメラジ</span>
+      </a>、
+      
+      
+      
+      <a href="https://moonaileen.github.io/tag/SaitoSoma/">
+        <span>斉藤壮馬</span>
+      </a>、
+      
+      
+      
+      <a href="https://moonaileen.github.io/tag/IshikawaKaito/">
+        <span>石川界人</span>
+      </a>
+      
+      
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>5<span class="language" data-lan="minute">分钟</span></span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>1307<span class="pc-show language" data-lan="words">字数</span></span>
+    </span>
+    
+    
+    
+    <span id="/post/dameradio104/" data-flag-title="ダメラジ104（20/03/25放送分）" class="meta-item pc-show leancloud_visitors">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-eye"></i>
+      <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
+    </span>
+    
+  </div>
+</header>
+            <div class="post-body next-md-body" id="post_body">
+              <p>この間の生配信の特別編集版をお見せするからダメじゃないラジオ。</p>
+<p>3/14的直播配信剪辑版。<br>
+这次的冒头是在90分钟的直播结束后才录的，所以有了特别的疲劳感。</p>
+<!-- more -->
+<h2 id="op">OP</h2>
+<p>这次3/14的直播虽然是第一次带影像的直播，但是单论直播的话，已经是本广播的第三次了。<br>
+ホワイトデーの生放送だからダメじゃないラジオ。<br>
+那天日本好像还下了雪，是真的白色w<br>
+因为是带画面的直播，所以可以对K平时动作幅度有多大窥见一斑了。<br>
+有摄像头在，导致S会总想着要看向摄像头，说话的节奏跟平时不太一样。K则是一直盯着S看，甚至比平时看得还多，因为K怕摄像头w</p>
+<h2 id="ふつおた">ふつおた</h2>
+<p>来信因为疫情影响在家里的时间变多，有了更多看动画的时间。问两位最近有什么推荐的动画。<br>
+K一如既往地一直在看强袭魔女。因为买了BD，所以一定要多看几遍（值回票价吗？w）而且现在家里有两台显示器，经常会在其中一块显示器上放着动画当作业BGM，在另一块显示器上进行视频编辑之类的事。<br>
+S问那你这样的话，两边的内容都能看进脑子里吗？<br>
+K：当然不行了。<br>
+wwww<br>
+S最近在看ID（异度侵入）。因为原作&amp;系列构成是舞城王太郎，S是他的大fan。所以总是在忍不住想看与想存起来一起看的想法中纠结挣扎。最终还是会抵挡不住诱惑看起来。</p>
+<p>说起看自己出演的作品时会有不一样的感觉。正好3/14同一天S跟冈本白天的时候也有另一个直播配信的工作，就是hikayamiV的，他听着自己的声音（彼）就会觉得很不可思议。会在听的时候下意识地check自己的声音，又会在意普通听众听自己的声音是什么样的感觉，更会本能地对自己的声音dkdk。<br>
+而听到原先自己配的作品时，会总不由自主地反省当初配这些声音时的自己，比如技术上的不足等等。哪怕有些是只有当初的自己才能表现出来的直率。总之看自己配音的作品时心情会很复杂呢。</p>
+<h2 id="壮馬君界人君聞いてください">壮馬君・界人君聞いてください。</h2>
+<p>来信“こももももものうち”さん。<br>
+两人都挑战了喊名字，都非常完美。<br>
+K（之前卡壳了）：只要有是照着读我就不会卡壳的！<br>
+然而刚才卡壳的其实也是照着读的部分哦ww<br>
+こももさん最近在沉迷的事是手工（如羊毛毡），还特意寄来了她做的K和S的羊毛毡照片。特点抓得还很到位。甚至连S经常穿红色的袜子都有想到。（但是今天S恰好没穿www）</p>
+<p>另一封最近沉迷的是巧克力。因为小时候很少能吃，现在长大了就会经常买那种小时候很想吃却一直没吃到的巧克力。<br>
+S说自己也不怎么吃甜食，但是类似的事他也体验过，就是pocari。这事他在之前的广播里也聊到过。<br>
+对K来说，类似的是ピュレグミ（柠檬味）。因为小时候这些果冻都是女孩子爱吃的东西，所以就算他很有兴趣但是怕被人揶揄就一直没怎么敢吃，现在就可以毫无芥蒂的吃个痛快了。</p>
+<h2 id="ムービックインフォメーション">ムービックインフォメーション</h2>
+<p>介绍了呕吐趴2019的圆盘。各店铺的特典。<br>
+S夸K：你真的很擅长宣传诶。<br>
+K：那真是，相当擅长。<br>
+wwwww<br>
+</p>
+<h2 id="シンプルに仲良しチャレンジリベンジ">シンプルに仲良しチャレンジ：リベンジ</h2>
+<p>（这时候两个人已经换上了各自给对方带的衣物，由本田桑给做好了搭配造型）</p>
+<p><b>Q：说起运动会的项目首先想到的是？</b><br>
+规定了范围是在小学运动会上。<br>
+S说自己小时候最喜欢运动会了，K表示非常怀疑。S说自己初二之前都算跑得很快的了。<br>
+K：組体操　S：接力赛<br>
+可恶！S的伏笔（初二之前都跑得很快）埋得毫无意义！ww不过当年的S据说还是担任的anchor！</p>
+<p><b>Q：觉得温暖的地方是？</b><br>
+K：温室　S：被炉<br>
+连思考的回路都完全不对呢w<br>
+还被直播时候的推特提醒可以回答ダメラジ，然而MC们都没有想到这个回答呢ww</p>
+<p><b>Q：说起无酒精饮品首先想到的是？？</b><br>
+K&amp;S：POCARI！<br>
+毕竟S不止是在过去的放送里，在当天直播里就说起过，所以这次答得非常顺利。<br>
+抽到的奖品是 <strong>“三上D为你实现一个愿望（比如搭书架w）”</strong></p>
+<h2 id="ed">ED</h2>
+<p>附带影像的特殊ver Mailaddress和Archive！<br>
+附带一提，K君说这期对Archive的诠释可以用来展现他对本期特别回的感想。</p>
+<hr>
+<blockquote class="twitter-tweet" data-dnt="true" align="center"><p lang="ja" dir="ltr">本日の写真は<br>生配信編集回ということで。<br>けん玉チャレンジを成功させた<br>三上さんと一緒にパシャリッ📸<br>お色直しした洋服！<br><br>来週はもう4月ですね！<br>次回放送もお楽しみにぃ！<a href="https://twitter.com/hashtag/%E3%81%8A%E3%82%84%E3%81%99%E3%81%BF%E3%81%AA%E3%81%95%E3%81%84?src=hash&amp;ref_src=twsrc%5Etfw">#おやすみなさい</a><a href="https://twitter.com/hashtag/%E3%83%80%E3%83%A1%E3%83%A9%E3%82%B8?src=hash&amp;ref_src=twsrc%5Etfw">#ダメラジ</a> <a href="https://twitter.com/hashtag/agqr?src=hash&amp;ref_src=twsrc%5Etfw">#agqr</a> <a href="https://t.co/7O88siy2Wk">pic.twitter.com/7O88siy2Wk</a></p>&mdash; 斉藤壮馬・石川界人のダメじゃないラジオ (@dameradi) <a href="https://twitter.com/dameradi/status/1242831674980700160?ref_src=twsrc%5Etfw">March 25, 2020</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+            </div>
+            
+              <div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong class="language" data-lan="author">本文作者：</strong>
+      哀凌
+    </li>
+    <li class="post-copyright-link">
+      <strong class="language" data-lan="link">本文链接：</strong>
+      <a href="https://moonaileen.github.io/post/dameradio104/" title="ダメラジ104（20/03/25放送分）">https://moonaileen.github.io/post/dameradio104/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong class="language" data-lan="copyright">版权声明： </strong>
+      本博客所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i> BY-NC-SA</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+  <div class="tags">
+    
+      <a href="https://moonaileen.github.io/tag/Radio/"># Radio</a>
+    
+      <a href="https://moonaileen.github.io/tag/DameRadio/"># ダメラジ</a>
+    
+      <a href="https://moonaileen.github.io/tag/SaitoSoma/"># 斉藤壮馬</a>
+    
+      <a href="https://moonaileen.github.io/tag/IshikawaKaito/"># 石川界人</a>
+    
+  </div>
+  <div class="nav">
+    <div class="nav-prev">
+      
+    </div>
+    <div class="nav-next">
+      
+        <a class="nav-pc-next" title="ダメラジ103（20/03/18放送分）" href="https://moonaileen.github.io/post/dameradio103/">ダメラジ103（20/03/18放送分）</a>
+        <a class="nav-mobile-next" title="ダメラジ103（20/03/18放送分）" href="https://moonaileen.github.io/post/dameradio103/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
+      
+    </div>
+  </div>
+</div>
+            
+            
+  <script src="https://cdn.jsdelivr.net/npm/valine@1.4.4/dist/Valine.min.js"></script>
+<div id="vcomments" style="padding: 10px 0px 0px 0px"></div>
+
+<style>
+  .v .veditor {
+    min-height: 10rem;
+    background-image: url('/media/images/comment.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: rgba(255, 255, 255, 0);
+    resize: none;
+  }
+
+  .v .vwrap {
+    border: 1px solid #000 !important;
+  }
+
+  .v .vbtn {
+    padding: .4rem 1.2rem !important;
+    border-color: #fff !important;
+    background-color: #49b1f5 !important;
+    color: #fff !important;
+    font-size: .7rem !important;
+  }
+
+  .v .vcards .vcard .vh .vmeta .vat {
+    padding: 0 .8rem !important;
+    border: 1px solid #00c4b6 !important;
+    border-radius: 5px !important;
+    color: #00c4b6 !important;
+  }
+</style>
+<script>
+  new Valine({
+    el: '#vcomments',
+    appId: 'gFnnTFDXWiuusgoivc6d9afz-MdYXbMMI',
+    appKey: 'hWY2jXPF5fRho7aDeVV29Qv2',
+    avatar: '',
+    placeholder: '欢迎留言~',
+    pageSize: '',
+    lang: 'zh-cn',
+    visitor: 'true' === 'true',
+    highlight: 'true' === 'true',
+    avatarForce: 'true' === 'false',
+  });
+</script>
+
+          </div>
         </div>
       </div>
     </div>
@@ -6945,7 +6762,6 @@ A：＜电影＞『天使爱美丽』『生人勿进』『涨潮海岸』／＜�
 
 
 <script src="/media/js/mouse/love.js"></script>
-
 
 
 </html>

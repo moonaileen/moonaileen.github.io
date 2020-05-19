@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://moonaileen.github.io</id>
     <title>「旅程」</title>
-    <updated>2020-05-18T15:32:51.997Z</updated>
+    <updated>2020-05-19T06:42:09.838Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://moonaileen.github.io"/>
     <link rel="self" href="https://moonaileen.github.io/atom.xml"/>
@@ -10,6 +10,21 @@
     <logo>https://moonaileen.github.io/images/avatar.png</logo>
     <icon>https://moonaileen.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 「旅程」</rights>
+    <entry>
+        <title type="html"><![CDATA[ダメラジ104（20/03/25放送分）]]></title>
+        <id>https://moonaileen.github.io/post/dameradio104/</id>
+        <link href="https://moonaileen.github.io/post/dameradio104/">
+        </link>
+        <updated>2020-05-19T02:28:02.000Z</updated>
+        <summary type="html"><![CDATA[<p>この間の生配信の特別編集版をお見せするからダメじゃないラジオ。</p>
+<p>3/14的直播配信剪辑版。<br>
+这次的冒头是在90分钟的直播结束后才录的，所以有了特别的疲劳感。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>この間の生配信の特別編集版をお見せするからダメじゃないラジオ。</p>
+<p>3/14的直播配信剪辑版。<br>
+这次的冒头是在90分钟的直播结束后才录的，所以有了特别的疲劳感。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[ダメラジ103（20/03/18放送分）]]></title>
         <id>https://moonaileen.github.io/post/dameradio103/</id>
@@ -195,21 +210,6 @@ K君到现在也没穿过S在<a href="/post/dameradio081/">K生日回</a>送他�
 K君到现在也没穿过S在<a href="/post/dameradio081/">K生日回</a>送他的那件外套。（K：我把它当作关键时刻的御寒装😃结果到了冬天S送的礼物也还是没能派上用场😃）<br>
 另外K强力推荐了优衣库的保暖内衣，这个我也在用，确实不错。S说下次会尝试一下。K还挺惊讶像S这么怕冷的人竟然没穿过，但是S不但怕冷还怕热，而且自身体温比较高容易出汗，所以感觉保暖内衣虽然在外面可以御寒，但是在室内则会让他容易出汗，并不是很适合他XD<br>
 这次又说要送衣服给K君，倒是没有被明确拒绝了。（恭喜终于可以处理掉了？虽然感觉应该不会有后续了ww）</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ダメラジ095（20/01/22放送分）]]></title>
-        <id>https://moonaileen.github.io/post/dameradio095/</id>
-        <link href="https://moonaileen.github.io/post/dameradio095/">
-        </link>
-        <updated>2020-05-08T09:23:14.000Z</updated>
-        <summary type="html"><![CDATA[<p>寒さも一段と増していくからダメじゃないラジオ。<br>
-↑K：さみーんだよこういうなんか営業みたいなやり口ｗｗ</p>
-<p>这期开头就有超震撼的事啊。我当初为什么没有直接过来记录？哦，是我的拖延症😃</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>寒さも一段と増していくからダメじゃないラジオ。<br>
-↑K：さみーんだよこういうなんか営業みたいなやり口ｗｗ</p>
-<p>这期开头就有超震撼的事啊。我当初为什么没有直接过来记录？哦，是我的拖延症😃</p>
 ]]></content>
     </entry>
 </feed>
