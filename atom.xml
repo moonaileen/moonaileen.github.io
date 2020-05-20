@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://moonaileen.github.io</id>
     <title>「旅程」</title>
-    <updated>2020-05-19T06:46:36.913Z</updated>
+    <updated>2020-05-20T08:33:07.623Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://moonaileen.github.io"/>
     <link rel="self" href="https://moonaileen.github.io/atom.xml"/>
@@ -10,6 +10,23 @@
     <logo>https://moonaileen.github.io/images/avatar.png</logo>
     <icon>https://moonaileen.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 「旅程」</rights>
+    <entry>
+        <title type="html"><![CDATA[ダメラジ105（20/04/01放送分）]]></title>
+        <id>https://moonaileen.github.io/post/dameradio105/</id>
+        <link href="https://moonaileen.github.io/post/dameradio105/">
+        </link>
+        <updated>2020-05-20T05:48:07.000Z</updated>
+        <summary type="html"><![CDATA[<p>新年度が始まろうとしているからダメじゃないラジオ。</p>
+<p>K家的小伦巴终于掌握了K家的整体结构了！<br>
+喜出望外的K君还想给小伦巴起个昵称叫“ルンちゃん”，结果小伦巴只能记得住四个字的昵称，输入到“ルンちゃ”就止住了w<br>
+另外经过验证，发现在之前的广播里抱怨小伦巴记不住他家的结构主要是因为他的教育方法出现的问题，并不怪伦巴。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>新年度が始まろうとしているからダメじゃないラジオ。</p>
+<p>K家的小伦巴终于掌握了K家的整体结构了！<br>
+喜出望外的K君还想给小伦巴起个昵称叫“ルンちゃん”，结果小伦巴只能记得住四个字的昵称，输入到“ルンちゃ”就止住了w<br>
+另外经过验证，发现在之前的广播里抱怨小伦巴记不住他家的结构主要是因为他的教育方法出现的问题，并不怪伦巴。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[ダメラジ104（20/03/25放送分）]]></title>
         <id>https://moonaileen.github.io/post/dameradio104/</id>
@@ -191,25 +208,6 @@ K说这次做完脱毛后，医院还问他其它地方想不想做，他本来�
 </ul>
 <p>K：S桑的粉想听的……肯定是洗澡后的事情了对不对？选1！😊<br>
 原先S在广播里也蹭提到过，自己看书有一个习惯是：在什么地方看什么类型的书，是有自己的原则的。最近原则扩展到了音乐上，原来对于音乐的原则是走在什么路上听什么样的歌，现在对于音乐的原则又多加了一条→ <strong>洗完澡后听ELLEGARDEN</strong> 。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ダメラジ096（20/01/29放送分）]]></title>
-        <id>https://moonaileen.github.io/post/dameradio096/</id>
-        <link href="https://moonaileen.github.io/post/dameradio096/">
-        </link>
-        <updated>2020-05-11T06:19:45.000Z</updated>
-        <summary type="html"><![CDATA[<p>新年がもう一ヶ月終わっちゃうからダメじゃないラジオ。</p>
-<p>寒冷的冬季。S君在录音棚里都戴着围巾ww<br>
-K君到现在也没穿过S在<a href="/post/dameradio081/">K生日回</a>送他的那件外套。（K：我把它当作关键时刻的御寒装😃结果到了冬天S送的礼物也还是没能派上用场😃）<br>
-另外K强力推荐了优衣库的保暖内衣，这个我也在用，确实不错。S说下次会尝试一下。K还挺惊讶像S这么怕冷的人竟然没穿过，但是S不但怕冷还怕热，而且自身体温比较高容易出汗，所以感觉保暖内衣虽然在外面可以御寒，但是在室内则会让他容易出汗，并不是很适合他XD<br>
-这次又说要送衣服给K君，倒是没有被明确拒绝了。（恭喜终于可以处理掉了？虽然感觉应该不会有后续了ww）</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>新年がもう一ヶ月終わっちゃうからダメじゃないラジオ。</p>
-<p>寒冷的冬季。S君在录音棚里都戴着围巾ww<br>
-K君到现在也没穿过S在<a href="/post/dameradio081/">K生日回</a>送他的那件外套。（K：我把它当作关键时刻的御寒装😃结果到了冬天S送的礼物也还是没能派上用场😃）<br>
-另外K强力推荐了优衣库的保暖内衣，这个我也在用，确实不错。S说下次会尝试一下。K还挺惊讶像S这么怕冷的人竟然没穿过，但是S不但怕冷还怕热，而且自身体温比较高容易出汗，所以感觉保暖内衣虽然在外面可以御寒，但是在室内则会让他容易出汗，并不是很适合他XD<br>
-这次又说要送衣服给K君，倒是没有被明确拒绝了。（恭喜终于可以处理掉了？虽然感觉应该不会有后续了ww）</p>
 ]]></content>
     </entry>
 </feed>
