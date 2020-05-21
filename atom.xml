@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://moonaileen.github.io</id>
     <title>「旅程」</title>
-    <updated>2020-05-20T16:34:56.215Z</updated>
+    <updated>2020-05-21T11:52:52.382Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://moonaileen.github.io"/>
     <link rel="self" href="https://moonaileen.github.io/atom.xml"/>
@@ -10,6 +10,31 @@
     <logo>https://moonaileen.github.io/images/avatar.png</logo>
     <icon>https://moonaileen.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 「旅程」</rights>
+    <entry>
+        <title type="html"><![CDATA[ダメラジ107（20/04/15放送分）]]></title>
+        <id>https://moonaileen.github.io/post/dameradio107/</id>
+        <link href="https://moonaileen.github.io/post/dameradio107/">
+        </link>
+        <updated>2020-05-21T04:22:15.000Z</updated>
+        <summary type="html"><![CDATA[<p>春番組がいろいろ始まっているからダメじゃないラジオ。</p>
+<p>K君最近玩PUBG玩得不亦乐乎。然后又是动森疯狂大流行。<br>
+K说自己以前玩动森的时候都会改时间，这次是安下心来跟着现实时间慢慢玩。不过现在已经把自己的岛建得越来越城市化（image：調布市），被S吐槽大自然在慢慢流失hhh<br>
+貌似在录广播前K有给S试玩，S说自己很久没有玩这种掌上游戏了，K也说确实很不适合你。连拿机器的姿势看起来就很像新手。因为眼睛会不由自主地贴近屏幕。<br>
+S说最近确实是有这个问题，刚才试玩的时候看字也有点看不清了。<br>
+K：说明你开始了……是什么开始了我就不说了www</p>
+<p>S今天的发型跟平时不一样（中分了）。少见的被K盛大地赞赏了一番。<br>
+平时见面总要被K吐槽快把前发剪掉，至少要让人能看清脸。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>春番組がいろいろ始まっているからダメじゃないラジオ。</p>
+<p>K君最近玩PUBG玩得不亦乐乎。然后又是动森疯狂大流行。<br>
+K说自己以前玩动森的时候都会改时间，这次是安下心来跟着现实时间慢慢玩。不过现在已经把自己的岛建得越来越城市化（image：調布市），被S吐槽大自然在慢慢流失hhh<br>
+貌似在录广播前K有给S试玩，S说自己很久没有玩这种掌上游戏了，K也说确实很不适合你。连拿机器的姿势看起来就很像新手。因为眼睛会不由自主地贴近屏幕。<br>
+S说最近确实是有这个问题，刚才试玩的时候看字也有点看不清了。<br>
+K：说明你开始了……是什么开始了我就不说了www</p>
+<p>S今天的发型跟平时不一样（中分了）。少见的被K盛大地赞赏了一番。<br>
+平时见面总要被K吐槽快把前发剪掉，至少要让人能看清脸。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[ダメラジ106（20/04/08放送分）]]></title>
         <id>https://moonaileen.github.io/post/dameradio106/</id>
@@ -31,23 +56,6 @@ GUEST：鳥海浩輔さん</p>
         <link href="https://moonaileen.github.io/post/dameradio105/">
         </link>
         <updated>2020-05-20T08:48:07.000Z</updated>
-        <summary type="html"><![CDATA[<p>新年度が始まろうとしているからダメじゃないラジオ。</p>
-<p>K家的小伦巴终于掌握了K家的整体结构了！<br>
-喜出望外的K君还想给小伦巴起个昵称叫“ルンちゃん”，结果小伦巴只能记得住四个字的昵称，输入到“ルンちゃ”就止住了w<br>
-另外经过验证，发现在之前的广播里抱怨小伦巴记不住他家的结构主要是因为他的教育方法出现的问题，并不怪伦巴。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>新年度が始まろうとしているからダメじゃないラジオ。</p>
-<p>K家的小伦巴终于掌握了K家的整体结构了！<br>
-喜出望外的K君还想给小伦巴起个昵称叫“ルンちゃん”，结果小伦巴只能记得住四个字的昵称，输入到“ルンちゃ”就止住了w<br>
-另外经过验证，发现在之前的广播里抱怨小伦巴记不住他家的结构主要是因为他的教育方法出现的问题，并不怪伦巴。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ダメラジ105（20/04/01放送分）]]></title>
-        <id>https://moonaileen.github.io/post/dameradio105-哀凌のMacBook Pro/</id>
-        <link href="https://moonaileen.github.io/post/dameradio105-哀凌のMacBook Pro/">
-        </link>
-        <updated>2020-05-20T05:48:07.000Z</updated>
         <summary type="html"><![CDATA[<p>新年度が始まろうとしているからダメじゃないラジオ。</p>
 <p>K家的小伦巴终于掌握了K家的整体结构了！<br>
 喜出望外的K君还想给小伦巴起个昵称叫“ルンちゃん”，结果小伦巴只能记得住四个字的昵称，输入到“ルンちゃ”就止住了w<br>
