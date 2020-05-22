@@ -8,7 +8,7 @@
 <meta name="keywords" content="斉藤壮馬">
 <meta name="description" content="君と出逢ったことだけ後悔はしない">
 <meta name="theme-color" content="#ec91a3">
-<title>ボルラジ041 | 「旅程」</title>
+<title>ダメラジ108（20/04/22放送分） | 「旅程」</title>
 <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/moonaileen/moonaileen.github.io@master/favicon.ico?v=1590130515882">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/moonaileen/moonaileen.github.io@master/media/css/gemini.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/moonaileen/moonaileen.github.io@master/media/fonts/font-awesome.css">
@@ -48,8 +48,8 @@
 </script>
 
 
-  <meta name="description" content="ボルラジ041" />
-  <meta name="keywords" content="柿原徹也,畠中祐,近藤隆,Radio" />
+  <meta name="description" content="ダメラジ108（20/04/22放送分）" />
+  <meta name="keywords" content="Radio,ダメラジ,斉藤壮馬,石川界人" />
 </head>
 
 <body>
@@ -226,7 +226,8 @@
       <div class="sidebar-body gemini" id="sidebar_body">
         
           
-            
+            <div class="post-side-meta" id="post_side_meta">
+              
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="https://cdn.jsdelivr.net/gh/moonaileen/moonaileen.github.io@master/images/avatar.png"/>
@@ -287,6 +288,198 @@
 
 
 </div>
+            </div>
+            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+              <div class="toc-box right-motion">
+  <div class="toc-wrapper  auto"
+    id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#op">OP</a></li>
+<li><a href="#%E3%83%A0%E3%83%BC%E3%83%93%E3%83%83%E3%82%AF%E3%82%A4%E3%83%B3%E3%83%95%E3%82%A9%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3">ムービックインフォメーション</a></li>
+<li><a href="#%E5%A3%AE%E9%A6%AC%E3%81%95%E3%82%93%E3%81%95%E3%82%93%E3%81%8A%E7%A5%9D%E3%81%84-%E4%B8%89%E4%B8%8A%E3%82%AF%E3%82%A4%E3%82%BA%E3%83%AA%E3%82%BF%E3%83%BC%E3%83%B3%E3%82%BA">壮馬さんさんお祝い、三上クイズ・リターンズ</a></li>
+<li><a href="#ed">ED</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
+  let active = 'active-show', activeClass = 'active-current';
+  let tocWrapper = document.querySelector('#toc_wrapper');
+  let tocContent = tocWrapper.children[0];
+  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
+
+  function addTocNumber(elem, deep) {
+    if (!elem) {
+      return;
+    }
+    let prop = elem.__proto__;
+
+    if (prop === HTMLUListElement.prototype) {
+      for (let i = 0; i < elem.children.length; i++) {
+        addTocNumber(elem.children[i], deep + (i + 1) + '.');
+      }
+    } else if (prop === HTMLLIElement.prototype) {
+      // 保存li元素
+      if (elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
+        lList.push(elem);
+      }
+      for (let i = 0; i < elem.children.length; i++) {
+        let cur = elem.children[i];
+        if (cur.__proto__ === HTMLAnchorElement.prototype) {
+          if (autoNumber) {
+            cur.text = deep + ' ' + cur.text;
+          }
+        } else if (cur.__proto__ === HTMLUListElement.prototype) {
+          addTocNumber(cur, deep);
+        }
+      }
+    }
+  }
+
+  function removeParentActiveClass() {
+    let parents = tocContent.querySelectorAll('.' + active)
+    parents.forEach(function (elem) {
+      elem.classList.remove(active);
+    });
+  }
+
+  function addActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.add(activeClass);
+    }
+  }
+
+  function removeActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.remove(activeClass);
+    }
+  }
+
+  function addActiveLiElemment(elem, parent) {
+    if (!elem || elem === parent) {
+      return;
+    } else {
+      if (elem.__proto__ === HTMLLIElement.prototype) {
+        elem.classList.add(active);
+      }
+      addActiveLiElemment(elem.parentElement, parent);
+    }
+  }
+
+  function showToc() {
+    if (tocWrapper) {
+      postBody = document.querySelector('#post_body');
+      for (let i = 0; i < postBody.children.length; i++) {
+        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+          hList.push(postBody.children[i]);
+        }
+      }
+      if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+      } else if (tocWrapper.classList.contains('no_compress')) {
+        tocContent.classList.add('expanded');
+      } else {
+        if (hList.length > 10) {
+          active = 'active-hidden'
+          tocContent.classList.add('closed');
+        } else {
+          tocContent.classList.add('expanded');
+        }
+      }
+    }
+  }
+
+  (function () {
+    // 处理不是从#一级标题开始目录
+    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
+      let con = tocContent.children[0].children[0];
+      tocContent.innerHTML = con.innerHTML;
+    }
+    let markdownItTOC = document.querySelector('.markdownIt-TOC');
+    let innerHeight = window.innerHeight;
+    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
+    addTocNumber(tocContent, '');
+  })();
+
+  document.addEventListener('scroll', function (e) {
+    if (lList.length <= 0) {
+      return;
+    }
+    let scrollTop = document.scrollingElement.scrollTop + 10;
+    let dir;
+
+    if (lastTop - scrollTop > 0) {
+      dir = 'up';
+    } else {
+      dir = 'down';
+    }
+
+    lastTop = scrollTop;
+    if (scrollTop <= 0) {
+      if (lastIndex >= 0 && lastIndex < hList.length) {
+        lList[lastIndex].classList.remove(activeClass);
+      }
+      return;
+    }
+
+    let current = 0, hasFind = false;
+    for (let i = 0; i < hList.length; i++) {
+      if (hList[i].offsetTop > scrollTop) {
+        current = i;
+        hasFind = true;
+        break;
+      }
+    }
+    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+      current = hList.length - 1;
+    } else {
+      current--;
+    }
+    if (dir === 'down') {
+      if (current > lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex)
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    } else {
+      if (current < lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex);
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    }
+  });
+
+
+  window.addEventListener('load', function () {
+    showToc();
+    document.querySelector('#sidebar').style = 'display: block;';
+    tocWrapper.classList.add('toc-active');
+    setTimeout(function () {
+      if ("createEvent" in document) {
+        let evt = document.createEvent("HTMLEvents");
+        evt.initEvent("scroll", false, true);
+        document.dispatchEvent(evt);
+      }
+      else {
+        document.fireEvent("scroll");
+      }
+    }, 500)
+  })
+
+</script>
+            </div>
           
         
       </div>
@@ -374,8 +567,8 @@
           <div class="section bg-color post post-page">
             <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://moonaileen.github.io/post/boruradi41/">
-      ボルラジ041
+    <a class="post-title-link" href="https://moonaileen.github.io/post/dameradio108/">
+      ダメラジ108（20/04/22放送分）
     </a>
   </h1>
   <div class="post-meta">
@@ -383,7 +576,7 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span>2018-10-15</span>
+      <span>2020-05-22</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
@@ -392,26 +585,26 @@
       <span class="pc-show language" data-lan="category-in">分类于</span>
       
       
-      <a href="https://moonaileen.github.io/tag/KakiharaTetsuya/">
-        <span>柿原徹也</span>
-      </a>、
-      
-      
-      
-      <a href="https://moonaileen.github.io/tag/HatanakaTasuku/">
-        <span>畠中祐</span>
-      </a>、
-      
-      
-      
-      <a href="https://moonaileen.github.io/tag/KondoTakashi/">
-        <span>近藤隆</span>
-      </a>、
-      
-      
-      
       <a href="https://moonaileen.github.io/tag/Radio/">
         <span>Radio</span>
+      </a>、
+      
+      
+      
+      <a href="https://moonaileen.github.io/tag/DameRadio/">
+        <span>ダメラジ</span>
+      </a>、
+      
+      
+      
+      <a href="https://moonaileen.github.io/tag/SaitoSoma/">
+        <span>斉藤壮馬</span>
+      </a>、
+      
+      
+      
+      <a href="https://moonaileen.github.io/tag/IshikawaKaito/">
+        <span>石川界人</span>
       </a>
       
       
@@ -425,12 +618,12 @@
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>1178<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>1233<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
     
-    <span id="/post/boruradi41/" data-flag-title="ボルラジ041" class="meta-item pc-show leancloud_visitors">
+    <span id="/post/dameradio108/" data-flag-title="ダメラジ108（20/04/22放送分）" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
@@ -439,37 +632,75 @@
   </div>
 </header>
             <div class="post-body next-md-body" id="post_body">
-              <p>10/13配信分。<br>
-GUEST：近藤隆</p>
-<p>不听广播都不知道男神的霧隠才蔵已经人气投票殿堂了，投票不是才刚拿了两年第一吗，这就给殿堂了(´･ω･`;)</p>
+              <p>まさかの誕生日当日放送だからダメじゃないラジオ。</p>
+<p>S君生日回！<br>
+staff因为不擅长提供惊喜就这么直愣愣地把蛋糕拿出来了。<br>
+而且在S拆蛋糕包装的时候没有任何人帮他😅寿星好可怜！</p>
 <!-- more -->
-<p>广播实在是无聊的很，好几段CM，还加了几个胸キュン的段落。但是我发现我一点也不想听柿子和白田的胸キュン啊……（。）<br>
-而且这个广播让我认识到，白田不只是配音，连主持广播时的地声都是惨绝人寰的难听…………为什么他唱歌会那么好听啊？？真是个谜一般的人种（？）。每到这个时候都会困惑他为什么要想不开当声优，歌手或者演……员大概更适合他？？<br>
-柿子喊男神也是喊的近ちゃんww</p>
-<p>男神出场后介绍了一下自己的角色，得知他的角色已经人气投票殿堂入了，柿子十分直接地问：想必录了不少追加voice吧？<br>
-男神也蛮大方地承认了：每年都会录蛮多段追加voice，所以有不少额外的bonus拿。<br>
-是好事嘛！<br>
-柿子还调侃既然都已经入殿堂了，是不是要给才藏专门搞个殿堂供着w</p>
-<p>让才藏发表一下入殿堂感言。男神就用才藏的声线说了。两人又调戏说才藏会瞬间移动的忍术（才藏是忍者），嗖地一声出现，搜地一声又消失了。柿子更是强人所难地开了个男神刚才用才藏声线念台词时喊了个“忍忍”（其实并没有）的玩笑，男神倒是也顺着说确实在收尾的时候喊了一句，但是肯定在后期被编辑掉了ww<br>
-哎，我心上人真是太温柔了ww<br>
-男神谈才藏这个角色是个对🍡的喜爱程度要优先于女性的角色。任务最重要，其次是🍡，最后才是女主www一开始之所以会保护女主，也是因为上面有令，才不得不遵从的感觉，然后在执行任务的过程中才逐渐被女主吸引。（大概就是因为这样所以才会这么有人气的吧，有一种慢慢培养恋情的感觉。）<br>
-白田恍然大悟状：我要是也这么做的话会受女孩子欢迎吗？<br>
-柿子：比如tsk你现在24，在收录现场碰到十几岁的女孩子后辈，温柔地教他应该怎么用麦克风啥的……然后慢慢就会产生额外的感情，配熟悉了会跟人家说「看，就像我在家里教你的那样」<br>
-白田：别这样啊www设定太过真实了吧？<br>
-男神：真实！！！？？什么，你们家里还有配音用的立麦吗？！<br>
-这里真是笑死我了，男神你的关注点是不是不太对www</p>
-<p>天下一统的小游戏。<br>
-这次要拿下的是长野县。本来是柿子跟白田对战谁赢了谁就能拿下，这次guest要一起玩，所以guest赢了的话这个县就不属于柿子也不属于白田，属于男神。<br>
-男神：诶？谁都不属于的县就归我了吗！？我还以为谁都不属于的话就归群马县了ww（男神你的思考回路wwww）<br>
-对战内容是扔飞镖。但是在扔之前要从箱子里抽类似于忍术的指令，按照指令来扔。<br>
-白田最先扔，抽到的忍术是分身之术。是要转靶子让它在看起来像有分身一样的状态时丢飞镖（😂）。白田扔完中了个40点。<br>
-然后是男神，抽到的忍术是水蜘蛛之术。是可以向靶子走近三步再丢。另外两人纷纷吐槽这签抽得也太欧了，这么近得距离走三步基本都可以贴在靶子上了！男神走近了三步开始琢磨自己拿什么分数比较好，最后选了80分的档，说自己拿了100分就太没意思了，把90分和100分的两个可能留给柿子ww<br>
-最后是柿子了，抽到的忍术是水遁之术。就是直接让飞镖和靶子都过了水。结果直接丢出了个最差的10分😂😂<br>
-于是男神赢了，所以长野县就这么归男神所有了！！😂😂😂</p>
-<p>节目的最后轮到男神念胸キュン台词了。<br>
-看到台词内容柿子让男神用本音来念。<br>
-男神就用本音念的………………苏得一塌糊涂，杀伤力真是太大了｡ﾟ(PД`q*)ﾟ｡<br>
-好吧，看在这一段台词的份上，这个广播还是要好好收藏的！！</p>
+<h2 id="op">OP</h2>
+<p>K：想要什么生日礼物？除了冰箱。<br>
+S：啊……那ANOVA（低温真空调理机）怎么样？<br>
+K：啊——我家正好有一个，要是不嫌弃我拆了的话，可以拿来送你。<br>
+S：真的吗？送我吧，我真的想要！</p>
+<blockquote>
+<p>Q：构成你的三部漫画。</p>
+</blockquote>
+<p>S的回答：<br>
+<b>①虫师</b><br>
+相关的书都收了全卷。比起剑与魔法的幻想题材，更喜欢虫师这种透着不可思议氛围的类型。初中时经常会说这部的名台词「原因は虫ですな」。<br>
+<b>②灌篮高手</b><br>
+在看这部之前自己就有在打篮球，后来看队友都在看自己也跟着看了，喜欢的角色是三井寿，但是最喜欢的是水戸洋平。K被前辈推荐买了后却没看过。<br>
+<b>③热带雨林的爆笑生活</b><br>
+让他成为OTAKU的重要契机之一。非常喜欢的一部，让他在很多地方觉醒了，至于是在什么地方觉醒了，他选择了沉默（咦？）<br>
+因为说hare的妈妈很工口，还被K调戏说对妈妈角色的觉醒，S：请不要说让人误会的话好吗，没准我妈妈也有在听广播啊😂😂<br>
+不过S说hare的妈妈确实也是让他喜欢上大姐姐角色的契机之一。</p>
+<p>K的回答：<br>
+<b>①翼-Tsubasa-</b><br>
+也是收了全卷并且反复看了好多遍。<br>
+<b>②To LOVE</b><br>
+エロへの目覚め。对S来说同题材的作品他那会儿流行的是「草莓百分百」、「漂亮脸蛋」和「魔法零蛋」，代沟竟然在这里竟然产生了！<br>
+<b>③浦安铁筋家族</b><br>
+里面小铁的姐姐在洗澡时剃腿毛被小铁拉开门撞见的地方让K君觉得很工口。</p>
+<p>S：怎么觉得咱们的构成要素只剩下工口了啊←www<br>
+K：不不不翼和虫师很正常好伐！要是能从虫师里看出工口反而才不正常了！</p>
+<h2 id="ムービックインフォメーション">ムービックインフォメーション</h2>
+<p>介绍了とりはい的圆盘和SolidS的CARD系列新CD。<br>
+「GAME IS MINE」是非常有固体团特色的歌，节奏感强，又带着性感。但是另一首「Timeless」，是迄今为止的SolidS未曾尝试过的，带有包容性的情歌风，可以体验到SolidS新境地的一首歌。连歌词都非常的pure。录音的时候也跟过去不一样，没有走通常那种帅气中带着性格的路线，希望大家也能喜欢。</p>
+<h2 id="壮馬さんさんお祝い-三上クイズリターンズ">壮馬さんさんお祝い、三上クイズ・リターンズ</h2>
+<p>去年<a href="/post/dameradio081/">K君生日回</a>因为做的非常有趣被S提前预约要在生日里也搞一次，所以就有了这次的特别栏目。<br>
+S：虽然确实是我预约的，但是怎么感觉气氛并不是很热呢……ww<br>
+这次也有浅野桑自掏腰包给的奖励，规则也跟上次一样，如果能回答对这些小quiz，就可以霸占这本来要给三上D的2万块ww</p>
+<ol>
+<li><b>三上对石川界人的第一印象是？</b></li>
+</ol>
+<p>都已经不记得第一次见面是什么时候了还问这种问题真的好吗ww<br>
+并且给了提示是：非角色<br>
+最后S给的回答是：ASCENSION！<br>
+答案是……错的！<br>
+正确答案是：<strong>ヒカリ断ツ雨</strong><br>
+wwwwww<br>
+按三上的话说，虽然一直有看S出演的动画，但是让他感受到最 <strong>「Vivid斉藤壮馬」</strong> 的是这首歌。更将它推为神曲，甚至每次去卡拉OK必点！www</p>
+<ol start="2">
+<li><b>迄今为止的广播里，三上选出的第一名场面是？</b></li>
+</ol>
+<p>是连K都印象非常深刻的名场面！并且K有信心S也记得！两个人当时都笑得很开心！<br>
+最后S给的回答是：圣诞节跟K君一起夸dmrj的时候！（指路→<a href="/post/dameradio095/">第95回</a>）<br>
+答案是……错的！<br>
+正确答案是：<strong>三上在回答对K君第一印象是东京暗鸦的时候</strong><br>
+鬼才猜得出啊！！！！<br>
+S：もう二度と呼ばないよ！！</p>
+<h2 id="ed">ED</h2>
+<p>本周的ARCHIVE：啊～～（叹气）RCHIVE<br>
+S：那个……请允许我说一句，今天体感真的比三十分钟还要长。<br>
+确实这次的刻意感太强了，完全没有上次K君时那么好笑😂😂</p>
+<p>对于生日的愿景，希望今后继续把声优摆在第一位的同时，能继续发掘更多自己喜欢的事物。<br>
+K：希望你那时候也能把“游戏”加进去。<br>
+S：要是你当礼物送我的话我就加哦。<br>
+K：真的吗？那我送你个只能玩PUBG的iPad哦？<br>
+S：wwwww如果你真的送我的话我萨苏噶会玩的啦～<br>
+K：嗯～～有点贵呢。<br>
+S：所以我还是老实等着你送我ANOVA吧ww<br>
+于是就这么不了了之了～</p>
 
             </div>
             
@@ -481,7 +712,7 @@ GUEST：近藤隆</p>
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://moonaileen.github.io/post/boruradi41/" title="ボルラジ041">https://moonaileen.github.io/post/boruradi41/</a>
+      <a href="https://moonaileen.github.io/post/dameradio108/" title="ダメラジ108（20/04/22放送分）">https://moonaileen.github.io/post/dameradio108/</a>
     </li>
     <li class="post-copyright-license">
       <strong class="language" data-lan="copyright">版权声明： </strong>
@@ -490,27 +721,23 @@ GUEST：近藤隆</p>
   </ul>
   <div class="tags">
     
-      <a href="https://moonaileen.github.io/tag/KakiharaTetsuya/"># 柿原徹也</a>
-    
-      <a href="https://moonaileen.github.io/tag/HatanakaTasuku/"># 畠中祐</a>
-    
-      <a href="https://moonaileen.github.io/tag/KondoTakashi/"># 近藤隆</a>
-    
       <a href="https://moonaileen.github.io/tag/Radio/"># Radio</a>
+    
+      <a href="https://moonaileen.github.io/tag/DameRadio/"># ダメラジ</a>
+    
+      <a href="https://moonaileen.github.io/tag/SaitoSoma/"># 斉藤壮馬</a>
+    
+      <a href="https://moonaileen.github.io/tag/IshikawaKaito/"># 石川界人</a>
     
   </div>
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="本田さんバックヤードレイディオ02" href="https://moonaileen.github.io/post/backyardradio02/">本田さんバックヤードレイディオ02</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="本田さんバックヤードレイディオ02" href="https://moonaileen.github.io/post/backyardradio02/">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="ダメラジ028（18/10/10放送分）" href="https://moonaileen.github.io/post/dameradio028/">ダメラジ028（18/10/10放送分）</a>
-        <a class="nav-mobile-next" title="ダメラジ028（18/10/10放送分）" href="https://moonaileen.github.io/post/dameradio028/">下一篇</a>
+        <a class="nav-pc-next" title="ダメラジ107（20/04/15放送分）" href="https://moonaileen.github.io/post/dameradio107/">ダメラジ107（20/04/15放送分）</a>
+        <a class="nav-mobile-next" title="ダメラジ107（20/04/15放送分）" href="https://moonaileen.github.io/post/dameradio107/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>
