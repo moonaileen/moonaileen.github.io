@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://moonaileen.github.io</id>
     <title>「旅程」</title>
-    <updated>2020-05-24T05:34:08.993Z</updated>
+    <updated>2020-05-24T10:29:35.012Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://moonaileen.github.io"/>
     <link rel="self" href="https://moonaileen.github.io/atom.xml"/>
@@ -10,6 +10,23 @@
     <logo>https://moonaileen.github.io/images/avatar.png</logo>
     <icon>https://moonaileen.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 「旅程」</rights>
+    <entry>
+        <title type="html"><![CDATA[ダメラジ111（20/05/13放送分）]]></title>
+        <id>https://moonaileen.github.io/post/dameradio111/</id>
+        <link href="https://moonaileen.github.io/post/dameradio111/">
+        </link>
+        <updated>2020-05-24T12:06:53.000Z</updated>
+        <summary type="html"><![CDATA[<p>タイトルコール合わないけどお互いの気持はあっているはずなのでダメじゃないラジオ。</p>
+<p>S这期换了新麦克后音质飞升！看起来可能是在家里搞的了～<br>
+冒头念的来信来说了这点，明明是K君的音质很好，跟普通录音棚收录的效果相差无几，S的音质差到像在打电话，来信反而夸S的让她有种dkdk的感觉hhhh<br>
+然而音质再好，TITLE CALL想在远程的条件下合上看来是没希望了XD</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>タイトルコール合わないけどお互いの気持はあっているはずなのでダメじゃないラジオ。</p>
+<p>S这期换了新麦克后音质飞升！看起来可能是在家里搞的了～<br>
+冒头念的来信来说了这点，明明是K君的音质很好，跟普通录音棚收录的效果相差无几，S的音质差到像在打电话，来信反而夸S的让她有种dkdk的感觉hhhh<br>
+然而音质再好，TITLE CALL想在远程的条件下合上看来是没希望了XD</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[ダメラジ110（20/05/06放送分）]]></title>
         <id>https://moonaileen.github.io/post/dameradio110/</id>
@@ -167,33 +184,6 @@ GUEST：鳥海浩輔さん</p>
         <summary type="html"><![CDATA[<p>发售日3月25日，并且这张我还是寄到了YUI家，人家当天就帮我压出来发给我，结果我愣是磨蹭到今天才刚刚听完。我这个速度真是绝了😅😅😅😅</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>发售日3月25日，并且这张我还是寄到了YUI家，人家当天就帮我压出来发给我，结果我愣是磨蹭到今天才刚刚听完。我这个速度真是绝了😅😅😅😅</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ダメラジ102（20/03/11放送分）]]></title>
-        <id>https://moonaileen.github.io/post/dameradio102/</id>
-        <link href="https://moonaileen.github.io/post/dameradio102/">
-        </link>
-        <updated>2020-05-17T14:45:07.000Z</updated>
-        <summary type="html"><![CDATA[<p>ラジオはいつも通り楽しくお届けするからダメじゃないラジオ。</p>
-<p>花粉季又要开始了。<br>
-因为花粉症的关系，S的皮肤都在发红。K：怪不得你今天看起来脸色不错！<br>
-咦？<br>
-据说平时S的脸色比较惨白，会让人忍不住担心😅<br>
-貌似下雨天花粉症会更严重。K作为开车一族最讨厌这个时期的下雨天，他的车下雨时雨水加上花粉飞溅的黄色，会让车看起来特别脏。所以正在寻思着给车换个颜色。问S哪种颜色好。<br>
-S认为K适合红色或者蓝色，但是最后选了紫色。<br>
-K自己是更想改装成红色的。只可惜红色在花粉季也很容易脏ww<br>
-最后发现只有黄色最耐脏，但是怎么想都觉得黄色跟K君完全不搭啊ww（K：说起黄色还是TSK比较适合嘛！）</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>ラジオはいつも通り楽しくお届けするからダメじゃないラジオ。</p>
-<p>花粉季又要开始了。<br>
-因为花粉症的关系，S的皮肤都在发红。K：怪不得你今天看起来脸色不错！<br>
-咦？<br>
-据说平时S的脸色比较惨白，会让人忍不住担心😅<br>
-貌似下雨天花粉症会更严重。K作为开车一族最讨厌这个时期的下雨天，他的车下雨时雨水加上花粉飞溅的黄色，会让车看起来特别脏。所以正在寻思着给车换个颜色。问S哪种颜色好。<br>
-S认为K适合红色或者蓝色，但是最后选了紫色。<br>
-K自己是更想改装成红色的。只可惜红色在花粉季也很容易脏ww<br>
-最后发现只有黄色最耐脏，但是怎么想都觉得黄色跟K君完全不搭啊ww（K：说起黄色还是TSK比较适合嘛！）</p>
 ]]></content>
     </entry>
 </feed>
