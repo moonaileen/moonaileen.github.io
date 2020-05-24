@@ -8,7 +8,7 @@
 <meta name="keywords" content="斉藤壮馬">
 <meta name="description" content="君と出逢ったことだけ後悔はしない">
 <meta name="theme-color" content="#ec91a3">
-<title>旅に出る | 「旅程」</title>
+<title>ダメラジ112（20/05/20放送分） | 「旅程」</title>
 <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/moonaileen/moonaileen.github.io@master/favicon.ico?v=1590335376975">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/moonaileen/moonaileen.github.io@master/media/css/gemini.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/moonaileen/moonaileen.github.io@master/media/fonts/font-awesome.css">
@@ -48,8 +48,8 @@
 </script>
 
 
-  <meta name="description" content="旅に出る" />
-  <meta name="keywords" content="Life" />
+  <meta name="description" content="ダメラジ112（20/05/20放送分）" />
+  <meta name="keywords" content="Radio,ダメラジ,斉藤壮馬,石川界人" />
 </head>
 
 <body>
@@ -226,7 +226,8 @@
       <div class="sidebar-body gemini" id="sidebar_body">
         
           
-            
+            <div class="post-side-meta" id="post_side_meta">
+              
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="https://cdn.jsdelivr.net/gh/moonaileen/moonaileen.github.io@master/images/avatar.png"/>
@@ -287,6 +288,199 @@
 
 
 </div>
+            </div>
+            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+              <div class="toc-box right-motion">
+  <div class="toc-wrapper  auto"
+    id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#op">OP</a></li>
+<li><a href="#%E3%81%B5%E3%81%A4%E3%81%8A%E3%81%9F">ふつおた</a></li>
+<li><a href="#%E4%BB%8A%E9%80%B1%E3%81%AE%E3%83%80%E5%90%8D%E8%A8%80">今週のダ名言</a></li>
+<li><a href="#%E5%A3%AE%E9%A6%AC%E5%90%9B%E7%95%8C%E4%BA%BA%E5%90%9B%E8%81%9E%E3%81%84%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84">壮馬君・界人君聞いてください。</a></li>
+<li><a href="#ed">ED</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
+  let active = 'active-show', activeClass = 'active-current';
+  let tocWrapper = document.querySelector('#toc_wrapper');
+  let tocContent = tocWrapper.children[0];
+  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
+
+  function addTocNumber(elem, deep) {
+    if (!elem) {
+      return;
+    }
+    let prop = elem.__proto__;
+
+    if (prop === HTMLUListElement.prototype) {
+      for (let i = 0; i < elem.children.length; i++) {
+        addTocNumber(elem.children[i], deep + (i + 1) + '.');
+      }
+    } else if (prop === HTMLLIElement.prototype) {
+      // 保存li元素
+      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
+        lList.push(elem);
+      }
+      for (let i = 0; i < elem.children.length; i++) {
+        let cur = elem.children[i];
+        if (cur.__proto__ === HTMLAnchorElement.prototype) {
+          if (autoNumber) {
+            cur.text = deep + ' ' + cur.text;
+          }
+        } else if (cur.__proto__ === HTMLUListElement.prototype) {
+          addTocNumber(cur, deep);
+        }
+      }
+    }
+  }
+
+  function removeParentActiveClass() {
+    let parents = tocContent.querySelectorAll('.' + active)
+    parents.forEach(function (elem) {
+      elem.classList.remove(active);
+    });
+  }
+
+  function addActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.add(activeClass);
+    }
+  }
+
+  function removeActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.remove(activeClass);
+    }
+  }
+
+  function addActiveLiElemment(elem, parent) {
+    if (!elem || elem === parent) {
+      return;
+    } else {
+      if (elem.__proto__ === HTMLLIElement.prototype) {
+        elem.classList.add(active);
+      }
+      addActiveLiElemment(elem.parentElement, parent);
+    }
+  }
+
+  function showToc() {
+    if (tocWrapper) {
+      postBody = document.querySelector('#post_body');
+      for (let i = 0; i < postBody.children.length; i++) {
+        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+          hList.push(postBody.children[i]);
+        }
+      }
+      if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+      } else if (tocWrapper.classList.contains('no_compress')) {
+        tocContent.classList.add('expanded');
+      } else {
+        if (hList.length > 10) {
+          active = 'active-hidden'
+          tocContent.classList.add('closed');
+        } else {
+          tocContent.classList.add('expanded');
+        }
+      }
+    }
+  }
+
+  (function () {
+    // 处理不是从#一级标题开始目录
+    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
+      let con = tocContent.children[0].children[0];
+      tocContent.innerHTML = con.innerHTML;
+    }
+    let markdownItTOC = document.querySelector('.markdownIt-TOC');
+    let innerHeight = window.innerHeight;
+    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
+    addTocNumber(tocContent, '');
+  })();
+
+  document.addEventListener('scroll', function (e) {
+    if (lList.length <= 0) {
+      return;
+    }
+    let scrollTop = document.scrollingElement.scrollTop + 10;
+    let dir;
+
+    if (lastTop - scrollTop > 0) {
+      dir = 'up';
+    } else {
+      dir = 'down';
+    }
+
+    lastTop = scrollTop;
+    if (scrollTop <= 0) {
+      if (lastIndex >= 0 && lastIndex < hList.length) {
+        lList[lastIndex].classList.remove(activeClass);
+      }
+      return;
+    }
+
+    let current = 0, hasFind = false;
+    for (let i = 0; i < hList.length; i++) {
+      if (hList[i].offsetTop > scrollTop) {
+        current = i;
+        hasFind = true;
+        break;
+      }
+    }
+    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+      current = hList.length - 1;
+    } else {
+      current--;
+    }
+    if (dir === 'down') {
+      if (current > lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex)
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    } else {
+      if (current < lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex);
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    }
+  });
+
+
+  window.addEventListener('load', function () {
+    showToc();
+    document.querySelector('#sidebar').style = 'display: block;';
+    tocWrapper.classList.add('toc-active');
+    setTimeout(function () {
+      if ("createEvent" in document) {
+        let evt = document.createEvent("HTMLEvents");
+        evt.initEvent("scroll", false, true);
+        document.dispatchEvent(evt);
+      }
+      else {
+        document.fireEvent("scroll");
+      }
+    }, 500)
+  })
+
+</script>
+            </div>
           
         
       </div>
@@ -374,8 +568,8 @@
           <div class="section bg-color post post-page">
             <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://moonaileen.github.io/post/tabinideru/">
-      旅に出る
+    <a class="post-title-link" href="https://moonaileen.github.io/post/dameradio1122/">
+      ダメラジ112（20/05/20放送分）
     </a>
   </h1>
   <div class="post-meta">
@@ -383,7 +577,7 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span>2017-02-22</span>
+      <span>2020-05-25</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
@@ -392,8 +586,26 @@
       <span class="pc-show language" data-lan="category-in">分类于</span>
       
       
-      <a href="https://moonaileen.github.io/tag/Life/">
-        <span>Life</span>
+      <a href="https://moonaileen.github.io/tag/Radio/">
+        <span>Radio</span>
+      </a>、
+      
+      
+      
+      <a href="https://moonaileen.github.io/tag/DameRadio/">
+        <span>ダメラジ</span>
+      </a>、
+      
+      
+      
+      <a href="https://moonaileen.github.io/tag/SaitoSoma/">
+        <span>斉藤壮馬</span>
+      </a>、
+      
+      
+      
+      <a href="https://moonaileen.github.io/tag/IshikawaKaito/">
+        <span>石川界人</span>
       </a>
       
       
@@ -402,17 +614,17 @@
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>1<span class="language" data-lan="minute">分钟</span></span>
+      <span>6<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>196<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>1699<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
     
-    <span id="/post/tabinideru/" data-flag-title="旅に出る" class="meta-item pc-show leancloud_visitors">
+    <span id="/post/dameradio1122/" data-flag-title="ダメラジ112（20/05/20放送分）" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
@@ -421,10 +633,64 @@
   </div>
 </header>
             <div class="post-body next-md-body" id="post_body">
-              <figure data-type="image" tabindex="1"><img src="http://wx1.sinaimg.cn/large/59249651ly1fcz2fdhv4dj20zk0qowlw.jpg" alt="" loading="lazy"></figure>
-<p>憋了两周终于赶在出发前憋出来了。真是字到写时方恨丑TvT其实也还是连两页纸都没凑满，不管了，反正我就是心里万千思绪憋不出一个P来的闷骚文盲啦！！（自暴自弃ing</p>
-<p>在信里又忍不住跟男神抱怨了一下91的烂尾，心里也知道这事跟男神说一点用都没有，就是忍不住当ky，自打脸.gif</p>
-<p>跟小朋友也忍不住抱怨了一下现在的buddyfight，一边心里嫌弃自己怎么这么ky还是一边忍不住写，望天。啊，不过也有好好夸他在qc的哭戏，去年心目中的最佳&gt;__&lt;（虽然含蓄地跟他说的是TOP3哈哈哈）</p>
+              <p>人としゃべるのってやっぱ楽しいね～って思えるからダメじゃないラジオ。</p>
+<p>K买了些设备可以把爱疯打造成简易的摄影机。但是搞完了却不知道能拿来拍些什么。真人出镜实况锻炼被否了（事务所应该也不会同意），只有手出镜的料理视频也被否了（“直接叫外卖不好吗？”）。<br>
+S：你干脆把这套设备送我算了！<br>
+最后说觉得拿来录PUBG的教学视频或许不错，但是又担心自己的手毛（てげ）不好看，只能作罢。<br>
+S反应了半天てげ是什么？然后问剃掉不就好了？<br>
+K又觉得这种表现自己最真实的一面比较好吧……准备等录完广播再研究看看了。</p>
+<p>这回轮到K君在水里放冰故意摇得嘎啦嘎啦响了。仿佛在报复上一回的S君。</p>
+<p>四度目の正直。当然TITLE CALL也依然是没有合上拍。不如说这次是最不合的一期ww</p>
+<!-- more -->
+<h2 id="op">OP</h2>
+<p>最近因为疫情关系和人的交流变少了很多，所以一旦有可以说话的机会就会忍不住聊很久。<br>
+K前阵子因为工作去了现场（游戏的收录，怀疑是晚钟FD），大部分人都不在现场而是采取远程联线的形式check工作，只有导演还是在的。他收录结束后跟导演两人保持着很远的距离（分处两个房间）又聊了一个半小时。<br>
+S本以为自己是一个不说话也没事的人，但是一旦身处现在的环境，偶尔远距离的收录、聊天就会让他发觉交流还是很重要的。<br>
+K：这就是「人」这个字的真谛啊。都是需要相互扶持的。<br>
+S：wwww</p>
+<p>K君做油管主播后发现到，和观众能够进行直接的交流会他在演技方面也产生有益的影响。有很多事是自己发现不了的，要通过第三者指出后才会意识到。会根据观众的要求对自己的视频进行修改，这种在和观众一起做视频的氛围他很喜欢。</p>
+<p>最近越来越多的声优开设了自己的油管频道。并且也都玩起了动森。S问现在玩还来得及吗？K说不光来得及，你现在玩我还可以在金钱上支援你。おじさん融資しちゃうから。<br>
+S：这么想让我玩的吗！？<br>
+K：想。一起录视频吧？<br>
+S：ww原来是因为这个。<br>
+K：比起一起玩PUBG，可能一起玩动森的话粉丝们更开心吧。玩起来不那么刺激，又适合聊天。<font color=#eee>（←真的不用了谢谢……）</font><br>
+S：原来如此，我会考虑的。<br>
+K：真的吗？你有switch吗？<br>
+S：有的。<br>
+<font color=#e47e93>↑我惊呆，他竟然有switch！！明明<a href="/post/dameradio107/">107回</a>的时候还被K吐槽拿掌机的姿势像个新手！不过后来一想，他去年就在说搬新家后一直没开通电视台又没联网，一直在玩俄罗斯方块（<a href="/post/dameradio083/">83回</a>里提到的），有没有可能就是那个时候买的NS啊😅😂😂</font><br>
+K：真的吗！那你现在赶紧拿出来下载！<br>
+不过听S的意思是他真的有考虑搞一些视频节目配信？</p>
+<h2 id="ふつおた">ふつおた</h2>
+<p>来信是とりはい的感想。并问两人会不会回顾自己出演过的活动圆盘。<br>
+S说基本不会。K说生放的那种会去看看做下自我反省，但是活动的圆盘感觉就不太一样。他曾经看过一次，感受到活动的圆盘只有站在观众的角度上去体会当时的氛围才是最好的。自己作为出演者并不适合，只会发现越来越多需要反省的地方。<br>
+S说入这行开始出演活动以来，虽然很感谢自己能出演作品，能被邀请参加活动，但最开始的时候经常不知道自己该怎么去做，他本来的性格是不喜欢露面喜欢待在幕后的，现在回顾那时的自己，会不由自主地产生<b>“壮馬、頑張ってるな！頑張れ！”</b>这样的感觉。因为那时的自己浑身都散发出拼命努力的氛围。<br>
+总之，要适当地进行自我反省吸取经验教训从而得以进步。以及，无论如何，能把过去的活动留下有形的东西都是值得感恩的！</p>
+<h2 id="今週のダ名言">今週のダ名言</h2>
+<blockquote>
+<p>寝ないは寝るのフラグ。</p>
+</blockquote>
+<p>是听众对妈妈的内心吐槽。妈妈经常说着不睡反而早早就睡了。<br>
+K说自己完全不会这样，S因为也是很难入睡的类型所以也很难get到这句名言。<br>
+K：倒不如说恰恰相反吧，我是 <strong>「寝るは寝ないのフラグ」</strong> 。<br>
+S：wwww秒懂。<br>
+比如看动画想着再看一集就睡，然后就这么看到了最终话ww</p>
+<h2 id="壮馬君界人君聞いてください">壮馬君・界人君聞いてください。</h2>
+<p>听众现在沉迷的事是怎样把书皮包得最平整（指书店店员帮忙包的那种）。因为哥哥姐姐都在书店打过工，照葫芦画瓢开始爱上了包书皮。</p>
+<p>S惊叹的点是照葫芦画瓢竟然就能学会，好厉害！<br>
+不过用自己喜欢的图案包书皮感觉确实不错，S虽然平时没有包书皮的习惯，但是也认为可以试试。K说可以凑一些图案当做书皮set出售，没准挺有销路。然后一搜发现真的有这么卖的。<br>
+S：（突然灵光一闪）你说咱们出个ダメラジ的书皮怎么样？素材是纸成本应该也不会太高？<br>
+K：嗯～可是我不看书啊～而且要出书皮的话你得先出书吧。<br>
+S：啊……那就来本ダメラジ的ダ名言集吧。可以放在口袋里的那种。一天一句，一共365页这样。<br>
+这个提案似乎得到了p们的认可，不知道是不是真的会出相关的goods呢？</p>
+<h2 id="ed">ED</h2>
+<p>远程收录第四回，开始有些找到远程收录的节奏了。<br>
+比起普通收录来显得不那么得要领。但是或许也更适合一边做些别的事一边听。<br>
+等未来一切恢复正常了，没准也可以继续利用这些远程收录时所积累到的经验。</p>
+<hr>
+<blockquote class="twitter-tweet" data-dnt="true" align="center"><p lang="ja" dir="ltr">ついにリモート収録も4回目！だいぶテンポ感が掴めてきました！かいとくんの撮影機材、なにかにうまく使えないかな……。ダメラジ本、けっこうアリだと思いますけど、皆さんいかがでしょうか？笑(そうま)<a href="https://twitter.com/hashtag/%E3%83%80%E3%83%A1%E3%83%A9%E3%82%B8?src=hash&amp;ref_src=twsrc%5Etfw">#ダメラジ</a> <a href="https://twitter.com/hashtag/agqr?src=hash&amp;ref_src=twsrc%5Etfw">#agqr</a></p>&mdash; 斉藤壮馬・石川界人のダメじゃないラジオ (@dameradi) <a href="https://twitter.com/dameradi/status/1263122408371703808?ref_src=twsrc%5Etfw">May 20, 2020</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-dnt="true" align="center"><p lang="ja" dir="ltr">スタッフ一同、リモート収録（立会も）慣れてきました！<br>スタジオ収録とは違うテンポが出来上がってきた気がします。<br>ゆったりで基本は変わらずなダメラジ放送！<br>今回も聞きながらしっかり笑ってしまってます。<br><br>来週の放送もお楽しみに～！<a href="https://twitter.com/hashtag/%E3%81%8A%E3%82%84%E3%81%99%E3%81%BF%E3%81%AA%E3%81%95%E3%81%84?src=hash&amp;ref_src=twsrc%5Etfw">#おやすみなさい</a><a href="https://twitter.com/hashtag/%E3%83%80%E3%83%A1%E3%83%A9%E3%82%B8?src=hash&amp;ref_src=twsrc%5Etfw">#ダメラジ</a> <a href="https://twitter.com/hashtag/agqr?src=hash&amp;ref_src=twsrc%5Etfw">#agqr</a> <a href="https://t.co/gGSAd0ePq1">pic.twitter.com/gGSAd0ePq1</a></p>&mdash; 斉藤壮馬・石川界人のダメじゃないラジオ (@dameradi) <a href="https://twitter.com/dameradi/status/1263125126800748544?ref_src=twsrc%5Etfw">May 20, 2020</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
             </div>
             
@@ -436,7 +702,7 @@
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://moonaileen.github.io/post/tabinideru/" title="旅に出る">https://moonaileen.github.io/post/tabinideru/</a>
+      <a href="https://moonaileen.github.io/post/dameradio1122/" title="ダメラジ112（20/05/20放送分）">https://moonaileen.github.io/post/dameradio1122/</a>
     </li>
     <li class="post-copyright-license">
       <strong class="language" data-lan="copyright">版权声明： </strong>
@@ -445,21 +711,27 @@
   </ul>
   <div class="tags">
     
-      <a href="https://moonaileen.github.io/tag/Life/"># Life</a>
+      <a href="https://moonaileen.github.io/tag/Radio/"># Radio</a>
+    
+      <a href="https://moonaileen.github.io/tag/DameRadio/"># ダメラジ</a>
+    
+      <a href="https://moonaileen.github.io/tag/SaitoSoma/"># 斉藤壮馬</a>
+    
+      <a href="https://moonaileen.github.io/tag/IshikawaKaito/"># 石川界人</a>
     
   </div>
   <div class="nav">
     <div class="nav-prev">
       
         <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="Soma Saito - 只想平淡地表现“状况”本身" href="https://moonaileen.github.io/post/seiyuanimedia1710/">Soma Saito - 只想平淡地表现“状况”本身</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="Soma Saito - 只想平淡地表现“状况”本身" href="https://moonaileen.github.io/post/seiyuanimedia1710/">上一篇</a>
+        <a class="nav-pc-next" title="やっと！/【Memo】5/23 安元洋貴の笑われるセールスマン（仮）" href="https://moonaileen.github.io/post/viiFzVmP/">やっと！/【Memo】5/23 安元洋貴の笑われるセールスマン（仮）</a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="やっと！/【Memo】5/23 安元洋貴の笑われるセールスマン（仮）" href="https://moonaileen.github.io/post/viiFzVmP/">上一篇</a>
       
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="冬のはなし" href="https://moonaileen.github.io/post/fuyunohanashi/">冬のはなし</a>
-        <a class="nav-mobile-next" title="冬のはなし" href="https://moonaileen.github.io/post/fuyunohanashi/">下一篇</a>
+        <a class="nav-pc-next" title="ダメラジ111（20/05/13放送分）" href="https://moonaileen.github.io/post/dameradio111/">ダメラジ111（20/05/13放送分）</a>
+        <a class="nav-mobile-next" title="ダメラジ111（20/05/13放送分）" href="https://moonaileen.github.io/post/dameradio111/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>
