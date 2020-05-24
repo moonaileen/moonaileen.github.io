@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://moonaileen.github.io</id>
     <title>「旅程」</title>
-    <updated>2020-05-23T05:50:08.725Z</updated>
+    <updated>2020-05-24T05:34:08.993Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://moonaileen.github.io"/>
     <link rel="self" href="https://moonaileen.github.io/atom.xml"/>
@@ -10,6 +10,23 @@
     <logo>https://moonaileen.github.io/images/avatar.png</logo>
     <icon>https://moonaileen.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 「旅程」</rights>
+    <entry>
+        <title type="html"><![CDATA[ダメラジ110（20/05/06放送分）]]></title>
+        <id>https://moonaileen.github.io/post/dameradio110/</id>
+        <link href="https://moonaileen.github.io/post/dameradio110/">
+        </link>
+        <updated>2020-05-23T17:36:25.000Z</updated>
+        <summary type="html"><![CDATA[<p>家にいる時間をみんな大事にしてて偉いからダメじゃないラジオ。</p>
+<p>K买了健身器材，把家里改造得就像健身房一样。最近因为疫情关系一直待在家里，不能去健身房，所以身体没有以前那么健硕了，想借此改善自己的体型，也建议大家在家也要适当地进行锻炼。<br>
+听到S君说他自己在家里也有在做平板支撑（俯卧撑？）我也放心了。<br>
+TITLE CALL依然没办法完美合拍。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>家にいる時間をみんな大事にしてて偉いからダメじゃないラジオ。</p>
+<p>K买了健身器材，把家里改造得就像健身房一样。最近因为疫情关系一直待在家里，不能去健身房，所以身体没有以前那么健硕了，想借此改善自己的体型，也建议大家在家也要适当地进行锻炼。<br>
+听到S君说他自己在家里也有在做平板支撑（俯卧撑？）我也放心了。<br>
+TITLE CALL依然没办法完美合拍。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[ダメラジ109（20/04/29放送分）]]></title>
         <id>https://moonaileen.github.io/post/dameradio109/</id>
@@ -177,31 +194,6 @@ K自己是更想改装成红色的。只可惜红色在花粉季也很容易脏w
 S认为K适合红色或者蓝色，但是最后选了紫色。<br>
 K自己是更想改装成红色的。只可惜红色在花粉季也很容易脏ww<br>
 最后发现只有黄色最耐脏，但是怎么想都觉得黄色跟K君完全不搭啊ww（K：说起黄色还是TSK比较适合嘛！）</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ダメラジ101（20/03/04放送分）]]></title>
-        <id>https://moonaileen.github.io/post/dameradio101/</id>
-        <link href="https://moonaileen.github.io/post/dameradio101/">
-        </link>
-        <updated>2020-05-16T18:25:02.000Z</updated>
-        <summary type="html"><![CDATA[<p>卒業式シーズンで寂しいけどダメじゃないラジオ。</p>
-<p>冒头继续上期没答完的特别栏目仲良しチャレンジ延長線～<br>
-<b>Q：说起3月的活动首先想到的是？</b><br>
-S：毕业典礼　K：公开录音<br>
-S本来是想答女儿节（ひな祭り）的，结果愣是没想起这个词，所以改了答案。<br>
-K：不是吧，你怎么连朋友主演的动画标题都能忘记？！（指的YSK）<br>
-S：而且漫画我明明全卷都看了！<br>
-K：是啊你还说超级有趣来着呢！</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>卒業式シーズンで寂しいけどダメじゃないラジオ。</p>
-<p>冒头继续上期没答完的特别栏目仲良しチャレンジ延長線～<br>
-<b>Q：说起3月的活动首先想到的是？</b><br>
-S：毕业典礼　K：公开录音<br>
-S本来是想答女儿节（ひな祭り）的，结果愣是没想起这个词，所以改了答案。<br>
-K：不是吧，你怎么连朋友主演的动画标题都能忘记？！（指的YSK）<br>
-S：而且漫画我明明全卷都看了！<br>
-K：是啊你还说超级有趣来着呢！</p>
 ]]></content>
     </entry>
 </feed>
