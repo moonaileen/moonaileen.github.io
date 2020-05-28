@@ -2414,7 +2414,7 @@ mark {
 .next-md-body > p strong,
 .next-md-body > ul strong {
   font-weight: 550;
-  color: #111;
+  color: #e07289;
   position: relative;
   z-index: 10;
 }
@@ -2436,9 +2436,30 @@ mark {
   border-radius: 0.4rem;
 }
 
+
 .next-md-body hr {
 height: 4px;
 background: url(https://moonaileen.github.io/media/images/line02.png) repeat-x 0 0;
+}
+
+.marker_pink {
+background:linear-gradient(transparent 80%, #ffc0cb 80%);
+font-weight:bold; 
+}
+
+.marker_blue {
+ background: linear-gradient(transparent 80%, #c1e0ff 80%);
+font-weight: bold; 
+}
+
+.marker_green {
+background:linear-gradient(transparent 80%, #c9dfd7 80%);
+font-weight:bold; 
+}
+
+.marker_red {
+background:linear-gradient(transparent 80%, #ffadad 80%);
+font-weight:bold; 
 }.box-shadow-wrapper {
       box-shadow: none !important;
     }body {
