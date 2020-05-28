@@ -603,7 +603,7 @@ pre > span.copy-code:hover {
 }
 .post-footer .post-eof {
   display: block;
-  margin: 80px auto 60px;
+  margin: 40px auto 30px;
   width: 8%;
   height: 1px;
   background: #ccc;
@@ -2116,9 +2116,6 @@ pre > span.copy-code:hover {
       background: transparent !important;
     }body {
       background-color: #eee;
-    }
-    .nav-toggle .line {
-      background-color: #eee !important;
     }.header {
         width: 1200px;
         margin: 0 auto;
@@ -2180,6 +2177,9 @@ pre > span.copy-code:hover {
     .next-md-body a:hover, .friends-box a:hover {
       color: #ffc9c9;
       border-bottom-color: #ffc9c9;
+    }
+    .nav-toggle .line {
+      background-color:  !important;
     }
       .nav-item a {
         color:  #555;
