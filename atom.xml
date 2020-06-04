@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://moonaileen.github.io</id>
     <title>「旅程」</title>
-    <updated>2020-05-28T15:13:58.417Z</updated>
+    <updated>2020-06-04T08:40:28.862Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://moonaileen.github.io"/>
     <link rel="self" href="https://moonaileen.github.io/atom.xml"/>
@@ -10,6 +10,21 @@
     <logo>https://moonaileen.github.io/images/avatar.png</logo>
     <icon>https://moonaileen.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 「旅程」</rights>
+    <entry>
+        <title type="html"><![CDATA[ダメラジ114（20/06/03放送分）]]></title>
+        <id>https://moonaileen.github.io/post/dameradio114/</id>
+        <link href="https://moonaileen.github.io/post/dameradio114/">
+        </link>
+        <updated>2020-06-04T01:22:24.000Z</updated>
+        <summary type="html"><![CDATA[<p>久々にスタジオからお送りしているからダメじゃないラジオ。</p>
+<p>这次是在studio收录的！而且还是在文化放送新建的<a href="https://twitter.com/ide_P_/status/1268205164340494341">专门录动画用的studio</a>里收录的！<br>
+所以TITLE CALL终于又能合拍啦！</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>久々にスタジオからお送りしているからダメじゃないラジオ。</p>
+<p>这次是在studio收录的！而且还是在文化放送新建的<a href="https://twitter.com/ide_P_/status/1268205164340494341">专门录动画用的studio</a>里收录的！<br>
+所以TITLE CALL终于又能合拍啦！</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[ダメラジ113（20/05/27放送分）]]></title>
         <id>https://moonaileen.github.io/post/dameradio113/</id>
@@ -195,23 +210,6 @@ GUEST：鳥海浩輔さん</p>
         <content type="html"><![CDATA[<p>先輩が来てくれているからダメじゃないラジオ。<br>
 GUEST：鳥海浩輔さん</p>
 <p>S把手机的液晶屏摔坏了！导致漏出来的背光灯强光能闪瞎人的那种。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ダメラジ105（20/04/01放送分）]]></title>
-        <id>https://moonaileen.github.io/post/dameradio105/</id>
-        <link href="https://moonaileen.github.io/post/dameradio105/">
-        </link>
-        <updated>2020-05-20T08:48:07.000Z</updated>
-        <summary type="html"><![CDATA[<p>新年度が始まろうとしているからダメじゃないラジオ。</p>
-<p>K家的小伦巴终于掌握了K家的整体结构了！<br>
-喜出望外的K君还想给小伦巴起个昵称叫“ルンちゃん”，结果小伦巴只能记得住四个字的昵称，输入到“ルンちゃ”就止住了w<br>
-另外经过验证，发现在之前的广播里抱怨小伦巴记不住他家的结构主要是因为他的教育方法出现的问题，并不怪伦巴。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>新年度が始まろうとしているからダメじゃないラジオ。</p>
-<p>K家的小伦巴终于掌握了K家的整体结构了！<br>
-喜出望外的K君还想给小伦巴起个昵称叫“ルンちゃん”，结果小伦巴只能记得住四个字的昵称，输入到“ルンちゃ”就止住了w<br>
-另外经过验证，发现在之前的广播里抱怨小伦巴记不住他家的结构主要是因为他的教育方法出现的问题，并不怪伦巴。</p>
 ]]></content>
     </entry>
 </feed>
