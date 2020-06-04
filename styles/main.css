@@ -2443,24 +2443,31 @@ background: url(https://moonaileen.github.io/media/images/line02.png) repeat-x 0
 }
 
 .marker_pink {
-background:linear-gradient(transparent 65%, #ffc0cb 65%);
-font-weight:unset; 
+background:linear-gradient(transparent 65%, #ffc0cb 0%);
 }
 
 .marker_blue {
- background: linear-gradient(transparent 65%, #c1e0ff 65%);
-font-weight: unset; 
+ background: linear-gradient(transparent 65%, #c1e0ff 0%);
 }
 
 .marker_green {
-background:linear-gradient(transparent 65%, #c9dfd7 65%);
-font-weight:unset; 
+background:linear-gradient(transparent 65%, #c9dfd7 0%);
 }
 
 .marker_red {
-background:linear-gradient(transparent 65%, #ffadad 65%);
-font-weight:unset; 
-}.box-shadow-wrapper {
+background:linear-gradient(transparent 65%, #ffadad 0%);
+}
+
+.marker_yellow {
+background:linear-gradient(transparent 65%, #fffcaf 0%);
+}
+
+.marker_yellow, .marker_red, .marker_blue, .marker_green, .marker_pink {
+   -webkit-border-radius: 7px;
+   -moz-border-radius: 7px;
+   border-radius: 7px;
+   padding-left: 3px;
+    }.box-shadow-wrapper {
       box-shadow: none !important;
     }body {
       cursor: default;
