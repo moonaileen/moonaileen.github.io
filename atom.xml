@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://moonaileen.github.io</id>
     <title>「旅程」</title>
-    <updated>2020-06-04T11:54:33.964Z</updated>
+    <updated>2020-06-06T12:05:35.281Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://moonaileen.github.io"/>
     <link rel="self" href="https://moonaileen.github.io/atom.xml"/>
@@ -10,6 +10,21 @@
     <logo>https://moonaileen.github.io/images/avatar.png</logo>
     <icon>https://moonaileen.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 「旅程」</rights>
+    <entry>
+        <title type="html"><![CDATA[消化存货。]]></title>
+        <id>https://moonaileen.github.io/post/uhGtNUdgy/</id>
+        <link href="https://moonaileen.github.io/post/uhGtNUdgy/">
+        </link>
+        <updated>2020-06-06T15:44:30.000Z</updated>
+        <summary type="html"><![CDATA[<p>最近一直在慢慢消化之前堆积的存货～<br>
+消化的速度取决于我在用来助眠播放的途中是否会睡着😜<br>
+不过存货基本也消化得差不多了，而新的作品拜今年这局势所赐延期的延期取消的取消，唉……</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>最近一直在慢慢消化之前堆积的存货～<br>
+消化的速度取决于我在用来助眠播放的途中是否会睡着😜<br>
+不过存货基本也消化得差不多了，而新的作品拜今年这局势所赐延期的延期取消的取消，唉……</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[ダメラジ114（20/06/03放送分）]]></title>
         <id>https://moonaileen.github.io/post/dameradio114/</id>
@@ -195,21 +210,6 @@ S说最近确实是有这个问题，刚才试玩的时候看字也有点看不�
 K：说明你开始了……是什么开始了我就不说了www</p>
 <p>S今天的发型跟平时不一样（中分了）。少见的被K盛大地赞赏了一番。<br>
 平时见面总要被K吐槽快把前发剪掉，至少要让人能看清脸。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ダメラジ106（20/04/08放送分）]]></title>
-        <id>https://moonaileen.github.io/post/dameradio106/</id>
-        <link href="https://moonaileen.github.io/post/dameradio106/">
-        </link>
-        <updated>2020-05-20T16:16:05.000Z</updated>
-        <summary type="html"><![CDATA[<p>先輩が来てくれているからダメじゃないラジオ。<br>
-GUEST：鳥海浩輔さん</p>
-<p>S把手机的液晶屏摔坏了！导致漏出来的背光灯强光能闪瞎人的那种。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>先輩が来てくれているからダメじゃないラジオ。<br>
-GUEST：鳥海浩輔さん</p>
-<p>S把手机的液晶屏摔坏了！导致漏出来的背光灯强光能闪瞎人的那种。</p>
 ]]></content>
     </entry>
 </feed>

@@ -8,7 +8,7 @@
 <meta name="keywords" content="斉藤壮馬">
 <meta name="description" content="君と出逢ったことだけ後悔はしない">
 <meta name="theme-color" content="#ec91a3">
-<title>【Memo】歌舞伎町シャーロック～パイプキャットラジオ～ 第02回（19/10/23配信） | 「旅程」</title>
+<title>消化存货。 | 「旅程」</title>
 <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/moonaileen/moonaileen.github.io@master/favicon.ico?v=1591445066295">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/moonaileen/moonaileen.github.io@master/media/css/gemini.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/moonaileen/moonaileen.github.io@master/media/fonts/font-awesome.css">
@@ -48,8 +48,8 @@
 </script>
 
 
-  <meta name="description" content="【Memo】歌舞伎町シャーロック～パイプキャットラジオ～ 第02回（19/10/23配信）" />
-  <meta name="keywords" content="Soma Memo" />
+  <meta name="description" content="消化存货。" />
+  <meta name="keywords" content="中島ヨシキ,感想,CD,斉藤壮馬" />
 </head>
 
 <body>
@@ -226,7 +226,8 @@
       <div class="sidebar-body gemini" id="sidebar_body">
         
           
-            
+            <div class="post-side-meta" id="post_side_meta">
+              
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="https://cdn.jsdelivr.net/gh/moonaileen/moonaileen.github.io@master/images/avatar.png"/>
@@ -287,6 +288,192 @@
 
 
 </div>
+            </div>
+            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+              <div class="toc-box right-motion">
+  <div class="toc-wrapper  auto"
+    id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li><a href="#%E3%82%AF%E3%82%A4%E3%83%BC%E3%83%B3%E3%82%BA%E3%82%AF%E3%82%AA%E3%83%AA%E3%83%86%E3%82%A3-vol1">クイーンズ・クオリティ Vol.1</a></li>
+<li><a href="#%E3%81%BF%E3%81%A0%E3%82%89%E3%81%AA%E7%8C%AB%E3%81%AF%E7%88%AA%E3%82%92%E9%9A%A0%E3%81%99">みだらな猫は爪を隠す</a></li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
+  let active = 'active-show', activeClass = 'active-current';
+  let tocWrapper = document.querySelector('#toc_wrapper');
+  let tocContent = tocWrapper.children[0];
+  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
+
+  function addTocNumber(elem, deep) {
+    if (!elem) {
+      return;
+    }
+    let prop = elem.__proto__;
+
+    if (prop === HTMLUListElement.prototype) {
+      for (let i = 0; i < elem.children.length; i++) {
+        addTocNumber(elem.children[i], deep + (i + 1) + '.');
+      }
+    } else if (prop === HTMLLIElement.prototype) {
+      // 保存li元素
+      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
+        lList.push(elem);
+      }
+      for (let i = 0; i < elem.children.length; i++) {
+        let cur = elem.children[i];
+        if (cur.__proto__ === HTMLAnchorElement.prototype) {
+          if (autoNumber) {
+            cur.text = deep + ' ' + cur.text;
+          }
+        } else if (cur.__proto__ === HTMLUListElement.prototype) {
+          addTocNumber(cur, deep);
+        }
+      }
+    }
+  }
+
+  function removeParentActiveClass() {
+    let parents = tocContent.querySelectorAll('.' + active)
+    parents.forEach(function (elem) {
+      elem.classList.remove(active);
+    });
+  }
+
+  function addActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.add(activeClass);
+    }
+  }
+
+  function removeActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.remove(activeClass);
+    }
+  }
+
+  function addActiveLiElemment(elem, parent) {
+    if (!elem || elem === parent) {
+      return;
+    } else {
+      if (elem.__proto__ === HTMLLIElement.prototype) {
+        elem.classList.add(active);
+      }
+      addActiveLiElemment(elem.parentElement, parent);
+    }
+  }
+
+  function showToc() {
+    if (tocWrapper) {
+      postBody = document.querySelector('#post_body');
+      for (let i = 0; i < postBody.children.length; i++) {
+        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+          hList.push(postBody.children[i]);
+        }
+      }
+      if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+      } else if (tocWrapper.classList.contains('no_compress')) {
+        tocContent.classList.add('expanded');
+      } else {
+        if (hList.length > 10) {
+          active = 'active-hidden'
+          tocContent.classList.add('closed');
+        } else {
+          tocContent.classList.add('expanded');
+        }
+      }
+    }
+  }
+
+  (function () {
+    // 处理不是从#一级标题开始目录
+    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
+      let con = tocContent.children[0].children[0];
+      tocContent.innerHTML = con.innerHTML;
+    }
+    let markdownItTOC = document.querySelector('.markdownIt-TOC');
+    let innerHeight = window.innerHeight;
+    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
+    addTocNumber(tocContent, '');
+  })();
+
+  document.addEventListener('scroll', function (e) {
+    if (lList.length <= 0) {
+      return;
+    }
+    let scrollTop = document.scrollingElement.scrollTop + 10;
+    let dir;
+
+    if (lastTop - scrollTop > 0) {
+      dir = 'up';
+    } else {
+      dir = 'down';
+    }
+
+    lastTop = scrollTop;
+    if (scrollTop <= 0) {
+      if (lastIndex >= 0 && lastIndex < hList.length) {
+        lList[lastIndex].classList.remove(activeClass);
+      }
+      return;
+    }
+
+    let current = 0, hasFind = false;
+    for (let i = 0; i < hList.length; i++) {
+      if (hList[i].offsetTop > scrollTop) {
+        current = i;
+        hasFind = true;
+        break;
+      }
+    }
+    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+      current = hList.length - 1;
+    } else {
+      current--;
+    }
+    if (dir === 'down') {
+      if (current > lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex)
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    } else {
+      if (current < lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex);
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    }
+  });
+
+
+  window.addEventListener('load', function () {
+    showToc();
+    document.querySelector('#sidebar').style = 'display: block;';
+    tocWrapper.classList.add('toc-active');
+    setTimeout(function () {
+      if ("createEvent" in document) {
+        let evt = document.createEvent("HTMLEvents");
+        evt.initEvent("scroll", false, true);
+        document.dispatchEvent(evt);
+      }
+      else {
+        document.fireEvent("scroll");
+      }
+    }, 500)
+  })
+
+</script>
+            </div>
           
         
       </div>
@@ -374,8 +561,8 @@
           <div class="section bg-color post post-page">
             <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://moonaileen.github.io/post/memo1030-1/">
-      【Memo】歌舞伎町シャーロック～パイプキャットラジオ～ 第02回（19/10/23配信）
+    <a class="post-title-link" href="https://moonaileen.github.io/post/uhGtNUdgy/">
+      消化存货。
     </a>
   </h1>
   <div class="post-meta">
@@ -383,7 +570,7 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span>2019-10-30</span>
+      <span>2020-06-07</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
@@ -392,8 +579,26 @@
       <span class="pc-show language" data-lan="category-in">分类于</span>
       
       
-      <a href="https://moonaileen.github.io/tag/SomaMemo/">
-        <span>Soma Memo</span>
+      <a href="https://moonaileen.github.io/tag/NakajimaYoshiki/">
+        <span>中島ヨシキ</span>
+      </a>、
+      
+      
+      
+      <a href="https://moonaileen.github.io/tag/Review/">
+        <span>感想</span>
+      </a>、
+      
+      
+      
+      <a href="https://moonaileen.github.io/tag/CD/">
+        <span>CD</span>
+      </a>、
+      
+      
+      
+      <a href="https://moonaileen.github.io/tag/SaitoSoma/">
+        <span>斉藤壮馬</span>
       </a>
       
       
@@ -402,17 +607,17 @@
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>2<span class="language" data-lan="minute">分钟</span></span>
+      <span>10<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>389<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>2679<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
     
-    <span id="/post/memo1030-1/" data-flag-title="【Memo】歌舞伎町シャーロック～パイプキャットラジオ～ 第02回（19/10/23配信）" class="meta-item pc-show leancloud_visitors">
+    <span id="/post/uhGtNUdgy/" data-flag-title="消化存货。" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
@@ -421,22 +626,65 @@
   </div>
 </header>
             <div class="post-body next-md-body" id="post_body">
-              <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="http://www.onsen.ag/" data-iframely-url="//cdn.iframe.ly/mUqpHU9?iframe=card-small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
-<p><br><audio src="https://files.catbox.moe/z0rhqa.mp3" controls></audio></p>
-<p>因为看到S要当第03回的GUEST了，就来感受下这个广播的氛围，听了第二回，结果发现演小林的那位橘龙丸竟然只跟S生日差一天。是1991年4月21日。（也就是说他跟小西是同月同日的生日ww）<br>
-20:53～<br>
-他说自己一直是个比较容易认生的人，但是有一次被朋友指出自己对其他人没兴趣，他有点震惊自己给别人带来的这种印象，也终于下定决心改善自己。不过在收录现场的时候，因为还是新人，还是没有勇气放得太开，不好融入。<br>
-小西就说没事啊，你看在现场我们所有人不都在欺负soma吗w<br>
-还特意造了词，例句：あいつそうまっちゃってんな。<br>
-橘：那样确实也挺厉害的www<br>
-（S：？？？）</p>
-<p>后来看了下<a href="https://www.animatetimes.com/news/details.php?id=1571376032">小西中村和监督的访谈</a>好像也提到了类似的事。</p>
-<p><img src="https://moonaileen.github.io/post-images/1572414703921.png" alt="" loading="lazy"><br>
-<img src="https://moonaileen.github.io/post-images/1572414797120.png" alt="" loading="lazy"><br>
-……看起来好像京极的地位比我想象中还要高啊？<br>
-可是目前看起来京极更像个小丑型的角色啊😂<br>
-不过毕竟是一个连播两季的动画，后来还有比较长的篇幅，我目前看着也算有趣，但是如果整整两季都是来捏他福尔摩斯探案集的话，也有点emmm？就看岸本卓怎么玩了，吃过91的苦我不太敢抱有期待了呢……</p>
-<p>不过感觉S君演起来一定很开心吧www在现场里被前辈们いじる感觉也蛮有趣^^</p>
+              <p>最近一直在慢慢消化之前堆积的存货～<br>
+消化的速度取决于我在用来助眠播放的途中是否会睡着😜<br>
+不过存货基本也消化得差不多了，而新的作品拜今年这局势所赐延期的延期取消的取消，唉……</p>
+<!-- more -->
+<h1 id="クイーンズクオリティ-vol1">クイーンズ・クオリティ Vol.1</h1>
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://betsucomi.shogakukan.co.jp/rensai/queens/" data-iframely-url="//cdn.iframe.ly/YH4UoFB"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+<p>因为3月开始EMS停运，导致这套抓我直到前阵子找到新的可以发国内的转运才得以拿到手。也终于听上了。<br>
+老实讲这部在刚出消息的时候我就觉得非常微妙，一个正儿八经的少女漫画，公布CV的时候用超大的字体标出男一男二的名字，女主的CV反而只字未提，我直到拿到手以后才在CAST表里看到了女主和其他路人的CV……这种操作真的，非常迷惑@@<br>
+挑了一个睡前的夜晚把Vol.1听完后，我又陷入沉默了。<br>
+<strong>制作怎么可以这么廉价的！？</strong><br>
+好吧，从CV阵容全部来自81这一点多少也可以看出些端倪了吧😂😂<br>
+抓是挑了几个漫画里的片段来改的，如果没有看过剧情可以说是听得丈二和尚摸不着头脑，而且选出来的这些片段确实男一男二的台词远比女主还多。作为一个没看过原作直接听抓的人，我能从抓里推理出来的信息大概是这样：男主（S）喜欢女主，女主喜欢男主，但是因为什么事导致男主不能够跟女主表真心，只求陪在她身边默默付出。而男二（kmd）是个口嫌体正直大部分时间担任吐槽的角色。<br>
+光只是这么一点点片段剧情，就可以数出好多缺点，<span class="marker_red"><b>改编得不到位的剧本，不合时宜的BGM，透着满满的假的音效，毫无对手戏氛围的拼接方式</b></span>。<br>
+其他闭着眼忍忍也就算了，尤其是这个掛け合い。<br>
+直到听完了Vol.1，我才幡然醒悟，杂志上S和kmd的访谈是分别的单人照啊！我怎么反射弧这么长才反应过来他们是分别收录的呢？（Vol.1和2是同时收录的，1作为杂志的附录赠送）<br>
+不过就算是分别收录的，专业人士需要做的不就是让每个人录的音轨衔接得看起来更自然一些吗！？<br>
+玖太郎说一句话，夸张的时候中间甚至会隔着1秒以上的空白，四方才会接话。请问正常人之间的对话会这样吗1？通过这张碟真的再次深切体会到了音监对于“間”的把握是何等重要了。<br>
+就冲着这样的制作，也幸亏它是杂志附录了。这种品质要是拿出来单独卖碟，简直都想直接写投诉信了=_=</p>
+<p>不禁回想起之前春待的各种杂志附录和单行本特装版。明明是同样的捆绑形式，但是春待我没看过原作都一样听得津津有味，并且改得非常行云流水，要说唯一不同的也就是春待的收录是多人进行的。但是有那么几张里S和美元也是单独收录的啊，为什么人家音监就可以把美独收录的部分那么完美地衔接进去呢？？？？<br>
+没有对比就没有伤害。说白了还是做得不够专业不够认真，敷衍了事。把消费者当傻子会有什么好结果吗？不会的。</p>
+<p>FT里S还说因为接到了这份工作后才特意去补的漫画 <s>（看到CAST表清一色81就知道大概是小学馆跟81的PY交易了）</s> ，结果漫画好看到他睡眠不足，他非常期待今后能再接到关于它的工作，并且希望以后能有机会演绎一个完整点的故事。<br>
+↑连CV自己都觉得这次配的剧本支离破碎可还行啊🤣🤣<br>
+另外FT里他还cue了玖太郎的童贞，不要说得这么直接啊人家不要面子吗XD<br>
+↑不过抓化的部分可没觉得玖太郎是童贞哦，有一段是玖太郎和四方净身（？）的温泉附带会激发自己内心深处最真实的一面的功效，然后玖太郎就自己一个人满脑子都在奢想能用舌头prpr女主文（？？？？）这种虎狼之词，听得我下巴都掉下来了好吗！！！！</p>
+<p>其他的等我继续把Vol.2听完再来考虑要不要补。听S的说法好像2里带的原创轨还是偏搞笑风格，有点战战兢兢……</p>
+<h1 id="みだらな猫は爪を隠す">みだらな猫は爪を隠す</h1>
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="http://crownworks.jp/crws0055.html" data-iframely-url="//cdn.iframe.ly/7qPnW9X"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+<p>这张跟SCRANBLE BIRTH DAY 那张全员抓是一起寄到YUI那里，然后人家给帮忙压的。<br>
+至于我为什么会足足拖了两个多月才听…………害，BL嘛，总是要先做一堆心理准备的嘛对不对🤣🤣（借口）</p>
+<p>这张我本来就没有特意去补原作，感觉看个粗筋大概也能想象到了。而且跟YSK合作这么多次了也……<br>
+结果听完了确实跟想象中的出入不大。剧情本身没什么特别值得写的，无论就是他以为他喜欢她，他以为他不爱他这样的陈词滥调。而且整体还挺黄的。<br>
+其中最让我？？？的地方就是天野（YSK）某天送快递的对象正好是三池（S），然后发现三池买的东西是情趣用品，当场揭穿后，<span class=marker_blue><b>天野就要求三池给他啪，两人还真的就啪了起来</b></span>。<br>
+…………大哥我记得你是个刚跟同居一年半的女朋友分手没多久的直男吧！？<br>
+怎么就会这么毫无芥蒂地插起别的男人来了？！<br>
+BL果然是fantasy啊…………………………</p>
+<p>而且这张作为S粉其实买得有点亏，因为是YSK视角的……等等这句话我怎么记得当年听红线时也说过？靠一搜发现还真的是😂<br>
+提起红线又想说，这边的船戏比那时候好了不少呢，终于没有貌合神离了。也不知道是我颗更涩情了还是YSK更熟练了……Orz<br>
+不过容我戴着粉丝滤镜夸一句，碟里有几处是三池害羞得满脸通红，然后压低帽子挡住脸的桥段，S配得真是很绝👍 就那种忍不住想要欺负他的感觉，啊～～🤣</p>
+<p>好，主要还是来记下FT里讲的感觉蛮好玩的点。</p>
+<p>YSK说在收录前一晚在家里check原作的时候，因为自己的台词量很大，check了好久还没结束。他就翻过去想看看三池都在说些什么台词呢？结果发现大部分都只是三个点「・・・」www<br>
+S说台词基本上是三个点的角色，要想演好只能通过其他形式来体现，而DRAMA这个载体就把这些可以用来表现的形式限制在了一个很小的范围内，还是有些难度的。<br>
+YSK说S给他的感觉是经常会演类似这样的角色，S说他自己也觉得，总是会接到那种通过气息来表现角色感情的要求。而且他回顾自己出演的广播时，也觉得自己说话的时候句尾都会带上点点点XD（因为是在说话的时候进行思考的类型）<br>
+↑我大半夜的愣是被这里的描述听到笑精神。请S同学赔我一下睡眠时间谢谢ww</p>
+<p>分析角色的时候YSK说三池对天野其实一直是一心一意的，是一个非常专一的人，但是在天野视角里看可能并没有把三池当什么特别的存在，所以一直表现得很渣……<br>
+S：官方承认这个角色渣了吗？<br>
+Y：NONONO，我说的就是官方钦点的，你看书的里封上是写了角色解说的，天野那里最后有标一个小小的クズ的。<br>
+S：诶？哪里哪里我看看！……真的耶！！<br>
+然后开始クズ连呼（クズだ！クズやんけ！おいこのクズ）hhhhh<br>
+后面更过分的还有YSK说如果不是因为已经跟三池搞上了，<span class=marker_yellow>面对对自己示好的点心店妹子可能也已经搞上一发了</span>ww看来クズ设定带来的先入为主是消不掉了XD</p>
+<p>关于原作里捏的快递公司名字梗，讲了讲自己的跟快递有关的事。YSK是曾经有一次时间总是对不上，让快递小哥重新跑了三趟怪过意不去的。S君则是有一次事务所把他出演的DVD之类的打了个打包快递给他，他让小哥先放在门口了，然后等他想自己搬进家里的时候发现箱子重到他压根搬不动，只好靠推的才给推了进来，所以快递小哥们真是太不容易了！<br>
+Y：但是也有可能是斉藤桑你自己力气太小←无情的吐槽233<br>
+不过因为作品里的三池已经干了十年快递了，S说他在配音的时候就不能表现出觉得重，还自我坦白原作里因为电梯坏了三池搬东西上楼那里，要表现出轻松不吃力的“ひょいひょい”感，结果他在三回中就会有一回直接就喊“ひょい”了<font color=#f091a3>←这里他学得超可爱的，但是其实我在听本篇的时候真的没发现www</font></p>
+<p>还有个问题是问两个人是否有什么地方是出人意外的。<br>
+S说别人看他可能总觉得他是个消极型的，但是他自认为自己其实是个很积极的人。当然，中二的时候他或许是个不愿意跟别人过多深入接触的人，但是自从开始当声优之后，开始慢慢对外敞开了。<br>
+YSK则说自己跟S恰恰相反，大家都觉得他看起来是个很大大咧咧的人，其实是很怕生的。<br>
+S：<span class=marker_green>我相信一直YSK的粉一定都很清楚，他这个人真的比我还要纤细得多哦！</span>！<br>
+Y：没错，我也这么觉得。<br>
+↑なんか意外ｗｗｗ<br>
+YSK的怕生体现在不敢跟店员说话，也讨厌打预约电话，这一点S也一样，还自嘲为什么自己这代人会讨厌电话，但是作为他年上的我也一样讨厌啊～～😂😂</p>
 
             </div>
             
@@ -449,7 +697,7 @@
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://moonaileen.github.io/post/memo1030-1/" title="【Memo】歌舞伎町シャーロック～パイプキャットラジオ～ 第02回（19/10/23配信）">https://moonaileen.github.io/post/memo1030-1/</a>
+      <a href="https://moonaileen.github.io/post/uhGtNUdgy/" title="消化存货。">https://moonaileen.github.io/post/uhGtNUdgy/</a>
     </li>
     <li class="post-copyright-license">
       <strong class="language" data-lan="copyright">版权声明： </strong>
@@ -458,21 +706,23 @@
   </ul>
   <div class="tags">
     
-      <a href="https://moonaileen.github.io/tag/SomaMemo/"># Soma Memo</a>
+      <a href="https://moonaileen.github.io/tag/NakajimaYoshiki/"># 中島ヨシキ</a>
+    
+      <a href="https://moonaileen.github.io/tag/Review/"># 感想</a>
+    
+      <a href="https://moonaileen.github.io/tag/CD/"># CD</a>
+    
+      <a href="https://moonaileen.github.io/tag/SaitoSoma/"># 斉藤壮馬</a>
     
   </div>
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="【Memo】河出文庫ベスト･オブ･ベスト" href="https://moonaileen.github.io/post/memo1030-2/">【Memo】河出文庫ベスト･オブ･ベスト</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="【Memo】河出文庫ベスト･オブ･ベスト" href="https://moonaileen.github.io/post/memo1030-2/">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="ダメラジ080（19/10/09放送分）" href="https://moonaileen.github.io/post/dameradio080/">ダメラジ080（19/10/09放送分）</a>
-        <a class="nav-mobile-next" title="ダメラジ080（19/10/09放送分）" href="https://moonaileen.github.io/post/dameradio080/">下一篇</a>
+        <a class="nav-pc-next" title="ダメラジ114（20/06/03放送分）" href="https://moonaileen.github.io/post/dameradio114/">ダメラジ114（20/06/03放送分）</a>
+        <a class="nav-mobile-next" title="ダメラジ114（20/06/03放送分）" href="https://moonaileen.github.io/post/dameradio114/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>
