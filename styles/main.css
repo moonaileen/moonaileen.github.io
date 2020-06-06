@@ -2366,11 +2366,6 @@ h3:before {
   color: #c9e2ff; /*アイコン色*/
 }
 
-mark {
-  background: #ee96a2;
-  color: #fff;
-}
-
 .pagination-active a{
   color: #fff;
   background: #f6d2d6;
@@ -2411,16 +2406,14 @@ mark {
   background: #e993a3;
 }
 
-.next-md-body > p strong,
-.next-md-body > ul strong {
+.markb {
   font-weight: 550;
   color: #e07289;
   position: relative;
   z-index: 10;
 }
 
-.next-md-body > p strong::before,
-.next-md-body > ul strong::before {
+.markb::before {
   display: inline-block;
   -webkit-transform: rotate(-2deg);
           transform: rotate(-2deg);
@@ -2434,6 +2427,11 @@ mark {
   top: -4px;
   z-index: -1;
   border-radius: 0.4rem;
+}
+
+mark {
+  background: #ee96a2;
+  color: #fff;
 }
 
 
@@ -2459,7 +2457,7 @@ background:linear-gradient(transparent 65%, #ffadad 0%);
 }
 
 .marker_yellow {
-background:linear-gradient(transparent 65%, #fffcaf 0%);
+background:linear-gradient(transparent 65%, #ffffa8 0%);
 }
 
 .marker_yellow, .marker_red, .marker_blue, .marker_green, .marker_pink {
