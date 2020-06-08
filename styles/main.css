@@ -2423,8 +2423,8 @@ h3:before {
   content: " ";
   width: 100%;
   height: 100%;
-  left: 2px;
-  top: -4px;
+  left: -4px;
+  top: 0px;
   z-index: -1;
   border-radius: 0.4rem;
 }
@@ -2440,32 +2440,35 @@ height: 4px;
 background: url(https://moonaileen.github.io/media/images/line02.png) repeat-x 0 0;
 }
 
+.marker_yellow, .marker_red, .marker_blue, .marker_green, .marker_pink {
+   -webkit-border-radius: 0.3em;
+   -moz-border-radius: 0.3em;
+   border-radius: 0.3em;
+   padding-left: 0.3em;
+   padding-right: 0.3em;
+   padding-top: 0.2em;
+   padding-bottom: 0.2em;
+}
+
 .marker_pink {
-background:linear-gradient(transparent 65%, #ffc0cb 0%);
+background:linear-gradient(transparent 60%, #ffe0fd 0%);
 }
 
 .marker_blue {
- background: linear-gradient(transparent 65%, #c1e0ff 0%);
+ background: linear-gradient(transparent 60%, #c1e0ff 0%);
 }
 
 .marker_green {
-background:linear-gradient(transparent 65%, #c9dfd7 0%);
+background:linear-gradient(transparent 60%, #c8dfd7 0%);
 }
 
 .marker_red {
-background:linear-gradient(transparent 65%, #ffadad 0%);
+background:linear-gradient(transparent 60%, #ffd8d9 0%);
 }
 
 .marker_yellow {
-background:linear-gradient(transparent 65%, #ffffa8 0%);
-}
-
-.marker_yellow, .marker_red, .marker_blue, .marker_green, .marker_pink {
-   -webkit-border-radius: 7px;
-   -moz-border-radius: 7px;
-   border-radius: 7px;
-   padding-left: 3px;
-    }.box-shadow-wrapper {
+background:linear-gradient(transparent 60%, #ffffa8 0%);
+}.box-shadow-wrapper {
       box-shadow: none !important;
     }body {
       cursor: default;
