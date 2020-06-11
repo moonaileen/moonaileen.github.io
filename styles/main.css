@@ -2127,7 +2127,7 @@ pre > span.copy-code:hover {
       }
     @font-face {
       font-family: 'PingFang SC';
-      src: url('/media/fonts/PingFang SC.ttf');
+      src: url('https://cdn.jsdelivr.net/gh/moonaileen/moonaileen.github.io@master/media/fonts/PingFang SC.ttf');
     }
     * {
         font-family: 'PingFang SC';
@@ -2465,7 +2465,7 @@ background:linear-gradient(transparent 65%, #ffe0fd 0%);
 }
 
 .marker_green {
-background:linear-gradient(transparent 65%, #cae6d6 0%);
+background:linear-gradient(transparent 65%, #cce7e1 0%);
 }
 
 .marker_red {
