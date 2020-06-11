@@ -2125,7 +2125,13 @@ pre > span.copy-code:hover {
         width: 1200px;
         margin: 0 auto;
       }
-    
+    @font-face {
+      font-family: 'PingFang SC';
+      src: url('/media/fonts/PingFang SC.ttf');
+    }
+    * {
+        font-family: 'PingFang SC';
+    }
     .post-body {
       font-size: 16px !important
     }
@@ -2356,7 +2362,7 @@ blockquote:before,.markdown .stressed-quote:before {
   border-bottom: none; !important
 }
 
-h3:before {
+.next-md-body h3:before {
   font-family: FontAwesome;
   content: "\f075";/*アイコンのユニコード*/
   position: absolute;/*絶対位置*/
@@ -2459,7 +2465,7 @@ background:linear-gradient(transparent 65%, #ffe0fd 0%);
 }
 
 .marker_green {
-background:linear-gradient(transparent 65%, #c8dfd7 0%);
+background:linear-gradient(transparent 65%, #cae6d6 0%);
 }
 
 .marker_red {
@@ -2467,7 +2473,7 @@ background:linear-gradient(transparent 65%, #ffd8d9 0%);
 }
 
 .marker_yellow {
-background:linear-gradient(transparent 65%, #ffffa8 0%);
+background:linear-gradient(transparent 65%, #fae3b6 0%);
 }.box-shadow-wrapper {
       box-shadow: none !important;
     }body {
