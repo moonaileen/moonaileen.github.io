@@ -2127,7 +2127,7 @@ pre > span.copy-code:hover {
       }
     @font-face {
       font-family: 'PingFang SC';
-      src: url('https://cdn.jsdelivr.net/gh/moonaileen/moonaileen.github.io@master/media/fonts/PingFang SC.ttf');
+      src: url('/media/fonts/PingFang SC.ttf');
     }
     * {
         font-family: 'PingFang SC';
@@ -2457,23 +2457,28 @@ background: url(https://moonaileen.github.io/media/images/line02.png) repeat-x 0
 }
 
 .marker_pink {
-background:linear-gradient(transparent 65%, #ffe0fd 0%);
+  color: #ff7f7f;
+  background:linear-gradient(transparent 65%, #ffe0fd 0%);
 }
 
 .marker_blue {
+ color: #0077c7;
  background: linear-gradient(transparent 65%, #c1e0ff 0%);
 }
 
 .marker_green {
-background:linear-gradient(transparent 65%, #cce7e1 0%);
+ color: #81afb4;
+ background:linear-gradient(transparent 65%, #cce7e1 0%);
 }
 
 .marker_red {
-background:linear-gradient(transparent 65%, #ffd8d9 0%);
+ color: #e07289;
+ background:linear-gradient(transparent 65%, #ffd8d9 0%);
 }
 
 .marker_yellow {
-background:linear-gradient(transparent 65%, #fae3b6 0%);
+ color: #f5c320;
+ background:linear-gradient(transparent 65%, #fae3b6 0%);
 }.box-shadow-wrapper {
       box-shadow: none !important;
     }body {
