@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://moonaileen.github.io</id>
     <title>「旅程」</title>
-    <updated>2020-06-15T01:46:12.056Z</updated>
+    <updated>2020-06-18T15:13:46.681Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://moonaileen.github.io"/>
     <link rel="self" href="https://moonaileen.github.io/atom.xml"/>
@@ -10,6 +10,38 @@
     <logo>https://moonaileen.github.io/images/avatar.png</logo>
     <icon>https://moonaileen.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 「旅程」</rights>
+    <entry>
+        <title type="html"><![CDATA[小兔兔get！]]></title>
+        <id>https://moonaileen.github.io/post/arknights-leonhardt-get/</id>
+        <link href="https://moonaileen.github.io/post/arknights-leonhardt-get/">
+        </link>
+        <updated>2020-06-18T16:45:30.000Z</updated>
+        <summary type="html"><![CDATA[<p>其实6/11那天知道S君也终于上舟后，我一开始只是普通地觉得<span class=marker_blue>“哇我的户口本又铜矿啦”</span>而已。<br>
+结果发生了一些我完全没有想到的特殊情况，总之最后的结局就是不但收获了关于S君值得敬佩的episode，又让S君配的这只小兔兔LEONHARDT变成了对我非常有纪念意义的角色……</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>其实6/11那天知道S君也终于上舟后，我一开始只是普通地觉得<span class=marker_blue>“哇我的户口本又铜矿啦”</span>而已。<br>
+结果发生了一些我完全没有想到的特殊情况，总之最后的结局就是不但收获了关于S君值得敬佩的episode，又让S君配的这只小兔兔LEONHARDT变成了对我非常有纪念意义的角色……</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ダメラジ116（20/06/17放送分）]]></title>
+        <id>https://moonaileen.github.io/post/dameradio116/</id>
+        <link href="https://moonaileen.github.io/post/dameradio116/">
+        </link>
+        <updated>2020-06-18T04:07:22.000Z</updated>
+        <summary type="html"><![CDATA[<p>今日は久々に対面スタイルでお送りしているからからダメじゃないラジオ。</p>
+<p>K：疲れたよ、ソーマラッシュ。<br>
+S：…カイロ！<br>
+↑终于又回到了日常的studio收录（虽然多了一块隔板）！一上来就互玩名字谐音梗。<br>
+日本解除自肃后大家的工作生活慢慢回归正轨，K君当然也回归到了正常的生活节奏，但是身体的生物钟还在唱反调。所以睡眠质量一直不佳，每天都睡得很浅，甚至每个小时都会因为做梦而忽然醒过来。（在场包括S君在内的大多数人都表示超懂这种感觉😂）所以就算已经睡足了六个小时，还是像没睡过一样，黑眼圈也又回来了XD</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>今日は久々に対面スタイルでお送りしているからからダメじゃないラジオ。</p>
+<p>K：疲れたよ、ソーマラッシュ。<br>
+S：…カイロ！<br>
+↑终于又回到了日常的studio收录（虽然多了一块隔板）！一上来就互玩名字谐音梗。<br>
+日本解除自肃后大家的工作生活慢慢回归正轨，K君当然也回归到了正常的生活节奏，但是身体的生物钟还在唱反调。所以睡眠质量一直不佳，每天都睡得很浅，甚至每个小时都会因为做梦而忽然醒过来。（在场包括S君在内的大多数人都表示超懂这种感觉😂）所以就算已经睡足了六个小时，还是像没睡过一样，黑眼圈也又回来了XD</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[ダメラジ115（20/06/10放送分）]]></title>
         <id>https://moonaileen.github.io/post/dameradio115/</id>
@@ -166,48 +198,6 @@ TITLE CALL依然没办法完美合拍。</p>
 <p>K买了健身器材，把家里改造得就像健身房一样。最近因为疫情关系一直待在家里，不能去健身房，所以身体没有以前那么健硕了，想借此改善自己的体型，也建议大家在家也要适当地进行锻炼。<br>
 听到S君说他自己在家里也有在做平板支撑（俯卧撑？）我也放心了。<br>
 TITLE CALL依然没办法完美合拍。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ダメラジ109（20/04/29放送分）]]></title>
-        <id>https://moonaileen.github.io/post/dameradio109/</id>
-        <link href="https://moonaileen.github.io/post/dameradio109/">
-        </link>
-        <updated>2020-05-23T06:49:45.000Z</updated>
-        <summary type="html"><![CDATA[<p>この番組もリモート収録でお届けしているからダメじゃないラジオ。</p>
-<p>受疫情影响开始采取远程收录。所以TITLE CALL必然是对不上的（有延迟）。<br>
-好久没有听到S声音的K很感动的样子。<br>
-在收录前S为了设置远程通话费了很大的劲也没成功，最后是到事务所里让staff给准备了房间和器材才得以进行收录。</p>
-<p>S说现在这个疫情下，待在家里的时间变多了，房间总会变脏，本来是懒人拖把派的他因为每天都要拖觉得累了，也想要个伦巴了（？？？哥咱们以前也是养过伦巴的啊！）<br>
-顺着又说到生日礼物的时候，K还假装信号不好。并且<a href="/post/dameradio108/">上一回</a>里说好要送S的低温真空调理机ANOVA，因为现在疫情影响在家的时间变多了，被他自己拿来用着做饭了。问S用过的他还要吗？S说完全不介意，如果可以送给他的话他还是想要的。<br>
-但是后来K就转移了话题，让S把想要的东西列个清单给他，他照着买好了。S说正好他还有别的想要的，比如hotcook，拘说只要把材料丢进去就可以做成好吃的咖喱。<br>
-K：好的，你先列个表给我吧，我看着挑便宜的送你。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>この番組もリモート収録でお届けしているからダメじゃないラジオ。</p>
-<p>受疫情影响开始采取远程收录。所以TITLE CALL必然是对不上的（有延迟）。<br>
-好久没有听到S声音的K很感动的样子。<br>
-在收录前S为了设置远程通话费了很大的劲也没成功，最后是到事务所里让staff给准备了房间和器材才得以进行收录。</p>
-<p>S说现在这个疫情下，待在家里的时间变多了，房间总会变脏，本来是懒人拖把派的他因为每天都要拖觉得累了，也想要个伦巴了（？？？哥咱们以前也是养过伦巴的啊！）<br>
-顺着又说到生日礼物的时候，K还假装信号不好。并且<a href="/post/dameradio108/">上一回</a>里说好要送S的低温真空调理机ANOVA，因为现在疫情影响在家的时间变多了，被他自己拿来用着做饭了。问S用过的他还要吗？S说完全不介意，如果可以送给他的话他还是想要的。<br>
-但是后来K就转移了话题，让S把想要的东西列个清单给他，他照着买好了。S说正好他还有别的想要的，比如hotcook，拘说只要把材料丢进去就可以做成好吃的咖喱。<br>
-K：好的，你先列个表给我吧，我看着挑便宜的送你。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ダメラジ108（20/04/22放送分）]]></title>
-        <id>https://moonaileen.github.io/post/dameradio108/</id>
-        <link href="https://moonaileen.github.io/post/dameradio108/">
-        </link>
-        <updated>2020-05-22T05:56:36.000Z</updated>
-        <summary type="html"><![CDATA[<p>まさかの誕生日当日放送だからダメじゃないラジオ。</p>
-<p>S君生日回！<br>
-staff因为不擅长提供惊喜就这么直愣愣地把蛋糕拿出来了。<br>
-而且在S拆蛋糕包装的时候没有任何人帮他😅寿星好可怜！</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>まさかの誕生日当日放送だからダメじゃないラジオ。</p>
-<p>S君生日回！<br>
-staff因为不擅长提供惊喜就这么直愣愣地把蛋糕拿出来了。<br>
-而且在S拆蛋糕包装的时候没有任何人帮他😅寿星好可怜！</p>
 ]]></content>
     </entry>
 </feed>
