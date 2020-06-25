@@ -2127,7 +2127,7 @@ pre > span.copy-code:hover {
       }
     @font-face {
       font-family: 'PingFang SC';
-      src: url('https://cdn.jsdelivr.net/gh/moonaileen/moonaileen.github.io@master/media/fonts/PingFang SC.ttf');
+      src: url('/media/fonts/PingFang SC.ttf');
     }
     * {
         font-family: 'PingFang SC';
