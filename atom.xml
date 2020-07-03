@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://moonaileen.github.io</id>
     <title>「旅程」</title>
-    <updated>2020-07-02T11:42:05.021Z</updated>
+    <updated>2020-07-03T06:32:21.013Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://moonaileen.github.io"/>
     <link rel="self" href="https://moonaileen.github.io/atom.xml"/>
@@ -10,6 +10,19 @@
     <logo>https://moonaileen.github.io/images/avatar.png</logo>
     <icon>https://moonaileen.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 「旅程」</rights>
+    <entry>
+        <title type="html"><![CDATA[ミュ〜コミプラス（20/07/02放送分）]]></title>
+        <id>https://moonaileen.github.io/post/mucomi200702/</id>
+        <link href="https://moonaileen.github.io/post/mucomi200702/">
+        </link>
+        <updated>2020-07-03T01:15:42.000Z</updated>
+        <summary type="html"><![CDATA[<p>上次听mucomi都是18年了（S君为宣传date来当guest），时间过得真快啊。<br>
+不知不觉间连yoppi都玩起vtb了，真是忍不住感慨一声时代潮流……</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>上次听mucomi都是18年了（S君为宣传date来当guest），时间过得真快啊。<br>
+不知不觉间连yoppi都玩起vtb了，真是忍不住感慨一声时代潮流……</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[ダメラジ118（20/07/01放送分）]]></title>
         <id>https://moonaileen.github.io/post/dameradio118/</id>
@@ -199,31 +212,6 @@ K君说最深切的感受就是下次买麦克之前一定要问问专业人士�
 <s>虽然更早之前的没有补但是我决定放弃了……</s><br>
 不过记录是记录完了，感觉自己的废话还是太多了，到底要怎么办才能写出最精简没有废话，搜索关键词也能立刻就hit中的广播记录呢！！🤔<br>
 总之接下来希望自己不要再犯拖延症了，看看到底能坚持记到第几期吧。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ダメラジ112（20/05/20放送分）]]></title>
-        <id>https://moonaileen.github.io/post/dameradio112/</id>
-        <link href="https://moonaileen.github.io/post/dameradio112/">
-        </link>
-        <updated>2020-05-24T15:44:35.000Z</updated>
-        <summary type="html"><![CDATA[<p>人としゃべるのってやっぱ楽しいね～って思えるからダメじゃないラジオ。</p>
-<p>K买了些设备可以把爱疯打造成简易的摄影机。但是搞完了却不知道能拿来拍些什么。真人出镜实况锻炼被否了（事务所应该也不会同意），只有手出镜的料理视频也被否了（“直接叫外卖不好吗？”）。<br>
-S：你干脆把这套设备送我算了！<br>
-最后说觉得拿来录PUBG的教学视频或许不错，但是又担心自己的手毛（てげ）不好看，只能作罢。<br>
-S反应了半天てげ是什么？然后问剃掉不就好了？<br>
-K又觉得这种表现自己最真实的一面比较好吧……准备等录完广播再研究看看了。</p>
-<p>这回轮到K君在水里放冰故意摇得嘎啦嘎啦响了。仿佛在报复上一回的S君。</p>
-<p>四度目の正直。当然TITLE CALL也依然是没有合上拍。不如说这次是最不合的一期ww</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>人としゃべるのってやっぱ楽しいね～って思えるからダメじゃないラジオ。</p>
-<p>K买了些设备可以把爱疯打造成简易的摄影机。但是搞完了却不知道能拿来拍些什么。真人出镜实况锻炼被否了（事务所应该也不会同意），只有手出镜的料理视频也被否了（“直接叫外卖不好吗？”）。<br>
-S：你干脆把这套设备送我算了！<br>
-最后说觉得拿来录PUBG的教学视频或许不错，但是又担心自己的手毛（てげ）不好看，只能作罢。<br>
-S反应了半天てげ是什么？然后问剃掉不就好了？<br>
-K又觉得这种表现自己最真实的一面比较好吧……准备等录完广播再研究看看了。</p>
-<p>这回轮到K君在水里放冰故意摇得嘎啦嘎啦响了。仿佛在报复上一回的S君。</p>
-<p>四度目の正直。当然TITLE CALL也依然是没有合上拍。不如说这次是最不合的一期ww</p>
 ]]></content>
     </entry>
 </feed>
