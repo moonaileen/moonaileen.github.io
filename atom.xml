@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://moonaileen.github.io</id>
     <title>「旅程」</title>
-    <updated>2020-07-03T07:53:40.824Z</updated>
+    <updated>2020-07-05T16:22:01.096Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://moonaileen.github.io"/>
     <link rel="self" href="https://moonaileen.github.io/atom.xml"/>
@@ -10,6 +10,21 @@
     <logo>https://moonaileen.github.io/images/avatar.png</logo>
     <icon>https://moonaileen.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 「旅程」</rights>
+    <entry>
+        <title type="html"><![CDATA[とりはい]]></title>
+        <id>https://moonaileen.github.io/post/torihai/</id>
+        <link href="https://moonaileen.github.io/post/torihai/">
+        </link>
+        <updated>2020-07-05T22:57:36.000Z</updated>
+        <summary type="html"><![CDATA[<p>额，换了新转运后发的第一个包，就多灾多难地发了二十多天，还被海关扣了税……<br>
+结果过了一个多月后的现在我才终于看完了它，买那么早的意义何在？<br>
+其实看完后甚至想说我为什么要买……怎么就总是管不住自己的手呢ry</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>额，换了新转运后发的第一个包，就多灾多难地发了二十多天，还被海关扣了税……<br>
+结果过了一个多月后的现在我才终于看完了它，买那么早的意义何在？<br>
+其实看完后甚至想说我为什么要买……怎么就总是管不住自己的手呢ry</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[ミュ〜コミプラス（20/07/02放送分）]]></title>
         <id>https://moonaileen.github.io/post/mucomi200702/</id>
@@ -193,25 +208,6 @@ S：リバーブがすごいｗ<br>
 K君说最深切的感受就是下次买麦克之前一定要问问专业人士的意见ww他之前为了效果好买了个特别贵的麦克（没说具体价格），最近又新买了一个麦克，价格只有上一个的<b>1/30</b>（？？？？），录出来的音质反而更好了。<br>
 不过最后K斩钉截铁地表示，要想在宅录出最高音质，请认准<span class="marker_pink">人头麦</span>！<br>
 所以果然还是花江是有专业的投资眼光的！ww</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[やっと！/【Memo】5/23 安元洋貴の笑われるセールスマン（仮）]]></title>
-        <id>https://moonaileen.github.io/post/viiFzVmP/</id>
-        <link href="https://moonaileen.github.io/post/viiFzVmP/">
-        </link>
-        <updated>2020-05-24T22:04:55.000Z</updated>
-        <summary type="html"><![CDATA[<p>哇～～终于把ダメラジ的广播记录补完了！！<br>
-二十天补完二十二回！原来只要我想做的话还是做得到嘛！！（叉会儿腰）<br>
-<s>虽然更早之前的没有补但是我决定放弃了……</s><br>
-不过记录是记录完了，感觉自己的废话还是太多了，到底要怎么办才能写出最精简没有废话，搜索关键词也能立刻就hit中的广播记录呢！！🤔<br>
-总之接下来希望自己不要再犯拖延症了，看看到底能坚持记到第几期吧。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>哇～～终于把ダメラジ的广播记录补完了！！<br>
-二十天补完二十二回！原来只要我想做的话还是做得到嘛！！（叉会儿腰）<br>
-<s>虽然更早之前的没有补但是我决定放弃了……</s><br>
-不过记录是记录完了，感觉自己的废话还是太多了，到底要怎么办才能写出最精简没有废话，搜索关键词也能立刻就hit中的广播记录呢！！🤔<br>
-总之接下来希望自己不要再犯拖延症了，看看到底能坚持记到第几期吧。</p>
 ]]></content>
     </entry>
 </feed>
