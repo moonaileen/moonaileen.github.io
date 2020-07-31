@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://moonaileen.github.io</id>
     <title>「旅程」</title>
-    <updated>2020-07-25T08:19:45.685Z</updated>
+    <updated>2020-07-31T17:07:18.587Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://moonaileen.github.io"/>
     <link rel="self" href="https://moonaileen.github.io/atom.xml"/>
@@ -10,6 +10,25 @@
     <logo>https://moonaileen.github.io/images/avatar.png</logo>
     <icon>https://moonaileen.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 「旅程」</rights>
+    <entry>
+        <title type="html"><![CDATA[ダメラジ122（20/07/29放送分）]]></title>
+        <id>https://moonaileen.github.io/post/dameradio122/</id>
+        <link href="https://moonaileen.github.io/post/dameradio122/">
+        </link>
+        <updated>2020-07-31T09:20:48.000Z</updated>
+        <summary type="html"><![CDATA[<p>７月ももう終わっちゃうからダメじゃないラジオ。</p>
+<p>上来就被加了特效音的K君一声「クソがーーー！」给吓了一跳。<br>
+原来是因为K君最近沉迷ラブコメ漫画，现在的ラブコメ不再像以前那样都是后宫型了，而是一对一的更流行，而K君看到这些青春洋溢的角色们后，惊觉自己的Quality of Life堪忧，从而蹦出了上面那句w<br>
+K君列举了几个自己最近看的ラブコメ：「剥かせて！竜ケ崎さん」<font color=#eee>（S还把剥かせて听成了抜かせて，我怀疑你在开车只是我没有证据😂）</font>、「パシリな僕と恋する番長さん」、「めいかさんは押し殺せない」、「ヤンキー君と白杖ガール」……过于沉迷于列举作品名，而直接through掉了S说的话，明明是只有两个人的广播，K君不要这样啊！<br>
+总之，这类书看得多了，又开始感叹起自己的人生价值了呢～</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>７月ももう終わっちゃうからダメじゃないラジオ。</p>
+<p>上来就被加了特效音的K君一声「クソがーーー！」给吓了一跳。<br>
+原来是因为K君最近沉迷ラブコメ漫画，现在的ラブコメ不再像以前那样都是后宫型了，而是一对一的更流行，而K君看到这些青春洋溢的角色们后，惊觉自己的Quality of Life堪忧，从而蹦出了上面那句w<br>
+K君列举了几个自己最近看的ラブコメ：「剥かせて！竜ケ崎さん」<font color=#eee>（S还把剥かせて听成了抜かせて，我怀疑你在开车只是我没有证据😂）</font>、「パシリな僕と恋する番長さん」、「めいかさんは押し殺せない」、「ヤンキー君と白杖ガール」……过于沉迷于列举作品名，而直接through掉了S说的话，明明是只有两个人的广播，K君不要这样啊！<br>
+总之，这类书看得多了，又开始感叹起自己的人生价值了呢～</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[「天晴爛漫！」Radio Here we go!!!!! 第3回（20/07/23配信）]]></title>
         <id>https://moonaileen.github.io/post/appare0723/</id>
@@ -185,19 +204,6 @@ K：嗯～～太费sense了吧（116回的伏线）。你看，你今天穿的�
 S：但是～「MASTERキートン」里可是说过想在沙漠活下来，suits是最适合的哦。<br>
 K：所以人家是suits啊，你是shirt啊！不一样啊！<br>
 笑飞wwww</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[小兔兔get！]]></title>
-        <id>https://moonaileen.github.io/post/arknights-leonhardt-get/</id>
-        <link href="https://moonaileen.github.io/post/arknights-leonhardt-get/">
-        </link>
-        <updated>2020-06-18T17:45:30.000Z</updated>
-        <summary type="html"><![CDATA[<p>其实6/11那天知道S君也终于上舟后，我一开始只是普通地觉得<span class=marker_blue>“哇我的户口本又铜矿啦”</span>而已。<br>
-结果发生了一些我完全没有想到的特殊情况，总之最后的结局就是不但收获了关于S君值得敬佩的episode，又让S君配的这只小兔兔LEONHARDT变成了对我非常有纪念意义的角色……</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>其实6/11那天知道S君也终于上舟后，我一开始只是普通地觉得<span class=marker_blue>“哇我的户口本又铜矿啦”</span>而已。<br>
-结果发生了一些我完全没有想到的特殊情况，总之最后的结局就是不但收获了关于S君值得敬佩的episode，又让S君配的这只小兔兔LEONHARDT变成了对我非常有纪念意义的角色……</p>
 ]]></content>
     </entry>
 </feed>
