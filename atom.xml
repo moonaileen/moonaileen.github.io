@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://moonaileen.github.io</id>
     <title>「旅程」</title>
-    <updated>2020-08-07T15:54:20.166Z</updated>
+    <updated>2020-08-17T05:04:30.026Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://moonaileen.github.io"/>
     <link rel="self" href="https://moonaileen.github.io/atom.xml"/>
@@ -10,6 +10,23 @@
     <logo>https://moonaileen.github.io/images/avatar.png</logo>
     <icon>https://moonaileen.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 「旅程」</rights>
+    <entry>
+        <title type="html"><![CDATA[ダメラジ124（20/08/12放送分）]]></title>
+        <id>https://moonaileen.github.io/post/dameradio124/</id>
+        <link href="https://moonaileen.github.io/post/dameradio124/">
+        </link>
+        <updated>2020-08-17T01:02:13.000Z</updated>
+        <summary type="html"><![CDATA[<p>お盆らへんらしいからダメじゃないラジオ。</p>
+<p>S最近花了两天就补完了全43卷的＜魔偶马戏团＞，而且哭得一塌糊涂。最近看的网页也全都是跟这个有关。甚至看个名台词集锦都会眼眶湿润的程度。<br>
+K君正好在这部的动画版里配了个不算酱油的角色，还跟S炫耀自己有原作者亲笔画的带角色绘的签名板。<br>
+S：可恶，羡慕哭了～～！</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>お盆らへんらしいからダメじゃないラジオ。</p>
+<p>S最近花了两天就补完了全43卷的＜魔偶马戏团＞，而且哭得一塌糊涂。最近看的网页也全都是跟这个有关。甚至看个名台词集锦都会眼眶湿润的程度。<br>
+K君正好在这部的动画版里配了个不算酱油的角色，还跟S炫耀自己有原作者亲笔画的带角色绘的签名板。<br>
+S：可恶，羡慕哭了～～！</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[ダメラジ123（20/08/05放送分）]]></title>
         <id>https://moonaileen.github.io/post/dameradio123/</id>
@@ -159,29 +176,6 @@ S：ww说起灵气我就想起自己胯间灵气爆棚的事了www<br>
 ]]></summary>
         <content type="html"><![CDATA[<p>上次听mucomi都是18年了（S君为宣传date来当guest），时间过得真快啊。<br>
 不知不觉间连yoppi都玩起vtb了，真是忍不住感慨一声时代潮流……</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ダメラジ118（20/07/01放送分）]]></title>
-        <id>https://moonaileen.github.io/post/dameradio118/</id>
-        <link href="https://moonaileen.github.io/post/dameradio118/">
-        </link>
-        <updated>2020-07-02T07:45:05.000Z</updated>
-        <summary type="html"><![CDATA[<p>下半期がスタートしたからダメじゃないラジオ。</p>
-<p>S君最近准备去做脱毛了，上次做已经是三个月前的事了。这回他还搜到了新型脱毛技术，据说20分钟即可做完全身脱毛手术，并且是无痛型。搞得非常想试试看。如果听众里有人做过这个新型的脱毛手术，请务必来信告诉他们使用体验。<br>
-K君因为最近买了三脚架和相机（为了拍他拿到油管银盾奖杯的视频），跃跃欲试地想拍做脱毛手术的视频回头放在自己的油管频道里。S还给出主意可以贩卖K君之前提过的通过使劲捏来缓解疼痛的香蕉玩具。<br>
-S：<span class=marker_yellow>界人のバナナ</span>っていう…<br>
-K：おっととと、<span class=marker_red>大きめ</span>ｗ<br>
-真是架不住突如其来的一言不合就开车😂<br>
-以及为什么总会在两个大男人主持的广播里接收到最新的脱毛技术广告，真是个谜ww</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>下半期がスタートしたからダメじゃないラジオ。</p>
-<p>S君最近准备去做脱毛了，上次做已经是三个月前的事了。这回他还搜到了新型脱毛技术，据说20分钟即可做完全身脱毛手术，并且是无痛型。搞得非常想试试看。如果听众里有人做过这个新型的脱毛手术，请务必来信告诉他们使用体验。<br>
-K君因为最近买了三脚架和相机（为了拍他拿到油管银盾奖杯的视频），跃跃欲试地想拍做脱毛手术的视频回头放在自己的油管频道里。S还给出主意可以贩卖K君之前提过的通过使劲捏来缓解疼痛的香蕉玩具。<br>
-S：<span class=marker_yellow>界人のバナナ</span>っていう…<br>
-K：おっととと、<span class=marker_red>大きめ</span>ｗ<br>
-真是架不住突如其来的一言不合就开车😂<br>
-以及为什么总会在两个大男人主持的广播里接收到最新的脱毛技术广告，真是个谜ww</p>
 ]]></content>
     </entry>
 </feed>
