@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://moonaileen.github.io</id>
     <title>「旅程」</title>
-    <updated>2020-08-22T15:02:57.383Z</updated>
+    <updated>2020-08-27T02:56:21.605Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://moonaileen.github.io"/>
     <link rel="self" href="https://moonaileen.github.io/atom.xml"/>
@@ -10,6 +10,21 @@
     <logo>https://moonaileen.github.io/images/avatar.png</logo>
     <icon>https://moonaileen.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 「旅程」</rights>
+    <entry>
+        <title type="html"><![CDATA[中配]]></title>
+        <id>https://moonaileen.github.io/post/zhong-pei/</id>
+        <link href="https://moonaileen.github.io/post/zhong-pei/">
+        </link>
+        <updated>2020-08-27T01:24:06.000Z</updated>
+        <summary type="html"><![CDATA[<p>一切都要从魔道日语版选了男神给薛洋配音开始说起吧……<br>
+刚得知这个消息的时候，内心是非常复杂的。毕竟我首页一天到晚都被某个关键词刷屏，直接导致对这部作品产生了先入为主的刻板印象。<br>
+不过本着负责任的态度，我还是迎难而上地先把原作嗑了。事实上看完了感觉写得还是不错的，怪不得会那么火（无论好的意义还是不好的意义）。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>一切都要从魔道日语版选了男神给薛洋配音开始说起吧……<br>
+刚得知这个消息的时候，内心是非常复杂的。毕竟我首页一天到晚都被某个关键词刷屏，直接导致对这部作品产生了先入为主的刻板印象。<br>
+不过本着负责任的态度，我还是迎难而上地先把原作嗑了。事实上看完了感觉写得还是不错的，怪不得会那么火（无论好的意义还是不好的意义）。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[ダメラジ125（20/08/19放送分）]]></title>
         <id>https://moonaileen.github.io/post/dameradio125/</id>
@@ -171,21 +186,6 @@ S：肯定信，我自己都可以算是玄学本学了。（俺がスピリチ�
 K：是哦，这么说来你的灵气超强的！<br>
 S：ww说起灵气我就想起自己胯间灵气爆棚的事了www<br>
 关于这个可以参考几年前他们一起参加贤老师主持的节目旅友。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[とりはい]]></title>
-        <id>https://moonaileen.github.io/post/torihai/</id>
-        <link href="https://moonaileen.github.io/post/torihai/">
-        </link>
-        <updated>2020-07-05T22:57:36.000Z</updated>
-        <summary type="html"><![CDATA[<p>额，换了新转运后发的第一个包，就多灾多难地发了二十多天，还被海关扣了税……<br>
-结果过了一个多月后的现在我才终于看完了它，买那么早的意义何在？<br>
-其实看完后甚至想说我为什么要买……怎么就总是管不住自己的手呢ry</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>额，换了新转运后发的第一个包，就多灾多难地发了二十多天，还被海关扣了税……<br>
-结果过了一个多月后的现在我才终于看完了它，买那么早的意义何在？<br>
-其实看完后甚至想说我为什么要买……怎么就总是管不住自己的手呢ry</p>
 ]]></content>
     </entry>
 </feed>
